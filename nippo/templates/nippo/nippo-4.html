@@ -1,0 +1,1609 @@
+{% extends "base.html" %}
+{% block head_title %}新製品情報{% endblock %}
+{% block content %}
+
+<head >
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <div id="loading">
+      <div id="spinner" class="d-flex justify-content-center align-items-center">
+            <div class="spinner-border text-light"  style="width: 10rem; height: 10rem;" role="status">
+            </div>
+            <div text-align:center; style="position: absolute; top: 600px;">
+                <font size="8" color="#ffffff">只今、画像をロード中・・・</font>         
+            </div>
+      </div>
+    </div>
+
+</body>
+
+<style>
+    #loading {
+      display: none;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      background: #000;
+      z-index: 1;
+    }
+    #spinner {
+      display: none;
+      color: #fff;
+      z-index: 2;
+    }
+    
+    #wrap{
+      background: #fff;
+      width: 100%;
+    }
+    
+</style>
+<script>
+    $(function() {
+      var h = $(window).height();
+    
+      $('#wrap').css('display','none');
+      $('#loading ,#spinner').height(h).css('display','block');
+    });
+    
+    $(window).on('load',function () {
+      $('#wrap').css('display', 'block');
+      $('#loading').delay(500).fadeOut(500);
+      $('#spinner').delay(300).fadeOut(300);
+    });
+    
+    //5秒たったら強制的にロード画面を非表示
+    $(function(){
+      setTimeout('stopload()',5000);
+    });
+    
+    function stopload(){
+      $('#wrap').css('display','block');
+      $('#loading').delay(500).fadeOut(500);
+      $('#spinner').delay(300).fadeOut(300);
+    }
+    
+</script>
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+  <div class="container" >
+    <h1 class="my-3"  style="text-align:center">{% if not profile %}10.新製品情報{% else %}{{profile.username}}の新製品情報{% endif %}</h1>
+    <hr>
+  </div>
+</head>
+
+<body>
+    <div style="text-align: center" id="4-1">
+        <p>&nbsp;</p>
+        <hr>
+        <p style="background-color:#ff69b4">
+            <font  size="7" color = "black"><strong>2023年10月分</strong></font>
+        </p>
+    </div>
+
+    <hr>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">イズミ（ゆめタウン）</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202310/agri_aozoraninniku2.jpg" data-lightbox="202310-1"><img src="/media/sinseihin/202310/agri_aozoraninniku2.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    採用品：青昊にんにく
+                                    <br>青昊（あおぞら）にんにくは、岡山アグリフーズと岡山県の契約農家が丹精込めて栽培した岡山県産のにんにくです。
+                                    <br>「晴れの国おかやま」のイメージにあわせて「青昊」と名付けました。
+                                    <br>この度ゆめタウンに採用となり、店舗、期間限定で販売されます。是非お求めください！！
+                                    <br>販売先：丸倉青果㈱／㈱イズミ（ゆめタウン）
+                                    <br>販売期間：10月～11月
+                                    <br>販売エリア：ゆめタウン　以下13店舗でテスト販売
+                                    <br>（福山、蔵王、倉敷、平島、高梁、井原、久世、山陽、美作、邑久、丹波、津山、姫路）
+                                    <br>店頭価格：＠198円/個（税込214円/個）
+                                    <br>岡山アグリフーズのHPはこちら👇
+                                    <br>岡山アグリフーズ】青昊にんにく－岡山の美味しいにんにく<a href="http://www.okayama-agrifoods.co.jp/" target="_blank"><font size="3">HP </font></a>
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">エースコック</font></div>
+    <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+        <div style="padding: 15px;">         
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                       <td><a href="/media/sinseihin/202310/ac_vietnampho.png" data-lightbox="202310-2"><img src="/media/sinseihin/202310/ac_vietnampho.png" width="400" height="400" border="2"  vspace='2'></a></td>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                        <div> 
+                            <p>  <font size="3">
+                                 ベトナムフォー
+                                 <br>スパイス香る牛肉風味
+                                 <br>VietnameseBeefTastePho
+                                 <a href="https://cycle.me/shop/pages/seven_eleven_limited/#anchor_711_noodle_pho" target="_blank"><font size="3">HP </font></a>
+                                  <br>10/17New
+                                 ショウッガ由来ポリフェノール(6-ジンゲロール/6-ショッガオール)/
+                                 グルテンフリー/99kcal
+                                 <br>ジンジャーエキスパウダーEを配合した液体スープパック品が採用されました。
+                                 ジンジャーエキスパウダーEのビリビリ感が効いていて、数種のスペイス、
+                                 ビーフの旨味が効いたエスニックスープです。
+                                 セブンイレブンにて販売されています。
+                                 <br>ユーザー:エースコック(株)
+                                 <br>採用品:SECPB液-1
+                                 <br>担当営業・大阪支店斉藤MG
+                                 <br>担当開発:第二開発室液体チーム
+                                 <br>ジンジャーエキスパウダーEに関するサポート:食品基盤技術研究室、開2健食チーム
+                                 <br>使用自社原料:ビーフエキスAIE-6630、ジンジャーエキスパウダーE、
+                                 ローストオニオンエキスIME-7257、ガーリックエキスAK、
+                                 カラメルS-30、ステビアST957
+                                 <br>製造工場:キサイフーズ工業和ブレンド、バック
+                                 </font>
+                            </p>
+                       </div>       
+                   </div>
+               </div>
+            </div>
+       </div>
+    </div>
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">エクセルシオールカフェ</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202310/salmoncheese_grilledchicken_pasta.png" data-lightbox="ac"><img src="/media/sinseihin/202310/salmoncheese_grilledchicken_pasta.png" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  
+                                    <font size="3">
+                                        新規採用製品のご紹介
+                                        <br>ユーザー:ドトールコーヒー
+                                        <br>採用製品:
+                                        <br>・クアトロチーズクリーミーソースDIN-9020
+                                        (サーモンと4種のチーズのクリミーパスタ)
+                                        <br>・かき醤油のオイルソースDIN-9043
+                                        (きのことグリルチキンのだし醤油大葉マスカルポボーネ添えー)
+                                        <br>販売店舗:エクセルシオールカフェ(90店舗)
+                                        <br>発売期間:2023年10月19日へ*半年の予定です!
+                                        <br>生産ライン:キサイフーズ第二工場冷食ライン
+                                        <br>担当営業:東京本社山本MG3
+                                        <br>担当開発:キサイ開発小山CF、神保    
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202310/plaindog_cheesedog.png" data-lightbox="ac"><img src="/media/sinseihin/202310/plaindog_cheesedog.png" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  
+                                    <font size="3">
+                                        新規採用製品のご紹介
+                                        <br>ユーザー:ドトールコーヒー
+                                        <br>採用製品:イタリア産トマトのソースDIN-9068
+                                        (プレーンドックとチーズドック)
+                                        <br>販売店舗エクセルシオールカフェ(120店舗)
+                                        <br>発売期間2023年10月19日ー
+                                        <br>生産ライン:キサイフーズ第二工場冷食ライン
+                                        <br>担当営業東京本社山本MGERAPTを
+                                        <br>担当開発キサイ開発小山CF、神保5
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">ゴンチャ</font></div>
+            <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+                <div style="padding: 15px;">         
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <td><a href="/media/sinseihin/202310/komeda_kishimen_toripaitansyouga.jpg" data-lightbox="202310-3"><img src="/media/sinseihin/202310/komeda_kishimen_toripaitansyouga.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                            </div>
+                            <div class="col d-flex align-items-center">
+                                <div> 
+                                    <p>  <font size="3">
+                                        商品名「鶏白湯きしめん」「生姜あんかけきしめん」
+                                        <br><br>◆採用品1　　 　　　　　　　　　　　　　　　
+                                        <br>鶏白湯スープベースDIN-9131
+                                        <br>生産工場	：	キサイフーズ第二工場 
+                                        <br>開発担当	：	キサイ開発室　藤崎CF 
+                                        <br><br>◆採用品2　　 　　　　　　　　　　　　　　　
+                                        <br>生姜あんかけきしめんつゆHIR-8021
+                                        <br>クリームテイスト・ジンジャーエキスNE配合‼
+                                        <br>生産工場	：	箕島第三工場 
+                                        <br>開発担当	：	箕島第二開発室　仲戸社員
+                                        <br>担当営業	：	名古屋支店　安原マネージャー 
+                                        <br><br>コメダ珈琲の和風喫茶「おかげ庵」にて2024年3月ごろまで販売予定です。
+                                        <br>是非ご賞味ください。
+                                        </font>
+                                    </p>
+                                </div>       
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">イズミ（ゆめタウン）</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202310/agri_aozoraninniku2.jpg" data-lightbox="202310-4"><img src="/media/sinseihin/202310/agri_aozoraninniku2.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    採用品：青昊にんにく
+                                    <br>青昊（あおぞら）にんにくは、岡山アグリフーズと岡山県の契約農家が丹精込めて栽培した岡山県産のにんにくです。
+                                    <br>「晴れの国おかやま」のイメージにあわせて「青昊」と名付けました。
+                                    <br>この度ゆめタウンに採用となり、店舗、期間限定で販売されます。是非お求めください！！
+                                    <br>販売先：丸倉青果㈱／㈱イズミ（ゆめタウン）
+                                    <br>販売期間：10月～11月
+                                    <br>販売エリア：ゆめタウン　以下13店舗でテスト販売
+                                    <br>（福山、蔵王、倉敷、平島、高梁、井原、久世、山陽、美作、邑久、丹波、津山、姫路）
+                                    <br>店頭価格：＠198円/個（税込214円/個）
+                                    <br>岡山アグリフーズのHPはこちら👇
+                                    <br>岡山アグリフーズ】青昊にんにく－岡山の美味しいにんにく<a href="http://www.okayama-agrifoods.co.jp/" target="_blank"><font size="3">HP </font></a>
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">ゴンチャ</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202310/gongcha_masalachaimilktea.png" data-lightbox="202310-5"><img src="/media/sinseihin/202310/gongcha_masalachaimilktea.png" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  
+                                    <font size="3">
+                                        ゴンチャの本格派チャイがリニューアルしました
+                                        <br><br>ティーの味わいにほんのりスパイスが香る個性豊かな味わいです
+                                        <br><br>ジンジャーエキスパウダーEを配合しています!
+                                        <br><br>10月5日よりレギュラーメニューとして販売中です
+                                        <br><br>採用品:チャイパツウツダーver.2　HIB-6292
+                                        <br><br>営業担当:東京野々村社員
+                                        <br><br>開発担当:第2開発粉体チーム
+                                        
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202310/gongcha_yakiimomilktea.png" data-lightbox="202310-5"><img src="/media/sinseihin/202310/gongcha_yakiimomilktea.png" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  
+                                    <font size="3">
+                                        『焼き芋ごくりミルクティー(ICED/HOT)ンフローズンティー』
+                                        <br>採用品		①C.4230350焼き芋ソース(GC)A-263
+                                        <br>　　 　②C.4573630焼き芋クランチ(GC)HIX-7476
+                                        <br>痕販売価	格焼き芋ごくりミルクティー(ICED)610円(税込み)
+                                        <br>焼き芋ごくりミルクティー(HOT)610円(税込み)
+                                        <br>焼き芋ごくりフローズンティー630円(税込み)
+                                        <br>恨販売店	舗国内ゴンチャ全店
+                                        <br>発売日		2023年10月5日(木)2023年11月12日(日)
+                                        <br>お近くの頁茶を見掛けた際にはぜひご賞味ください
+                                        <br>営業担当:東京本社野々村社員
+                                        <br>開発担当:①第一開発室東京チーム
+                                        <br>　　　　 ②第一開発室キャラメリゼチーム
+                                        <br>製造工場:[焼き茸ソース]タヌマフーズ
+                                        <br>[焼き芋クランチ]キサイフーズ工業
+                                        <br>[焼き茸クランチパック]リコス手城工場
+                                        
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">シャトレーゼ</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202310/dessert_monakatart.png" data-lightbox="202310-6"><img src="/media/sinseihin/202310/dessert_monakatart.png" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  
+                                    <font size="3">
+                                        (㈱シャトレーゼ「DESSERTモナカのタルト4個入」
+                                        <br><br>●採用品	c:4233850アップルソースB-185
+                                        <br><br>●販売単価	550円
+                                        <br><br>●発売日	2023年10月20日～
+                                        <br><br>●開発担当	第一開発室今野MG、増田社員
+                                        <br><br>●業担当　	東京佐藤MG、後藤
+
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202310/chococaramel_butterball.png" data-lightbox="202310-6"><img src="/media/sinseihin/202310/chococaramel_butterball.png" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  
+                                    <font size="3">
+                                        ㈱シャトレーゼ
+                                        <br><br> 「デザートショコラボールキャラメルバター」
+                                        <br><br>●採用品	c:4231710生キャラメルペーストNO.3114A
+                                        <br><br>●販売単価	370円
+                                        <br><br>●発売日	2023年10月1日～
+                                        <br><br>●開発担当	第一開発室今野MG、平川社員
+                                        <br><br>●営業担当	東京佐藤MG、後藤
+
+                                        
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">スシロー</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202310/sushirokohaku_sijimiramen.jpg" data-lightbox="202310-7"><img src="/media/sinseihin/202310/sushirokohaku_sijimiramen.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    名店避修のラーメンがスシローに登場!
+                                    <br>海外のグルメガイドでも称賛され、行列が絶えない東京の超人気店『宍道湖しじみ中華蕎麦琥珀』の監修の『しじみ塩ラーメン』と『しじみ醤油ラーメン』がスシローで登場!
+                                    <br>海外のグルメガイドでも称賛された、ラーメンの激戦区東京鎌田エリアの本店をはじめ、池袋や福岡にも店を構える超人気店『宍道湖しじみ中華蕎麦琥珀』。
+                                    <br>“食べログ百名店”にも選出され、看板商品である『宍道湖しじみ中華蕎麦(塩)』と『地鶏としじみの中華蕎麦(醤油)』は、島根県産の大和しじみなどこだわりの国産原料を使用した、
+                                    <br>力強く繊細で上品な味わいがお楽しみいただける渾身の一杯です。
+                                    <br>の監修の『しじみ塩ラーメン』と『しじみ醤油ラーメン』がスシローで登場!
+                                    <br>『しじみ入り貝塩ラーメンDIN-8843』 
+                                    <br>『しじみ人り鶏醤油ラーメンDIN-8845』
+                                    <br>雑色の名店「琥珀」&食ペログ　監修　期間限定でW採用となりました
+                                    <br>自社使用原料	だしノートこんぶ日高01、ナチュラルレッドR-661、
+                                    <br>                黒みる貝エキスHIE-3890、ホタテエキスISE-7823
+                                    <br>本品製造にあたり、箕島第3開発、東京営業、各工場にご協力頂きました、誠に有難うございました。
+                                    <br>全国のメシローにて販売申是非ご叶味ください!
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">ゼンショーホールディングス</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202310/hokkaido_nikumisotukemen.jpg" data-lightbox="202310-8"><img src="/media/sinseihin/202310/hokkaido_nikumisotukemen.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    ゼンショーホールディングス　北海道らぁめん伝丸・北海道らーめん壱鵠堂
+                                    <br><br>■採用品 	：	味噌つけ麺のたれ2023.9 
+                                    <br>■開発担当	：	東京開発　平山 
+                                    <br>■営業担当	：	東京　山本MG
+                                    <br>グランドメニュー　味噌肉つけ麺　880円　に使用
+                                    <a href="https://www.gmfoods.co.jp/menu/" target="_blank"><font size="3">HP </font></a>                          
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">バロー</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202310/milkchococarame_sconel.png" data-lightbox="202310-9"><img src="/media/sinseihin/202310/milkchococarame_sconel.png" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    ミルクチョコとキャラメルのスコーン
+                                    <br>中部地方を拠点にスーパーマーケットを舗展開する株式会社ベバローに
+                                    <br>生地混ぜ込みとしてキャラメルベペーストNO.666Aを採用いただきました。
+                                    <br>商品名:ミルクチョコとキャラメルのスコーン
+                                    <br>特徴:キャラメル風味の生地に、ミルクチョコを練り込んだがスコーン。
+                                    <br>サクッとした食感に、キャラメルとミルクチョコのやわらかい甘みが口の中に広
+                                    <br>がります。
+                                    <br>ミニサイズなのでお子さまのおやつやティータイムにもおすすめです。
+                                    <br>スーパーマーケットバローのベーカリ店「北欧倶楽部」にて販売中です。
+                                    <br>売れ行きに応じて販売時期延長とのことですので、機会おありましたらぜひご賞味ください!
+                                    <br>【ユーザー】ュユニオン商事帳a/c中部フーズ帳(北欧倶楽部)
+                                    <br>【採用商品】キャラメルベペベーストNO.666A
+                                    <br>【営業担当者】名古屋支店米村主任
+                                    <br>【開発担当者】第一開発名古屋チーム
+                                        
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">プレスバターサンド（BAKE）</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202310/noukou_shrimpbisque.png" data-lightbox="202310-10"><img src="/media/sinseihin/202310/noukou_shrimpbisque.png" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    8年振りにリニューアルしたじっくりコトコトシリースの濃厚海老のビスクに採用いたださましだ!
+                                    <br><br>採用品:甘エビ頭パウツダーHID-6494
+                                    <br><br>営業担当:名古屋山田MG
+                                    <br><br>開発担当:第2開発粉体チーム
+                                    (宮島M6、加藤係長、藤島杜員、金行杜員)
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">マルサンアイ</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202310/almondtantan_nabesoup.jpg" data-lightbox="202310-11"><img src="/media/sinseihin/202310/almondtantan_nabesoup.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    商品名「【秋冬限定】アーモンド担々鍋スープ 720g」
+
+                                    <br><br>〇採用品
+                                    <br>　・冷蔵チキンエキスNR-4668
+                                    
+                                    <br>香り高いアーモンドベースにチキンのうまみを合わせ、2種類のごまのコクを効かせました。
+                                    <br>マルサン伝統のこうじみそに、豆板醤を加え、コク深くまろやかな辛味が食欲をそそります。
+                                    <br>〆はラーメンがおすすめです。
+                                    
+                                    
+                                    <br><br>営業担当	：	名古屋支店 
+                                    <br>開発担当	：	第3開発室　畜産チーム 
+                                    
+                                    
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">プレスバターサンド（BAKE）</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202310/noukou_shrimpbisque.png" data-lightbox="202310-12"><img src="/media/sinseihin/202310/noukou_shrimpbisque.png" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    8年振りにリニューアルしたじっくりコトコトシリースの濃厚海老のビスクに採用いたださましだ!
+                                    <br><br>採用品:甘エビ頭パウツダーHID-6494
+                                    <br><br>営業担当:名古屋山田MG
+                                    <br><br>開発担当:第2開発粉体チーム
+                                    (宮島M6、加藤係長、藤島杜員、金行杜員)
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">ミニストップ</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202310/ministop_siroiharoharo.png" data-lightbox="202310-13"><img src="/media/sinseihin/202310/ministop_siroiharoharo.png" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    採用品:MS冷凍ミルクベースTA-4937
+                                    <br><br>使用社内原料:クリームデイスト
+                                    <br><br>製造工場:キサイ冷食ライン
+                                    <br><br>開発担当:東京開発高須主任、吉留主任
+                                    <br><br>営業担当:岩崎
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">モロゾフ</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202310/mzff_mtblnc_cheesecake.jpg" data-lightbox="202310-14"><img src="/media/sinseihin/202310/mzff_mtblnc_cheesecake.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    ■商品名
+                                    <br>「モンブランとレアチーズケーキ」<a href="https://www.morozoff.co.jp/products/cake/post_247/" target="_blank"><font size="3">HP </font></a> 
+                                    <br>■採用品
+                                    <br>・ラム酒風キャラメリゼ(CT)　HIX-5119
+                                    <br>■商品概要
+                                    <br>華やかにラム酒の香るキャラメリゼが食感のアクセントになった、
+                                    <br>贅沢な秋のチーズケーキです。
+                                    <br>■売り先
+                                    <br>モロゾフ㈱
+                                    <br>営業担当	：	大阪支店　　河村主任 
+                                    <br>開発担当	：	第2開発室　 キャラメリゼチーム
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">ロッテ</font></div>
+    <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+        <div style="padding: 15px;">         
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <td><a href="/media/sinseihin/202310/yukimid_shiroikoibito.jpg" data-lightbox="202310-15"><img src="/media/sinseihin/202310/yukimid_shiroikoibito.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                        <div> 
+                            <p>  
+                                <font size="3">
+                                    ロッテ
+                                    <br>商品名	：	ISHIYA監修 雪見だいふく×白い恋人
+                                    <br>採用製品	：	ホワイトチョコソースNo.3957
+                                    <br>営業担当	：	東京本社　神野係長
+                                    <br>開発担当	：	箕島1開発　小畠MG、今野MG、別所社員
+                                    <br>『白い恋人』と『雪見だいふく』が初コラボ！
+                                    <br>北海道土産として人気の、石屋製菓 白い恋人のホワイトチョコレートを使用したソースを、ラング・ド・シャの風味香るミルクアイスでコーディング。
+                                    <br>それをぷにぷに食感の茶色いおもちで包み込んでいます。
+                                    <br>11/13日より、全国のコンビニで期間限定発売します。是非ご賞味ください。
+                                </font>
+                            </p>
+                        </div>       
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <td><a href="/media/sinseihin/202310/yukimid_torokerunamachoco.png" data-lightbox="202310-15"><img src="/media/sinseihin/202310/yukimid_torokerunamachoco.png" width="400" height="400" border="2"  vspace='2'></a></td>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                        <div> 
+                            <p>  
+                                <font size="3">
+                                    ロッテ
+                                    <br>商品名	：	雪見だいふく　とろける生チョコレート
+                                    <br>採用製品	：	生チョコソースTA-4384
+                                    <br>営業担当	：	東京本社　神野係長
+                                    <br>開発担当	：	箕島1開発　今野MG、別所社員
+                                    <br>         東京開発　二井係長
+                                    <br>センターに生チョコレートが入ったバニラアイスを、弾力のあるおもちで包みました。
+                                    <br>センターの生チョコレートは、チョコ感をｕｐさせ、とろける食感に仕上げています。
+                                    <br>9月中旬より、全国のスーパー等で半年間の発売となります。
+                                    <br>是非、ご賞味ください。
+                                </font>
+                            </p>
+                        </div>       
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <td><a href="/media/sinseihin/202310/7_namachoco_icebar.jpg" data-lightbox="202310-15"><img src="/media/sinseihin/202310/7_namachoco_icebar.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                        <div> 
+                            <p>  
+                                <font size="3">
+                                    ロッテ
+                                    <br>商品名	：	セブン　生チョコバー
+                                    <br>採用製品	：	生チョコソースNo.3956
+                                    <br>営業担当	：	東京本社　神野係長
+                                    <br>開発担当	：	箕島1開発　今野MG、別所社員
+                                    <br>アイス、生チョコ、2つのチョココーチングの4層仕立てのチョコレートバーです。
+                                    <br>チョコアイスを生チョコとチョコレートでコーティングし、先端に生チョコが入った、贅沢で濃厚な味わいを堪能できます。
+                                    <br>10月17日より、全国のセブンイレブンで期間限定発売します。是非ご賞味ください。
+                                </font>
+                            </p>
+                        </div>       
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <td><a href="/media/sinseihin/202310/sou_namachocoinvanilla2023.jpg" data-lightbox="202310-15"><img src="/media/sinseihin/202310/sou_namachocoinvanilla2023.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                        <div> 
+                            <p>  
+                                <font size="3">
+                                    ロッテ
+                                    <br>商品名	：	爽　生チョコinバニラ
+                                    <br>採用製品	：	生チョコソースTA-2146
+                                    <br>営業担当	：	東京本社　神野係長
+                                    <br>開発担当	：	箕島1開発　今野MG、別所社員
+                                    <br>バニラアイスに華やかなカカオが香る生チョコレートソースをミルフィーユ状に充填しました。
+                                    <br>どこを食べても、バニラと生チョコレートソースの味わいを満遍なく味わうことが出来ます。
+                                    <br>10月2日より、全国のスーパー等で半年発売されます。
+                                    <br>是非、ご賞味ください。  
+                                </font>
+                            </p>
+                        </div>       
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <td><a href="/media/sinseihin/202310/premiumghana_creamechocola.jpg" data-lightbox="202310-15"><img src="/media/sinseihin/202310/premiumghana_creamechocola.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                        <div> 
+                            <p>  
+                                <font size="3">
+                                    ロッテ
+                                    <br>商品名	：	プレミアムガーナ　クレームショコラ＜生キャラメル＞
+                                    <br>採用製品	：	キャラメルペーストNo.3089A、ローストシュガーNo.115K
+                                    <br>営業担当	：	神野係長
+                                    <br>開発担当	：	箕島1開発　清原係長、岡田主任  
+                                    <br>特許を取得した独自の「セミリキッドショコラ製法」によって実現した、
+                                    <br>生キャラメルと生クリーム入りのとろ～りとしたショコラソースを、濃厚なガーナミルクで包み込みました。
+                                    <br>生キャラメルと生クリームの濃厚な味わいととろけるくちどけのガーナミルクとの調和をお楽しみください。
+                                    <br>10月17日より、全国のコンビニ等で発売します。是非ご賞味ください。  
+                                </font>
+                            </p>
+                        </div>       
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <td><a href="/media/sinseihin/202310/premiumghana_kiyomiorange.jpg" data-lightbox="202310-15"><img src="/media/sinseihin/202310/premiumghana_kiyomiorange.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                        <div> 
+                            <p>  
+                                <font size="3">
+                                    ロッテ
+                                    <br>商品名　	：	プレミアムガーナ　フルーツショコラ＜清見オレンジ＞
+                                    <br>採用製品	：	清美ソースD-537
+                                    <br>営業担当	： 	神野係長
+                                    <br>開発担当	：	箕島1開発　今野MG、佐藤社員
+                                    <br>特許を取得した独自の「セミリキッドショコラ製法（※）」によって実現した、
+                                    <br>清見オレンジのみずみずしさが溢れ出すとろ～りとしたショコラソースを、
+                                    <br>濃厚なガーナミルクで包み込みました。
+                                    <br>果汁たっぷりでジューシーな果実感ととろけるくちどけのガーナミルクとの調和をお楽しみください。
+                                    <br>10月17日より、全国のコンビニ等で発売します。是非ご賞味ください。
+                                    
+                                </font>
+                            </p>
+                        </div>       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">湖池屋</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202310/strongpoteci_kotyumayo.png" data-lightbox="202310-16"><img src="/media/sinseihin/202310/strongpoteci_kotyumayo.png" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    ㈱湖池屋
+                                    <br><br>「ストロングポテトチップス甘辛コチュマヨ」
+                                    <br><br>●採用品_c:6818411コチジャンパウダーHID-7177
+                                    <br><br>●販売単価155円
+                                    <br><br>●発売日2023年10月23日～
+                                    <br><br>●開発担当第二開発室粉体チーム
+                                    <br><br>●営業担当東京後藤
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">蔵王高原農園</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202310/hotfruitginger_applelemon.jpg" data-lightbox="202310-17"><img src="/media/sinseihin/202310/hotfruitginger_applelemon.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    ☆商品名☆
+                                    <br>・	ホッとフルーツ　ジンジャー　アップル 
+                                    <br>・	ホッとフルーツ　ジンジャー　レモン
+                                    <br>☆採用品☆
+                                    <br>ジンジャーエキスパウダーG2
+                                    <br>蔵王高原農園の通販等で販売中！！
+                                    <br>■本体価格：1箱12本入り　5,184円
+                                    <br>営業担当	：	川内ＳＥ 
+                                    <br>開発担当	：	基盤研、健食チーム 
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">東洋ナッツ食品</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202310/onkansyougakurumi.jpg" data-lightbox="202310-18"><img src="/media/sinseihin/202310/onkansyougakurumi.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    ☆商品名☆
+                                    <br>温感しょうがくるみ
+                                    <br>〇確かな生姜の満足感
+                                    <br>　口いっぱいに広がる生姜の風味と、身体が熱くなるような辛味が実感できる、
+                                    <br>　本格志向の生姜菓子です。<a href="https://www.tons-cafe.jp/products/others/4901998021465.html/" target="_blank"><font size="3">HP </font></a>                             
+                                    <br>☆採用品☆
+                                    <br>ジンジャーエキスNE
+                                    <br>ユーザー：東洋ナッツ食品株式会社〔新規先〕
+                                    <br>　東洋ナッツ食品㈱は、1959年に創業をした日本で最初のナッツメーカーです。
+                                    <br>※食品開発展2021において、当社ブースに足を運んで頂いたことがきっかけで、
+                                    <br>　先方とやり取りを続け、採用に至っています。まだ関東地区では販売されておらず、
+                                    <br>　広島県では、ドラッグストア「ザグザグ」の下記店舗のみで発売されています。
+                                    <br>　・山手店　・神辺店　・向島店　・尾道高須店
+                                    <br>お見かけした際は、是非、御賞味下さい！
+                                    <br>　※ちなみに、山手店では、一般食品のナッツ類コーナーではなく、生姜ココアや生姜湯、
+                                    <br>　　ゆず茶など、温活イメージ食品のコーナーに配置されていました…
+                                    <br>営業担当	：	大阪支店 長谷川社員 
+                                    <br>開発担当	：	第二開発 健食チーム 
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">不二家</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202310/homepai_gingerbread.jpg" data-lightbox="202310-19"><img src="/media/sinseihin/202310/homepai_gingerbread.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    ☆商品名☆
+                                    <br>不二家 ホームパイバター＆ジンジャーブレッド
+                                    <br>限定のジンジャーブレッドと定番のバターのアソートホームパイ
+                                    <br>☆採用品☆
+                                    <br>ジンジャーエキスパウダーE
+                                    <br>期間限定のクリスマスの伝統菓子「ジンジャーブレッド」味にジンジャーエキスパウダーEが採用！！
+                                    <br>■メーカー希望小売価格：500円
+                                    <br>営業担当	：	後藤社員 
+                                    <br>開発担当	：	基盤研、健食チーム 
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center" id="4-2">
+        <p>&nbsp;</p>
+        <hr>
+        <p style="background-color:#ff69b4">
+            <font  size="7" color = "black"><strong>2023年11月分</strong></font>
+        </p>
+    </div>
+    <hr>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">CO・OP</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202311/coop_yasaitankakehudon.jpg" data-lightbox="202311-1"><img src="/media/sinseihin/202311/coop_yasaitankakehudon.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    商品名「ＣＯ・ＯＰ　野菜たっぷりあんかけ細うどん」
+                                    <br>◆採用品　
+                                    <br>あんかけうどんつゆ27g(2連)
+                                    <br>ジンジャーエキスNE・ジンジャーエキスパウダーE配合‼
+                                    <br>かつおと煮干しの旨みに生姜の風味を隠し味に効かせました。
+                                    <br>とろみのあるつゆが細うどんとよく絡む冷凍タイプのうどんです。
+                                    <br>是非ご賞味ください。
+                                    <br>取り扱い地域：東海、関西・北陸、中国・四国、九州・沖縄
+                                    <br>（コープ商品の取り扱いは各地域の生協によって異なります。）
+                                    <br>営業担当 	：	福山営業所　田邊係長　廣森マネージャー 
+                                    <br>生産工場 	：	箕島第4工場ブレンド　日本リコス手城工場パック 
+                                    <br>開発担当 	：	第二開発室 高橋係長 
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">CoCo壱番屋</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202311/cocoich_horonikugo-kaicurry.png" data-lightbox="202311-2"><img src="/media/sinseihin/202311/cocoich_horonikugo-kaicurry.png" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    ホロ肉ドカンと豪快カレー
+                                    <br>11/6(月)からの数量限定（約500店舗限定販売）メニューで、
+                                    <br>フルーツシロップNO.850を使用いただいてます。                                  
+                                    <br>こだわりの“ホロホロの肉塊”
+                                    <br>真空加熱することでスプーンでほどけるほどホロホロ食感に仕上げた大きな豚肩ロース肉。
+                                    <br>こだわりの“シャリアピンソース”
+                                    <br>肉塊にたっぷりかけたガツンと香るにんにくとすりおろし玉ねぎのシャリアピンソース。
+                                    <br>販売店はHPで確認できます。<a href="https://www.ichibanya.co.jp/cp/nikukai2023/" target="_blank"><font size="3">HP </font></a>                                  
+                                    <br>ぜひご賞味ください。
+                                    <br>ユーザー	：	㈱トーカンa/c㈱壱番屋 
+                                    <br>採用商品	：	フルーツシロップNO.850 
+                                    <br>営業担当者	：	名古屋支店　安原副支店長 
+                                    <br>開発担当者	：	第一開発室　名古屋チーム 
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">nana's green tea</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202311/nanas_applepai_pafait.jpg" data-lightbox="202311-3"><img src="/media/sinseihin/202311/nanas_applepai_pafait.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    <br>■商品名
+                                    <br>「アップルパイパフェ」<a href="https://www.nanasgreentea.com/products/seasonal-sweets_a" target="_blank"><font size="3">HP </font></a> 
+                                    <br>■採用品
+                                    <br>・ローストシュガーチップ(CT)　CIX-7808
+                                    <br>■商品概要
+                                    <br>まるでアップルパイのようなパフェ。
+                                    <br>たっぷりのりんごでクリスマスシーズンを楽しむ、nana’s green teaの特別なスイーツです。
+                                    <br>12/25までの販売です。
+
+                                    <br>■売り先
+                                    <br>タカナシ販売 a/c 七葉（nana’s　green　tea）
+                                    <br>営業担当者	：	東京本社　野々村社員
+                                    <br>開発担当者	：	第2開発室　キャラメリゼチーム
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">クリスピークリームドーナツ</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202311/kkd_komecokinako.png" data-lightbox="202311-4"><img src="/media/sinseihin/202311/kkd_komecokinako.png" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    採用品:c4234750黒密ソースNo.898
+                                    <br>販売先:クリスピー・クリーム・ドーナツ・ジャパン株式会社
+                                    <br>商品名:Komecoきなこ_(テイクアウト291円)
+                                    <br>販売予定期間は11/1(水)～11/21(火)です。
+                                    <br>是非ご賞味ください。
+                                    <br>開発担当:箕島第1開発室今野MG、増田社員
+                                    <br>製造工場・タヌマフーズ第2工場
+                                    <br>営業担当:東京営業野々村社員
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">ゴンチャ</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202311/gongcha_amaounoelmilktea.png" data-lightbox="202311-5"><img src="/media/sinseihin/202311/gongcha_amaounoelmilktea.png" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    『あまおうノエルミルクティー(ICED/HOT)プフローズンティー』
+                                    <br>採用品	①C.4231210あまおう苺ゼリー(GC)A-978
+                                    <br>　　　 ②C.4635130苺キャンディークラッシュ(GC)CIX-9183
+                                    <br>販売価格	あまおうノエルミルクティー(ICED)630円(税込み)
+                                    <br>あまおうノエルミルクティー(HOT)630円(税込み)
+                                    <br>あまおうノエルフローズンティー650円(税込み)
+                                    <br>販売店舗	国内ゴンチャ全店
+                                    <br>発売日		2023年11月16日(木)2023年12月25日(月)
+                                    <br>お近くの貢茶を見掛けた際にはぜひご賞味ください
+                                    <br>営業担当:東京本社野々村社員
+                                    <br>開発担当:①第一開発室東京チーム
+                                    <br>　　　　 ②第二開発室キャラメリゼチーム
+                                    <br>製造工場:[あまおう苺ゼリー]箕島第五工場
+                                    <br>[苺キャンディークラッシュ]キサイフーズ工業
+                                    <br>[苺キャンディークラッシュパック]リコス手城工場
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">チャンピオンカレー</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202311/champion_whitecurry.png" data-lightbox="202311-6"><img src="/media/sinseihin/202311/champion_whitecurry.png" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    【販売場所】全16店舗
+                                    <br>・石川県8店舗)・野々市本店、県庁前店、玉魚店、高析店、堤内店、辰口店、小松店、加賀店
+                                    <br>・富山県2店舗)富山店、eタウッン店
+                                    <br>・社井県(1店舗):北四ツ計店
+                                    <br>・北海道(1店舗):札幌白石店
+                                    <br>・長野県(1店舗):長野東和田店
+                                    <br>・京都府(1店舗):百亡選店
+                                    <br>・兵庫県(1店舗):神戸西店
+                                    <br>・福岡県(1店舗):博多駅地下街店
+                                    <br>※店舗により1日の食数が数量限定となる場合もございます.
+                                    <br>《およそ1か月程度の販売を予定しております》
+                                    <br>※在庫がなくなり次第販売終了となります。
+                                    <br>【ユーザー】チャンピオンカレー
+                                    <br>【採用製品】ホワイトソースDIN-9169
+                                    <br>【販売開始】11月6日(月)
+                                    <br>【販売価格】980円
+                                    <br>【営業担当者】東京本社山本MG
+                                    <br>【開発担当者】水田CF
+                                    <br>【製造工場】キサイフーズ工業偶冷食ライン
+                                    <br>なかなか近くに行かれることは無いと思いますが、
+                                    <br>胃袋に余裕がございましたら是非ご賞味ください。
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">ドトールコーヒーショップ</font></div>
+    <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+        <div style="padding: 15px;">         
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <td><a href="/media/sinseihin/202311/doutor_chocomilkcrape.jpg" data-lightbox="202311-7"><img src="/media/sinseihin/202311/doutor_chocomilkcrape.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                        <div> 
+                            <p>  <font size="3">
+                                ドトールコーヒーショップ
+                                <br>〈商品名〉                               
+                                <br>パリパリチョコミルクレープ～キャラメル＆チョコ～
+                                <br>〈採用製品〉
+                                <br>キャラメルペーストNO.3120A
+                                <br>ショコラクレープ生地に、パリパリ食感のチョコと、
+                                <br>やさしい甘みとほろ苦さをほのかに感じるキャラメル風味のホイップクリームをサンドしました。
+                                <br>11月9日（木）より発売です。是非ご賞味ください。
+                                <br>〈担当営業〉
+                                <br>東京本社　　山本MG
+                                <br>〈開発担当〉
+                                <br>第一開発室　焙焼チーム   
+                                </font>
+                            </p>
+                        </div>       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">プロント</font></div>
+    <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+        <div style="padding: 15px;">         
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <td><a href="/media/sinseihin/202311/icebutterscotch_cafelatte.jpg" data-lightbox="202311-8"><img src="/media/sinseihin/202311/icebutterscotch_cafelatte.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                        <div> 
+                            <p>  <font size="3">
+                                ■商品名
+                                <br>「アイスバタースコッチカフェラテ」<a href="https://www.pronto.co.jp/topics/detail/20231115143018.html" target="_blank"><font size="3">HP </font></a> 
+                                <br>■採用品
+                                <br>・ローストシュガーチップCT100ｇ　CIX-7808　
+                                <br>■商品概要
+                                <br>トッピングのローストシュガーチップのアクセントが美味しさを引き立てる
+                                <br>コクのあるバタースコッチソースに、プロントオリジナルのエスプレッとミルクを
+                                <br>合わせた冬におすすめの1杯です。
+                                <br>■売り先
+                                <br>日本アクセスa/cプロントコーポレーション（カフェ PRONTO）
+                                <br>営業担当者	：	東京本社　岩﨑主任
+                                <br>開発担当者	：	第2開発室　キャラメリゼチーム
+                                </font>
+                            </p>
+                        </div>       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">ミスタードーナツ</font></div>
+    <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+        <div style="padding: 15px;">         
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <td><a href="/media/sinseihin/202311/misdo_monsterballring.png" data-lightbox="202311-9"><img src="/media/sinseihin/202311/misdo_monsterballring.png" width="400" height="400" border="2"  vspace='2'></a></td>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                        <div> 
+                            <p>  <font size="3">
+                                <br>「モンスターボール」をドーナツで再現!
+                                <br>ふんわり食感のシュー生地にストロベリーチョコとホワイトチョコをコーティングして.、甘酸っぱいストロベリーシュガーをトッピングしました。
+                                <br>11月8日(水)より全国のミスタードーナツで販売されます!
+                                <br>採用品:ストロペベリーシュガー頸粒HIG-7972
+                                <br>営業担当:大阪斉藤MG
+                                <br>開発担当:第2開発粉体チーム
+                                </font>
+                            </p>
+                        </div>       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">ロッテ</font></div>
+    <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+        <div style="padding: 15px;">         
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <td><a href="/media/sinseihin/202311/coolish_wnamachocodark.jpg" data-lightbox="202311-11"><img src="/media/sinseihin/202311/coolish_wnamachocodark.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                        <div> 
+                            <p>  
+                                <font size="3">
+                                    ロッテ
+                                    <br>商品名	：	クーリッシュ ダブル生チョコDARK
+                                    <br>採用製品	：	生チョコソースNo.3887、
+                                    <br>生チョコソースHA-8416
+                                    <br>営業担当	：	東京本社　神野係長
+                                    <br>開発担当	：	箕島1開発　今野MG、別所社員
+                                    <br>「高級チョコレート店が出すような、チョコレートにこだわったクーリッシュ」が誕生しました。
+                                    <br>エクアドル産カカオ豆を使用した生チョコレートとガーナ産カカオ豆を使用した生チョコレートをダブルで配合した、DARKなチョコレートアイスです。
+                                    <br>頑張った一日のご褒美に、濃厚生チョコが楽しめる“大人の飲むアイスイーツ”をお楽しみください。
+                                    <br>12/5より全国のコンビニ等で発売します。
+                                    <br>是非、ご賞味ください。
+                                </font>
+                            </p>
+                        </div>       
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <td><a href="/media/sinseihin/202311/7pnoko_browniesand.jpg" data-lightbox="202311-10"><img src="/media/sinseihin/202311/7pnoko_browniesand.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                        <div> 
+                            <p>  
+                                <font size="3">
+                                    ロッテ
+                                    <br>商品名	：	セブンプレミアム　濃厚ブラウニーサンド
+                                    <br>採用製品	：	生チョコソースNo.3887
+                                    <br>営業担当	：	東京本社　神野係長
+                                    <br>開発担当	：	箕島1開発　今野MG、別所社員
+                                    <br>カカオにこだわったブラウニーとチョコレートアイスを使用した、チョコづくしのサンドアイスです。
+                                    <br>とろっと生チョコソース入りで、最初から最後までチョコレートの味わいが楽しめます。
+                                    <br>11月14日（火）より、全国のセブンイレブンで発売されます。是非ご賞味ください。
+                                </font>
+                            </p>
+                        </div>       
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <td><a href="/media/sinseihin/202311/sou_mukashi_fruitsaulait.jpg" data-lightbox="202311-10"><img src="/media/sinseihin/202311/sou_mukashi_fruitsaulait.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                        <div> 
+                            <p>  
+                                <font size="3">
+                                    ロッテ
+                                    <br>商品名	：	爽　昔ながらのフルーツオレ
+                                    <br>採用製品	：	ミックスフルーツソースNo.935
+                                    <br>営業担当	：	東京本社　神野係長
+                                    <br>開発担当	：	箕島1開発　今野MG、佐藤純社員
+                                    <br>フルーツオレをイメージしたアイスの部分には、4種類のフルーツ果汁を使用。
+                                    <br>さらに5種類のフルーツ果汁を使用した、特製のとろけるフルーツソースをミルフィーユ状に充填することで、
+                                    <br>どこを食べても昔懐かしいフルーツ感のあるフルーツオレの味わいに仕上げています。
+                                    <br>11月6日より、全国のコンビニ等で発売します。是非ご賞味ください。
+                                    
+                                </font>
+                            </p>
+                        </div>       
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </div>
+    <br>
+
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">ロッテリア</font></div>
+    <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+        <div style="padding: 15px;">         
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <td><a href="/media/sinseihin/202311/coop_yasaitankakehudon.jpg" data-lightbox="202311-11"><img src="/media/sinseihin/202311/coop_yasaitankakehudon.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                        <div> 
+                            <p>  
+                                <font size="3">
+                                    商品名「ＣＯ・ＯＰ　野菜たっぷりあんかけ細うどん」
+
+                                    <br>◆採用品　
+                                    <br>あんかけうどんつゆ27g(2連)
+                                    <br>ジンジャーエキスNE・ジンジャーエキスパウダーE配合‼
+                                    
+                                    <br>かつおと煮干しの旨みに生姜の風味を隠し味に効かせました。
+                                    <br>とろみのあるつゆが細うどんとよく絡む冷凍タイプのうどんです。
+                                    <br>是非ご賞味ください。
+                                    
+                                    <br>取り扱い地域：東海、関西・北陸、中国・四国、九州・沖縄
+                                    <br>（コープ商品の取り扱いは各地域の生協によって異なります。）
+                                    
+                                    
+                                    <br>営業担当 	：	福山営業所　田邊係長　廣森マネージャー 
+                                    <br>生産工場 	：	箕島第4工場ブレンド　日本リコス手城工場パック 
+                                    <br>開発担当 	：	第二開発室 高橋係長 
+                                    
+                                    
+                                </font>
+                            </p>
+                        </div>       
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </div>
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">井村屋</font></div>
+    <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+        <div style="padding: 15px;">         
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <td><a href="/media/sinseihin/202311/hitokuti_daigakuimoice.png" data-lightbox="202311-12"><img src="/media/sinseihin/202311/hitokuti_daigakuimoice.png" width="400" height="400" border="2"  vspace='2'></a></td>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                        <div> 
+                            <p>  
+                                <font size="3">
+                                    井村屋ひとくち大学芋アイス
+                                    <br>大学学を再現したひとくちアイス。
+                                    <br>鳴門金時と紅はるかの2種類の芋を楽しめます。
+                                    <br>紅はるかアイス×黒ごま入りの芋風味チョココーチング、
+                                    <br>鳴門金時アイス×金ごま入りの芋風味チョココーチングの組み合わせで、
+                                    <br>それぞれ中に採用品の蜜ソースが入っています。
+                                    <br>ぜひご賞味ください。
+                                    
+                                    <br>【標準小売】235円(税込
+                                    <br>【販売場所】全国のLAWSON
+                                    <br>【ユーザー】井村屋株式会社
+                                    <br>【新規採用】蜜ソースー175
+                                    <br>【開発担当者】第1開発名古屋チーム
+                                    <br>【営業担当者】名古屋支店西野係長
+                                    
+                                </font>
+                            </p>
+                        </div>       
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <td><a href="/media/sinseihin/202311/beniimo_montblancice.png" data-lightbox="202311-12"><img src="/media/sinseihin/202311/beniimo_montblancice.png" width="400" height="400" border="2"  vspace='2'></a></td>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                        <div> 
+                            <p>  
+                                <font size="3">
+                                    紅芋のモンブラン
+                                    <br>紅芋のモンブランケーキをイメージしたカップアイスです。
+                                    <br>紅芋あんを巻き上げ、中心部に紅芋ソースを入れた紅芋アイス、
+                                    <br>底面にクッキークランチを敷いた紅芋を存分に味わえます。
+                                    <br>紅芋は沖縄県産ちゅら恋紅を使用しました。
+                                    <br>【標準小売】321円(税込)
+                                    <br>【販売場所】セブンイレブン
+                                    <br>【ユーザー】井村屋株式会社
+                                    <br>【新規採用】(c:4229410)紅芋ソースA-248
+                                    <br>【開発担当者】第1開発名古屋チーム
+                                    <br>【営業担当者】名古屋支店西野係長
+                                </font>
+                            </p>
+                        </div>       
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <td><a href="/media/sinseihin/202311/shalili_calelatteice.png" data-lightbox="202311-12"><img src="/media/sinseihin/202311/shalili_calelatteice.png" width="400" height="400" border="2"  vspace='2'></a></td>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                        <div> 
+                            <p>  
+                                <font size="3">
+                                    SHALILIカフェエラテアイス
+                                    <br>微細永入りのなめらかで濃厚なカフェラテアイスに、
+                                    <br>アイスの中からとろりとあふれるエスプレッソソース、天面にミルクソース、
+                                    <br>キャンディチップとローストアーモンドダイスのトッピングを贅沢に組み合わせ、
+                                    <br>最初から最後まで味と食感の変化が楽しめるように仕上げました。
+                                    <br>濃厚な味わいと微細氷のすっきりとした後味が秋冬にぴったりな、
+                                    <br>紙沢な味わいをぜひお楽しみください。
+                                    <br>【標準小売】194円(税込)
+                                    <br>【販売場所】全国の量販店・スーパー、コンビニエンスストア
+                                    <br>【ユーザー】井村屋株式会社
+                                    <br>【新規採用】エスプレッソソースA-250、ローストシュガーチップHIX-2155
+                                    <br>【開発担当者】第1開発名古屋チーム、第2開発キャラメリゼチーム
+                                    <br>【営業担当者】名古屋支店”西野係長
+                                </font>
+                            </p>
+                        </div>       
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </div>
+    <br>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">無印良品</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202311/coop_yasaitankakehudon.jpg" data-lightbox="202311-13"><img src="/media/sinseihin/202311/coop_yasaitankakehudon.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    商品名「ＣＯ・ＯＰ　野菜たっぷりあんかけ細うどん」
+                                    <br>◆採用品　
+                                    <br>　あんかけうどんつゆ27g(2連)
+                                    <br>　ジンジャーエキスNE・ジンジャーエキスパウダーE配合‼
+                                    <br>かつおと煮干しの旨みに生姜の風味を隠し味に効かせました。
+                                    <br>とろみのあるつゆが細うどんとよく絡む冷凍タイプのうどんです。
+                                    <br>是非ご賞味ください。
+                                    <br>取り扱い地域：東海、関西・北陸、中国・四国、九州・沖縄
+                                    <br>（コープ商品の取り扱いは各地域の生協によって異なります。）
+                                    <br>営業担当 	：	福山営業所　田邊係長　廣森マネージャー 
+                                    <br>生産工場 	：	箕島第4工場ブレンド　日本リコス手城工場パック 
+                                    <br>開発担当 	：	第二開発室 高橋係長 
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div style="text-align: center" id="4-3">
+        <p>&nbsp;</p>
+        <hr>
+        <p style="background-color:#ff69b4">
+            <font  size="7" color = "black"><strong>2023年12月分</strong></font>
+        </p>
+    </div>
+    <hr>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">カフェドクリエ</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202312/italycheese_cacioepepe.png" data-lightbox="202312-1"><img src="/media/sinseihin/202312/italycheese_cacioepepe.png" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    新製品のご紹介
+                                    <br>カフェドクリエ
+                                    <br>「イタリア産チーズ本格カチョエペペ～ペコリーノチーズ使用一」
+                                    <br>12月6日(水)一期間限定のメニューです。
+                                    <br>寒い冬にぜひ食べていただきたい、チーズが主役のパスタです。
+                                    <br>■採用品:(C:7669620)多+個食カチョエペペソースDIN-5636
+                                    <br>※使用社内原料:だし7-ト真昆布01、が-ラ外似AIO-3640、
+                                    <br>バターフレーバーFM-3058、ローストミートオイル(SF)FM-2435
+                                    <br>■開発担当:キサイ開発岡田MG島崎様
+                                    <br>ぜひご賞味ください。
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">ダイナック</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202312/dynac_ebidashimonjya.png" data-lightbox="202312-2"><img src="/media/sinseihin/202312/dynac_ebidashimonjya.png" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    採用品:(C:4682220)えび出汁ペースDIN-8897
+                                    <br>★通年メニュー採用★
+                                    <br>熱い鉄板から香る海老出汁の香りが食欲をそそります。
+                                    <br>※使用社内原料:ローストエビパウダーjIDO-1750、カロチンNa810、ナチュラルレッドR-661
+                                    <br>男生産ライン:キサイフーズ第ニニ工場冷食ライン
+                                    <br>営業担当者:東京本社山本MG
+                                    <br>開発担当者:キサイ開発藤崎、秋山
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">阿藻珍味</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202312/amoxnakayama_onomichiramen1.png" data-lightbox="202312-3"><img src="/media/sinseihin/202312/amoxnakayama_onomichiramen1.png" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    商品名「尾道ラーメン　濃コク醤油味」
+                                    <br>◆採用品　
+                                    <br>　牛骨尾道ラーメンスープタレ　HIB-8216
+                                    <br>　クックミートプラス配合‼
+                                    <br>阿藻珍味となかやま牧場のコラボ商品です。
+                                    <br>スーパーハートで販売中です。
+                                    <br>是非ご賞味ください。
+                                    <br>1袋980円（4食入り）
+                                    <br>営業担当 	：	福山営業所　廣森マネージャー 
+                                    <br>生産工場 	：	箕島第4工場ブレンド　日本リコス手城工場パック 
+                                    <br>開発担当 	：	第二開発室 液体チーム 烏山社員
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div  style="display: inline-block; background: #fcd330; padding: 3px 10px; color: #000000;"><font size="5">一の湯</font></div>
+        <div style="padding: 10px; border: 10px ridge #fcd330; background: #ffffff;">
+            <div style="padding: 15px;">         
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <td><a href="/media/sinseihin/202312/ichinoyu_corndressing.jpg" data-lightbox="202312-4"><img src="/media/sinseihin/202312/ichinoyu_corndressing.jpg" width="400" height="400" border="2"  vspace='2'></a></td>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <div> 
+                                <p>  <font size="3">
+                                    ◇一の湯◇
+
+                                    <br>＜新規採用品＞
+                                    <br>・とうもろこしドレッシングJIE-1999
+                                    
+                                    <br>キサイのΣを活用したドレッシング第一号です。
+                                    <br>プラントベースの提案プレゼンした中で、目新しさとベジタリアン向けの他、
+                                    <br>一般の方にもおいしく食べていただけると評価いただき、採用となりました。
+                                    
+                                    <br>クリームテイスト配合。
+                                    <br>乳成分なしでクリーミーなドレッシングに仕上げました。
+                                    <br>朝食のせいろ蒸しに合わせていただいております。
+                                    <br>ぜひご賞味ください！                                   
+                                    </font>
+                                </p>
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<br>  
+<br>
+</body>
+<div style="text-align: center">
+    <p style="background-color:#fce9ea">
+        <font  size="6" color = "red">随時更新中です。</font>
+ </div>
+{% endblock %}

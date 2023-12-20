@@ -1,0 +1,166 @@
+
+<div class="fixed-top">
+    {% load accounts_user %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <h3 style="color:white">池田糖化工業㈱イントラネット　　　</h3>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <button type="button" onclick="history.back()">(☜)前のページへ戻る</button>
+                    <li class="nav-item dropdown">
+                        {% if request.user.is_authenticated %}
+                            <a class="nav-link dropdown-toggle active"  href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            　　　会社紹介
+                        {% else %}
+                            <a class="nav-link dropdown-toggle disabled" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            　　　会社紹介
+
+                        {% endif %}
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href={% url "nippo-1-1" %}>1.　会社紹介</a></li>
+                            <li><a class="dropdown-item" href={% url "nippo-1-2" %}>2.　マツダスタジアム「池田糖化工業」看板！！</a></li>
+                            <li><a class="dropdown-item" href={% url "nippo-1-3" %}>3.　電話番号表</a></li>  
+                            <li><a class="dropdown-item" href={% url "nippo-1-3" %}#1-3-1>&ensp;　3-1.　各支店・事業所　短縮電話番号一覧</a></li>
+                            <li><a class="dropdown-item" href={% url "nippo-1-3" %}#1-3-2>&ensp;　3-2.　携帯電話番号短縮一覧</a></li>
+                            <li><a class="dropdown-item" href={% url "nippo-1-3" %}#1-3-3>&ensp;　3-3.　箕島工場　内線番号表</a></li>
+                            <li><a class="dropdown-item" href={% url "nippo-1-3" %}#1-3-4>&ensp;　3-4.　箕島北工場　内線番号表</a></li>
+                            <li><a class="dropdown-item" href={% url "nippo-1-3" %}#1-3-5>&ensp;　3-5.　工場事務所　内線番号表</a></li>
+                            <li><a class="dropdown-item" href={% url "nippo-1-3" %}#1-3-6>&ensp;　3-6.　食研　内線番号表</a></li>
+                            <li><a class="dropdown-item" href={% url "nippo-1-3" %}#1-3-7>&ensp;　3-7.　アイティケイ株式会社・池田配送センター　問合せ　電話番号表</a></li>
+                            <li><a class="dropdown-item" href={% url "nippo-1-3" %}#1-3-8>&ensp;　3-8.　ITS対応窓口表</a></li>
+                            <li><a class="dropdown-item" href={% url "nippo-1-3" %}#1-3-9>&ensp;　3-9.　リコス手城　内線番号表
+                            <li><a class="dropdown-item" href={% url "nippo-1-4" %}>4.　住所録</a></li>     
+                            <li><a class="dropdown-item" href={% url "nippo-1-5" %}>5.　mailアドレス一覧表</a></li> 
+                            <li><a class="dropdown-item" href={% url "nippo-1-5" %}#1-5-1>&ensp;　5-1.　携帯電話メールアドレス一覧表</a></li>
+                            <li><a class="dropdown-item" href={% url "nippo-1-5" %}#1-5-2>&ensp;　5-2.　PCメールアドレス一覧表</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        {% if request.user.is_authenticated %}
+                            <a class="nav-link dropdown-toggle active"  href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            　　お知らせ
+                        {% else %}
+                            <a class="nav-link dropdown-toggle disabled" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            　　お知らせ
+                        {% endif %}
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href={% url "nippo-2-1" %}>6.　ICT情報セキュリティポリシー</a></li>
+                            <li><a class="dropdown-item" href={% url "nippo-2-2" %}>7.　ストップ！職場のハラスメント ～「職場のほっとテレホン」開設～</a></li>
+                            <li><a class="dropdown-item" href={% url "nippo-2-3" %}>8.　伝票処理のためのルール等</a></li>
+                        </ul>   
+                    </li>  
+
+                    <body>
+                        &ensp;&ensp;&ensp;&ensp;&ensp;
+                    </body>
+
+                    <a href={% url "nippo-0" %} class="btn btn-warning">ホーム画面へ</a>
+
+                    <li class="nav-item dropdown">
+                        {% if request.user.is_authenticated %}
+                            <a class="nav-link dropdown-toggle active"  href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            　　○○さんてどんな顔
+                        {% else %}
+                            <a class="nav-link dropdown-toggle disabled" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            　　○○さんてどんな顔
+                        {% endif %}
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href={% url  "nippo-3"  %}    >&ensp;9.　○○さんてどんな顔</a></li>
+                            <li><a class="dropdown-item" href={% url  "nippo-3"  %}    >&ensp;　9- 1.　全社</a></li>
+                            <li><a class="dropdown-item" href={% url  "nippo-3"  %}#3-2>&ensp;　9- 2.　池田糖化工業㈱</a></li>
+                            <li><a class="dropdown-item" href={% url  "nippo-3"  %}#3-3>&ensp;　9- 3.　池田食研㈱</a></li>                     
+                            <li><a class="dropdown-item" href={% url  "nippo-3"  %}#3-4>&ensp;　9- 4.　日本リコス㈱</a></li>
+                            <li><a class="dropdown-item" href={% url  "nippo-3"  %}#3-5>&ensp;　9- 5.　アイティケイ㈱</a></li>
+                            <li><a class="dropdown-item" href={% url  "nippo-3"  %}#3-6>&ensp;　9- 6.　アイティエス㈱</a></li>
+                            <li><a class="dropdown-item" href={% url  "nippo-3"  %}#3-7>&ensp;　9- 7.　池田インターナショナル㈱</a></li>
+                            <li><a class="dropdown-item" href={% url  "nippo-3"  %}#3-8>&ensp;　9- 8.　キサイフーズ工業㈱</a></li>
+                            <li><a class="dropdown-item" href={% url  "nippo-3"  %}#3-9>&ensp;　9- 9.　タヌマフーズ㈱</a></li>
+                            <li><a class="dropdown-item" href={% url  "nippo-3"  %}#3-10>　 9-10.　上越フーズ㈱</a></li>
+                            <li><a class="dropdown-item" href={% url  "nippo-3"  %}#3-11>　 9-11.　岡山アグリフーズ㈱</a></li>
+                            <li><a class="dropdown-item" href={% url  "nippo-3"  %}#3-12>　 9-12.　2023年度新入社員</a></li>
+                        </ul>
+                    </li>
+                        
+                    <li class="nav-item dropdown">
+                        {% if request.user.is_authenticated %}
+                            <a class="nav-link dropdown-toggle active"  href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            　　新製品情報
+                        {% else %}
+                            <a class="nav-link dropdown-toggle disabled" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            　　新製品情報
+                        {% endif %}
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href={% url  "nippo-4"  %}>10.　新製品情報</a></li>
+                            <li><a class="dropdown-item" href={% url  "nippo-4"  %}#4-1>　10-1.　2023年10月分</a></li>
+                            <li><a class="dropdown-item" href={% url  "nippo-4"  %}#4-2>　10-2.　2023年11月分</a></li>                     
+                            <li><a class="dropdown-item" href={% url  "nippo-4"  %}#4-3>　10-3.　2023年12月分</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        {% if request.user.is_authenticated %}
+                            <a class="nav-link dropdown-toggle active"  href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            　　休日予定表
+                        {% else %}
+                            <a class="nav-link dropdown-toggle disabled" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            　　休日予定表
+                        {% endif %}
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">&ensp;11.　休日予定表</a></li>
+                            <li><a class="dropdown-item" href="/media/kyuujitu/箕島_製造工場事務分析.pdf">&ensp;　11-1.　【箕島】製造、工場事務、食研_福山（分析）</a></li>
+                            <li><a class="dropdown-item" href="/media/kyuujitu/箕島_食研業務資材桜馬場ITS.pdf">&ensp;　11-2.　【箕島】食研_福山（分析以外）、業務・資材、桜馬場・ＩＴＳ</a></li>
+                            <li><a class="dropdown-item" href="/media/kyuujitu/東京本社.pdf">&ensp;　11-3.　東京本社</a></li>
+                            <li><a class="dropdown-item" href="/media/kyuujitu/名古屋.pdf">&ensp;　11-4.　名古屋</a></li>
+                            <li><a class="dropdown-item" href="/media/kyuujitu/sakuseichuu.pdf">&ensp;　11-5.　大阪</a></li>
+                            <li><a class="dropdown-item" href="/media/kyuujitu/sakuseichuu.pdf">&ensp;　11-6.　福山</a></li>
+                            <li><a class="dropdown-item" href="/media/kyuujitu/sakuseichuu.pdf">&ensp;　11-7.　広島</a></li>
+                            <li><a class="dropdown-item" href="/media/kyuujitu/sakuseichuu.pdf">&ensp;　11-8.　福岡・鹿児島</a></li>
+                            <li><a class="dropdown-item" href="/media/kyuujitu/上越.pdf">&ensp;　11-9.　上越</a></li>
+                            <li><a class="dropdown-item" href="/media/kyuujitu/ﾀﾇﾏ.pdf">　11-10.　タヌマ</a></li>
+                            <li><a class="dropdown-item" href="/media/kyuujitu/ｷｻｲ.pdf">　11-11.　キサイ</a></li>
+                            <li><a class="dropdown-item" href="/media/kyuujitu/ﾘｺｽ.pdf">　11-12.　リコス</a></li>
+                            <li><a class="dropdown-item" href="/media/kyuujitu/ﾘｺｽS.pdf">　11-13.　リコス(S精製)</a></li>
+                            <li><a class="dropdown-item" href="/media/kyuujitu/岡山アグリ.pdf">　11-14.　岡山アグリ</a></li>
+                            <li><a class="dropdown-item" href="/media/kyuujitu/安丘.pdf">　11-15.　安丘福華</a></li>
+                            <li><a class="dropdown-item" href="/media/kyuujitu/上海.pdf">　11-16.　上海分公司</a></li>
+              
+                        </ul>   
+                    </li>
+
+                    <body>
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    </body>
+
+                    <button type="button" onclick="history.forward()">次のページへ進む(☞)</button>
+                
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-light nav-item dropstart ">
+            <a class="nav-link dropdown-toggle text-light" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{ request.user|user_display }}
+            </a>
+            <ul class="dropdown-menu endposition" aria-labelledby="navbarDropdown">
+            {% if request.user.is_authenticated %}
+                <li><a class="dropdown-item" href="{% url 'profile-update' request.user.profile.pk %}">アカウント設定</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href={% url "account_logout" %}>ログアウト</a></li>
+            {% else %}
+                <li><a class="dropdown-item" href={% url "account_login" %}>ログイン</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href={% url "account_signup" %}>サインアップ</a></li>
+            {% endif %}
+            </ul>
+        </div>
+    </nav>
+</div>
+<hr>
+<hr>
+<hr>

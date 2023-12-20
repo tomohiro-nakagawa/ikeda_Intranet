@@ -1,0 +1,679 @@
+{% extends "base.html" %}
+{% block head_title %}伝票処理のためのルール等{% endblock %}
+
+{% block content %}
+    <div class="container" >
+        <h1 class="my-3" style="text-align:center">{% if not profile %}8.　伝票処理のためのルール等{% else %}{{profile.username}}の伝票処理のためのルール等{% endif %}</h1>
+        <hr>
+    </div>
+
+    <div style="text-align: center;">
+        <div style="display: inline-block; border: 4px double #0000ff; padding: 20px; text-align: left; width: 1200px; background: #ffffff">
+            <h2 style="text-align:centyer">伝票処理のためのルール等</h2>
+            <h5 style="text-align:right">2023年12月7日　　</h5>
+            <h5 style="text-align:right">ITS　　</h5>
+            <div class="container" >
+                <div class="p-3 ">
+                    <table class="table table-hover table-warning table-bordered border-dark table-sm     d-flex justify-content-center" >
+                        <tbody>
+                            <tr class="table-dark" >
+                                <th style="width: 250px"><div class="text-center">項目</div></th>
+                                <th style="width: 850px"><div class="text-center">文書（文書名をクリックしてください）</div></th>
+                                <th style="width: 100px"><div class="text-center">文書日付</div></th>
+                            </tr>
+
+                            <tr>
+                                <td valign="middle"><div class="text-center">伝票類保管ルール</div></td>
+                                <td><a href="/media/denpyo/伝票類の保存について（確定版）2016.4.11.pdf"><font size="4">伝票類の保存について（確定版）</font></a></td>
+                                <td valign="middle"><div class="text-center">2016/4/19</div></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="8" valign="middle"><div class="text-center">事務処理ルール</div></td>
+                                <td><a href="/media/denpyo/01.伝票区分における詰替処理について.pdf"><font size="4">伝票区分における詰替処理について</font></a></td>
+                                <td valign="middle"><div class="text-center">2009/9/30</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/02.運賃の計上について.pdf"><font size="4">運賃の計上について</font></a></td>
+                                <td valign="middle"><div class="text-center">2019/3/12</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/03.在庫移管予定入力での在庫場所コードについて.pdf"><font size="4">在庫移管予定入力での在庫場所コードについて</font></a></td>
+                                <td valign="middle"><div class="text-center">2009/9/30</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/04.外注加工料計上ルール及び入庫・払出区分.pdf"><font size="4">外注加工料計上ルール及び入庫・払出区分</font></a></td>
+                                <td valign="middle"><div class="text-center">2009/9/30</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/05.外注加工の処理パターン.pdf"><font size="4">外注加工の処理パターン</font></a></td>
+                                <td valign="middle"><div class="text-center">2009/9/30</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/06.取引先コードの諸口（99000.xx）の利用について.pdf"><font size="4">取引先コードの諸口（99000.xx）の利用について</font></a></td>
+                                <td valign="middle"><div class="text-center">2009/9/30</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/07.処方登録における基本ルール.pdf"><font size="4">処方登録における基本ルール</font></a></td>
+                                <td valign="middle"><div class="text-center">2009/9/30</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/08.酵素事業の伝票処理について.pdf"><font size="4">酵素事業の伝票処理について</font></a></td>
+                                <td valign="middle"><div class="text-center">2009/9/30</div></td>
+                            </tr>
+
+                            <tr>
+                                <td rowspan="10" valign="middle"><div class="text-center">物品関連ルール</div></td>
+                                <td><a href="/media/denpyo/rule17.pdf"><font size="4">物品コード設定基準</font></a></td>
+                                <td valign="middle"><div class="text-center">2009/6/30</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/10.物品終売連絡票運用一部改定.pdf"><font size="4">物品終売連絡票の運用一部改定について</font></a></td>
+                                <td valign="middle"><div class="text-center">2020/7/1</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/11.物品終売連絡票の記入について.pdf"><font size="4">物品終売連絡票の記入について</font></a></td>
+                                <td valign="middle"><div class="text-center">2013/4/4</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/rule13.pdf"><font size="4">物品コード採番ルール</font></a></td>
+                                <td valign="middle"><div class="text-center">2009/6/30</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/rule12.pdf"><font size="4">仕入原料の物品コードについて</font></a></td>
+                                <td valign="middle"><div class="text-center">2006/2/7</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/rule04.pdf"><font size="4">同じ品名で複数の物品コードを持たせることについて</font></a></td>
+                                <td valign="middle"><div class="text-center">2008/1/8</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/物品更新票の項目追加について.pdf"><font size="4">物品更新票の項目追加について</font></a></td>
+                                <td valign="middle"><div class="text-center">2011/4/1</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/物品更新票「新規登録」起票時の「原料区分」項目の記入について.pdf"><font size="4">物品更新票「新規登録」起票時の「原料区分」項目の記入について</font></a></td>
+                                <td valign="middle"><div class="text-center">2019/6/25</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/物品更新票の項目追加について20190322.pdf"><font size="4">物品更新票の項目追加について（消費税率）</font></a></td>
+                                <td valign="middle"><div class="text-center">2019/3/22</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/qcbun11.pdf"><font size="4">『物品更新票』に記入する”メーカー”の定義</font></a></td>
+                                <td valign="middle"><div class="text-center">2019/1/22</div></td>
+                            </tr>
+
+                            <tr>
+                                <td rowspan="5" valign="middle"><div class="text-center">更新票記入ルール</div></td>
+                                <td><a href="/media/denpyo/07.取引先・取引条件更新票記入時の注意事項.pdf"><font size="4">取引先・取引条件更新票記入時の注意事項</font></a></td>
+                                <td valign="middle"><div class="text-center">2016/10/18</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/08.取引先・取引条件更新票記入要領.pdf"><font size="4">取引先・取引条件更新票記入要領</font></a></td>
+                                <td valign="middle"><div class="text-center">2016/10/10</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/取引先更新票入力用の法人組織略称名表.pdf"><font size="4">取引先更新票入力用の法人組織略称名表</font></a></td>
+                                <td valign="middle"><div class="text-center">2019/6/24</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/02.物品更新票記入時の注意事項.pdf"><font size="4">物品更新票記入時の注意事項</font></a></td>
+                                <td valign="middle"><div class="text-center">2014/7/18</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/rule25.pdf"><font size="4">物品更新票記入要領</font></a></td>
+                                <td valign="middle"><div class="text-center">2009/7/1</div></td>
+                            </tr>
+
+                            <tr>
+                                <td rowspan="6" valign="middle"><div class="text-center">更新票入力ルール</div></td>
+                                <td><a href="/media/denpyo/取引先更新票入力方法マニュアル.pdf"><font size="4">取引先更新票入力方法マニュアル</font></a></td>
+                                <td valign="middle"><div class="text-center">2021/3/10</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/46.物品更新票入力マニュアル.pdf"><font size="4">物品更新票入力マニュアル</font></a></td>
+                                <td valign="middle"><div class="text-center">2022/7/21</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/システム基本更新票入力マニュアル.pdf"><font size="4">システム基本更新票入力マニュアル</font></a></td>
+                                <td valign="middle"><div class="text-center">2019/6/24</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/JIS銀行名ファイルメンテ.pdf"><font size="4">JIS銀行名ファイルメンテ</font></a></td>
+                                <td valign="middle"><div class="text-center">2010/6/21</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/振込銀行マスタマニュアル.pdf"><font size="4">振込銀行マスタマニュアル</font></a></td>
+                                <td valign="middle"><div class="text-center">2011/10/31</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/名称・補助簿・総勘定マスタマニュアル.pdf"><font size="4">名称・補助簿・総勘定マスタマニュアル</font></a></td>
+                                <td valign="middle"><div class="text-center">2011/11/11</div></td>
+                            </tr>
+
+                            <tr>
+                                <td rowspan="13" valign="middle"><div class="text-center">更新票<br>(池田)</div></td>
+                                <td><a href="/media/denpyo/物品更新票.pdf"><font size="4">物品更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2019/4/1</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/物品終売連絡票.pdf"><font size="4">物品終売連絡票</font></a></td>
+                                <td valign="middle"><div class="text-center">2020/7/1</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/取引先更新票.pdf"><font size="4">取引先更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2016/6/1</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/売上先取引条件更新票.pdf"><font size="4">売上先取引条件更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2023/7/1</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/仕入先取引条件更新票.pdf"><font size="4">仕入先取引条件更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2016/5/1</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/販売単価更新票.pdf"><font size="4"> 販売単価更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2016/5/1</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/仕入単価更新票.pdf"><font size="4">仕入単価更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2016/5/1</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/在庫移管先更新票.pdf"><font size="4"> 在庫移管先更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2009/5/29</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/システム基本更新票.pdf"><font size="4">システム基本更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2019/2/27</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/池田経費用取引条件更新票.pdf"><font size="4">池田経費用取引条件更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2018/4/12</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/池田名称マスタ更新票.pdf"><font size="4">池田名称マスタ更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2011/11/15</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/池田総勘定マスタ更新票.pdf"><font size="4">池田総勘定マスタ更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2011/11/16</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/全社共通補助簿マスタ更新票.pdf"><font size="4">(全社共通)補助簿マスタ更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2011/11/16</div></td>
+                            </tr>                         	
+                           
+                            <tr>
+                                <td rowspan="34" valign="middle"><div class="text-center">更新票<br>(関連会社)</div></td>
+                                <td><a href="/media/denpyo/キサイ物品更新票.pdf"><font size="4">キサイ物品更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2019/4/1</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/リコス物品更新票.pdf"><font size="4">リコス物品更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2019/4/1</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/上越物品更新票.pdf"><font size="4">上越物品更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2019/4/1</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/タヌマ物品更新票.pdf"><font size="4">タヌマ物品更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2019/4/1</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/ＩＤＩ物品更新票.pdf"><font size="4">IDI物品更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2019/4/1</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/キサイシステム基本更新票.pdf"><font size="4">キサイシステム基本更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2019/3/5</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/リコスシステム基本更新票.pdf"><font size="4">リコスシステム基本更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2019/3/5</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/上越システム基本更新票.pdf"><font size="4">上越システム基本更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2019/3/5</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/タヌマシステム基本更新票.pdf"><font size="4">タヌマシステム基本更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2019/3/5</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/ＩＤＩシステム基本更新票.pdf"><font size="4">IDIシステム基本更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2019/3/5</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/ＩＴＫシステム基本更新票.pdf"><font size="4">ITKシステム基本更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2019/3/5</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/リコス経費用取引条件更新票.pdf"><font size="4">リコス経費用取引条件更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2011/11/11</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/上越経費用取引条件更新票.pdf"><font size="4">上越経費用取引条件更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2021/6/17</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/タヌマ経費用取引条件更新票.pdf"><font size="4">タヌマ経費用取引条件更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2011/11/11</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/ＩＤＩ振込銀行マスタ更新票.pdf"><font size="4">IDI振込銀行マスタ更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2011/11/11</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/ＩＴＫ経費用取引条件更新票.pdf"><font size="4">ITK経費用取引条件更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2011/11/11</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/食研経費用取引条件更新票.pdf"><font size="4">食研経費用取引条件更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2011/11/11</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/キサイ名称マスタ更新票.pdf"><font size="4">キサイ名称マスタ更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2011/11/15</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/リコス名称マスタ更新票.pdf"><font size="4">リコス名称マスタ更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2011/11/15</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/上越名称マスタ更新票.pdf"><font size="4">上越名称マスタ更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2011/11/15</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/タヌマ名称マスタ更新票.pdf"><font size="4">タヌマ名称マスタ更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2011/11/15</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/ＩＤＩ名称マスタ更新票.pdf"><font size="4">IDI名称マスタ更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2011/11/15</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/池田名称マスタ更新票.pdf"><font size="4">ITK名称マスタ更新票（池田名称マスタ更新票を使用する）</a></td>
+                                <td valign="middle"><div class="text-center">2011/11/15</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/食研名称マスタ更新票.pdf"><font size="4">食研名称マスタ更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2011/11/15</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/キサイ総勘定マスタ更新票.pdf"><font size="4">キサイ総勘定マスタ更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2011/11/16</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/リコス総勘定マスタ更新票.pdf"><font size="4">リコス総勘定マスタ更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2011/11/16</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/上越総勘定マスタ更新票.pdf"><font size="4">上越総勘定マスタ更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2011/11/16</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/タヌマ総勘定マスタ更新票.pdf"><font size="4">タヌマ総勘定マスタ更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2011/11/16</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/ＩＤＩ総勘定マスタ更新票.pdf"><font size="4">IDI総勘定マスタ更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2011/11/16</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/ＩＴＫ総勘定マスタ更新票.pdf"><font size="4">ITK総勘定マスタ更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2011/11/16</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/全社共通補助簿マスタ更新票.pdf"><font size="4">(全社共通)補助簿マスタ更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2011/11/16</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/ＩＤＩ取引先更新票.pdf"><font size="4">IDI取引先更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2016/5/1</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/ＩＤＩ売上先取引条件更新票.pdf"><font size="4">IDI売上先取引条件更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2023/7/1</div></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/media/denpyo/ＩＤＩ仕入先取引条件更新票.pdf"><font size="4">IDI仕入先取引条件更新票</font></a></td>
+                                <td valign="middle"><div class="text-center">2016/5/1</div></td>
+                            </tr>
+
+                            <tr>
+                                <td rowspan="1" valign="middle"><div class="text-center">コード一覧<br>(池田)</div></td>
+                                <td valign="middle">
+                                    <a href="/media/denpyo/部門.pdf"><font size="4">部門</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/製造場所.pdf"><font size="4">製造場所</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/製品勘定区分.pdf"><font size="4">製品勘定区分</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/性状.pdf"><font size="4">性状</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/工程.pdf"><font size="4">工程</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/形状.pdf"><font size="4">形状</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/製造部署.pdf"><font size="4">製造部署</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/製品部門.pdf"><font size="4">製品部門</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/単位.pdf"><font size="4">単位</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/保管.pdf"><font size="4">保管</font></a>&nbsp;&nbsp;
+                                    <br><a href="/media/denpyo/営業担当者一覧.pdf"><font size="4">営業担当者一覧</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/在庫場所.pdf"><font size="4">在庫場所</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/地区.pdf"><font size="4">地区</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/扱便.pdf"><font size="4">扱便</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/経費用部門.pdf"><font size="4">経費用部門</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/管理会計部門.pdf"><font size="4">管理会計部門</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/原料区分.pdf"><font size="4">原料区分</font></a>
+                                </td>
+                                <td valign="middle"><div class="text-center">2023/11/15</div></td>
+                            </tr>                      
+
+                            <tr>
+                                <td rowspan="1" valign="middle"><div class="text-center">コード一覧<br>(キサイ)</div></td>
+                                <td valign="middle">
+                                    <a href="/media/denpyo/キサイ_管轄部署.pdf"><font size="4">管轄部署</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/キサイ_営業.pdf"><font size="4">営業</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/キサイ_勘定区分.pdf"><font size="4">勘定区分</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/キサイ_売上統計部門.pdf"><font size="4">売上統計部門</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/キサイ_性状.pdf"><font size="4">性状</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/キサイ_単位.pdf"><font size="4">単位</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/キサイ_工程.pdf"><font size="4">工程</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/キサイ_保管.pdf"><font size="4">保管</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/キサイ_荷姿.pdf"><font size="4">荷姿</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/キサイ_在庫場所.pdf"><font size="4">在庫場所</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/キサイ_扱便.pdf"><font size="4">扱便</font></a>&nbsp;&nbsp;
+                                </td>
+                                <td valign="middle"><div class="text-center">2023/4/1</div></td>
+                            </tr>
+        
+                            <tr>
+                                <td rowspan="1" valign="middle"><div class="text-center">コード一覧<br>(リコス)</div></td>
+                                <td valign="middle">
+                                    <a href="/media/denpyo/リコス_部門.pdf"><font size="4">部門</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/リコス_性状.pdf"><font size="4">性状</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/リコス_製品勘定区分.pdf"><font size="4">製品勘定区分</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/リコス_製造場所.pdf"><font size="4">製造場所</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/リコス_工程.pdf"><font size="4">工程</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/リコス_製造部署.pdf"><font size="4">製造部署</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/リコス_形状.pdf"><font size="4">形状</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/リコス_製造部署.pdf"><font size="4">製造部署</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/リコス_形状.pdf"><font size="4">形状</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/リコス_原価部門.pdf"><font size="4">原価部門</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/リコス_単位.pdf"><font size="4">単位</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/リコス_保管.pdf"><font size="4">保管</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/リコス_品種.pdf"><font size="4">品種</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/リコス_在庫場所.pdf"><font size="4">在庫場所</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/リコス_扱便.pdf"><font size="4">扱便</font></a>&nbsp;&nbsp;
+                                </td>
+                                <td valign="middle"><div class="text-center">2023/12/7</div></td>
+                            </tr>
+	
+                            <tr>
+                                <td rowspan="1" valign="middle"><div class="text-center">コード一覧<br>(上越)</div></td>
+                                <td valign="middle">
+                                    <a href="/media/denpyo/上越_部門.pdf"><font size="4">部門</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/上越_性状.pdf"><font size="4">性状</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/上越_製品勘定区分.pdf"><font size="4">製品勘定区分</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/上越_製造場所.pdf"><font size="4">製造場所</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/上越_工程.pdf"><font size="4">工程</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/上越_製造部署.pdf"><font size="4">製造部署</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/上越_形状.pdf"><font size="4">形状</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/上越_工場区分.pdf"><font size="4">工場区分</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/上越_単位.pdf"><font size="4">単位</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/上越_保管.pdf"><font size="4">保管</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/上越_分類区分.pdf"><font size="4">分類区分</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/上越_在庫場所.pdf"><font size="4">在庫場所</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/上越_扱便.pdf"><font size="4">扱便</font></a>&nbsp;&nbsp;
+                                </td>
+                                <td valign="middle"><div class="text-center">2023/5/31</div></td>
+                            </tr>
+           
+                            <tr>
+                                <td rowspan="1" valign="middle"><div class="text-center">コード一覧<br>(タヌマ)</div></td>
+                                <td valign="middle">
+                                    <a href="/media/denpyo/タヌマ_性状.pdf"><font size="4">性状</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/タヌマ_製品勘定区分.pdf"><font size="4">製品勘定区分</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/タヌマ_製造場所.pdf"><font size="4">製造場所</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/タヌマ_工程.pdf"><font size="4">工程</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/タヌマ_製造部署.pdf"><font size="4">製造部署</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/タヌマ_形状.pdf"><font size="4">形状</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/タヌマ_製品部門.pdf"><font size="4">製品部門</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/タヌマ_単位.pdf"><font size="4">単位</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/タヌマ_保管.pdf"><font size="4">保管</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/タヌマ_在庫場所.pdf"><font size="4">在庫場所</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/タヌマ_扱便.pdf"><font size="4">扱便</font></a>&nbsp;&nbsp;
+                                </td>
+                                <td valign="middle"><div class="text-center">2023/5/31</div></td>
+                            </tr> 	
+                           
+                            <tr>
+                                <td rowspan="1" valign="middle"><div class="text-center">コード一覧<br>(ＩＤＩ)</div></td>
+                                <td valign="middle">
+                                    <a href="/media/denpyo/ＩＤＩ_売上統計部門.pdf"><font size="4">売上統計部門</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/ＩＤＩ_単位.pdf"><font size="4">単位</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/ＩＤＩ_保管.pdf"><font size="4">保管</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/ＩＤＩ_荷姿.pdf"><font size="4">荷姿</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/ＩＤＩ_勘定区分.pdf"><font size="4">勘定区分</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/ＩＤＩ_在庫場所.pdf"><font size="4">在庫場所</font></a>&nbsp;&nbsp;
+                                    <a href="/media/denpyo/ＩＤＩ_扱便.pdf"><font size="4">扱便</font></a>&nbsp;&nbsp;
+                                </td>
+                                <td valign="middle"><div class="text-center">2023/9/28</div></td>
+                            </tr> 	
+                            	
+                            <tr>
+                                <td rowspan="6" valign="middle"><div class="text-center">伝票№一覧</div></td>
+                                <td><a href="/media/denpyo/rule06.pdf"><font size="4">池田糖化工業(株)</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2012/7/2</div></td>
+                            </tr> 	   	
+                            <tr>
+                                <td><a href="/media/denpyo/rule07.pdf"><font size="4">キサイフーズ工業(株)</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2014/4/27</div></td>
+                            </tr> 	
+                            <tr>
+                                <td><a href="/media/denpyo/rule08.pdf"><font size="4">日本リコス(株)</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2012/7/2</div></td>
+                            </tr> 	
+                            <tr>
+                                <td><a href="/media/denpyo/rule09.pdf"><font size="4">上越フーズ(株)</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2010/8/10</div></td>
+                            </tr> 	
+                            <tr>
+                                <td><a href="/media/denpyo/rule10.pdf"><font size="4">タヌマフーズ(株)</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2010/8/9</div></td>
+                            </tr> 	
+                            <tr>
+                                <td><a href="/media/denpyo/rule11.pdf"><font size="4">イケダインターナショナル(株)</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2012/7/2</div></td>
+                            </tr> 	    
+                            
+                            <tr>
+                                <td rowspan="29" valign="middle"><div class="text-center">更新票の説明<br>(池田)</div></td>
+                                <td><a href="/media/denpyo/01.物品更新票項目説明.pdf"><font size="4">物品更新票項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/07/01</div></td>
+                            </tr> 	   	       	
+                            <tr>
+                                <td><a href="/media/denpyo/02.物品更新票記入時の注意事項.pdf"><font size="4">物品更新票記入時の注意事項</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/10/30</div></td>
+                            </tr> 	
+                            <tr>
+                                <td><a href="/media/denpyo/03.物品更新票記入要領.pdf"><font size="4">物品更新票記入要領</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/07/01</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/04.取引先更新票項目説明.pdf"><font size="4">取引先更新票項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/07/01</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/05.売上先取引条件更新票項目説明.pdf"><font size="4">売上先取引条件更新票項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/07/01</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/06.仕入先取引条件更新票項目説明.pdf"><font size="4">仕入先取引条件更新票項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/07/01</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/07.取引先・取引条件更新票記入時の注意事項.pdf"><font size="4">取引先・取引条件更新票記入時の注意事項</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/07/01</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/08.取引先・取引条件更新票記入要領.pdf"><font size="4">取引先・取引条件更新票記入要領</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2011/08/01</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/09.販売単価更新票項目説明.pdf"><font size="4">販売単価更新票項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/07/01</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/10.仕入単価更新票項目説明.pdf"><font size="4">仕入単価更新票項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/07/01</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/11.システム基本更新票項目説明.pdf"><font size="4">システム基本更新票項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/08/31</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/12.物品終売連絡票項目説明.pdf"><font size="4">物品終売連絡票項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/07/01</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/13.物品終売連絡票記入時の注意事項.pdf"><font size="4">物品終売連絡票記入時の注意事項</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/07/01</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/14.在庫移管先更新票項目説明.pdf"><font size="4">在庫移管先更新票項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/07/01</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/15.取引先削除更新票項目説明.pdf"><font size="4">取引先削除更新票項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/07/01</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/17.物品更新票入力時の主たるチェック事項.pdf"><font size="4">物品更新票入力時の主たるチェック事項</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/07/01</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/18.取引先・取引条件更新票入力時の主たるチェック事項.pdf"><font size="4">取引先・取引条件更新票入力時の主たるチェック事項</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/07/01</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/19.物品コード採番ルール.pdf"><font size="4">物品コード採番ルール</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/06/30</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/20.キサイ物品更新票項目説明.pdf"><font size="4">キサイ物品更新票項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/11/04</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/21.リコス物品更新票項目説明.pdf"><font size="4">リコス物品更新票項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/08/31</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/22.上越物品更新票項目説明.pdf"><font size="4">上越物品更新票項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/08/31</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/23.タヌマ物品更新票項目説明.pdf"><font size="4">タヌマ物品更新票項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/08/31</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/24.ＩＤＩ物品更新票項目説明.pdf"><font size="4">ＩＤＩ物品更新票項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/08/31</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/25.キサイシステム基本更新票項目説明.pdf"><font size="4">キサイシステム基本更新票項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/08/31</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/26.リコスシステム基本更新票項目説明.pdf"><font size="4">リコスシステム基本更新票項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/08/31</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/27.上越システム基本更新票項目説明.pdf"><font size="4">上越システム基本更新票項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/08/31</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/28.タヌマシステム基本更新票項目説明.pdf"><font size="4">タヌマシステム基本更新票項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/08/31</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/29.ＩＤＩシステム基本更新票項目説明.pdf"><font size="4">ＩＤＩシステム基本更新票項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/08/31</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/30.ＩＴＫシステム基本更新票項目説明.pdf"><font size="4">ＩＴＫシステム基本更新票項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/11/16</div></td>
+                            </tr> 
+                            
+                            <tr>
+                                <td rowspan="14" valign="middle"><div class="text-center">入力原始票<br>(池田)</div></td>
+                                <td><a href="/media/denpyo/01.受注報告書項目説明.pdf"><font size="4">受注報告書項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/08/31</div></td>
+                            </tr> 	   	
+                            <tr>
+                                <td><a href="/media/denpyo/02.入荷報告書項目説明.pdf"><font size="4">入荷報告書項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/08/31</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/03.出荷報告書項目説明.pdf"><font size="4">出荷報告書項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/08/31</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/04.入庫伝票項目説明.pdf"><font size="4">入庫伝票項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/08/31</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/05.払出伝票項目説明.pdf"><font size="4"> 払出伝票項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/08/31</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/06.在庫移管依頼書項目説明.pdf"><font size="4">在庫移管依頼書項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/08/31</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/07.在庫移管報告書項目説明.pdf"><font size="4">在庫移管報告書項目説明</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/08/31</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/08.デ－タの処理区分一覧表.pdf"><font size="4">デ－タの処理区分一覧表</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/08/31</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/09.受注報告書記入例.pdf"><font size="4">受注報告書記入例</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/08/31</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/10.入荷報告書記入例.pdf"><font size="4">入荷報告書記入例</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/08/31</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/11.出荷報告書記入例.pdf"><font size="4">出荷報告書記入例</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/08/31</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/12.入庫伝票記入例.pdf"><font size="4">入庫伝票記入例</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/08/31</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/13.払出伝票記入例.pdf"><font size="4">払出伝票記入例</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/08/31</div></td>
+                            </tr> 
+                            <tr>
+                                <td><a href="/media/denpyo/14.処理区分使用上の注意事項.pdf"><font size="4">処理区分使用上の注意事項</font></a>&nbsp;&nbsp;</td>
+                                <td valign="middle"><div class="text-center">2009/08/31</div></td>
+                            </tr> 
+                        </tbody>
+                    </table>
+                </div>
+            <h5 style="text-align:left">◆趣旨◆
+                <br>　この場所に伝票処理を行う上でのルール等を掲載します。
+                池田グループ各社の伝票処理は、担当者が間違いのないように細心の注意を払って行って頂いておりますが、担当者の引継ぎ時やユーザからの依頼等のために処理方法を変えると別の部分で問題が発生することがあります。
+                このような場合、ITSではその問題が起こらないようルールを考えて担当者に通達しております。
+                今後は常にこれらのルールを参照できるよう、池田グループの「伝票処理のためのルール等」としてここに掲載します。 文書は作成したものから順に掲載してまいります。掲載した文書は再々変更する場合があります。伝票処理を担当する方におきましては内容をご理解の上、遵守していただきますようお願いいたします。
+                なお、ここに掲載する文書は絶対的なものではなく、時代の変化に合わせて変更されるべきものと考えております。
+                ご意見等がございましたらITSまでご連絡ください。
+                </h5>
+            </div>
+        </div>
+    </div>
+<br>
+<br>
+{% endblock %}

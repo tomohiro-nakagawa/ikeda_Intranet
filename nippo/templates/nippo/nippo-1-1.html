@@ -1,0 +1,212 @@
+{% extends "base.html" %}
+{% block head_title %}会社紹介{% endblock %}
+
+{% block content %}
+
+<body  style="background-color:#a4def3;">
+  <div class="container" >
+    <h1 class="my-3" style="text-align:center">{% if not profile %}1.会社紹介{% else %}{{profile.username}}の部署紹介{% endif %}</h1>
+    <hr>
+  </div>
+  <div>
+    <h3 style="margin-left:660px">社　　名：池田糖化工業㈱</h3>
+    <h3 style="margin-left:660px">本社住所：〒720-8638　広島県福山市桜馬場町2番28号</h3>
+    <h3 style="margin-left:660px">箕島工場：〒721-8558　広島県福山市箕沖町97番地　<a href="https://www.ikedatohka.co.jp/" target="_blank" style="text-decoration:none"><font size="4" color="blue">【会社HP】</font></a></h3>
+  </div>
+  <div>
+    <body>
+      <div class="container-fluid" >
+        <!--<h1 class="my-3">箕島工場</h1>-->
+        <div class="carousel slide" id="sample" data-ride="carousel" >
+          <ol class="carousel-indicators">
+            <li data-target="#sample" data-slide-to="0" class="active"></li>
+            <li data-target="#sample" data-slide-to="1"></li>
+            <li data-target="#sample" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner carousel-fade">
+            <div class="carousel-item active">
+            
+              <a href="#">
+                <img src="/media/pages/slider_100year_01.jpg" alt="topimg"  style="border:solid 2px #0000ff" class="d-block w-100"  >
+                <div class="carousel-caption d-none d-sm-block"  >
+                  <span style="font-size: 40px; text-shadow:  0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000;">食と向き合って100年</span>
+                  <br><br>
+                  <span style="font-size: 20px; text-shadow:  0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000;">池田糖化工業は製品作りに欠かかすことができない原料の提供、</span>
+                  <br>
+                  <span style="font-size: 20px; text-shadow:  0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000;">製品開発のお手伝いを通じて豊かな食文化の発展に貢献いたします。</span>
+                  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+              
+                </div>
+              </a>          
+            </div>
+            <div class="carousel-item">
+              <img src="/media/pages/slider_100year_02.jpg" alt="topimg"  style="border:solid 2px #0000ff" class="d-block w-100">
+              <div class="carousel-caption d-none d-sm-block">
+                <span style="font-size: 40px; text-shadow:  0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000;">食と向き合って100年</span>
+                <br>
+                <br>
+                <span style="font-size: 20px; text-shadow:  0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000;">池田糖化工業は製品作りに欠かかすことができない原料の提供</span>
+                <br>
+                <span style="font-size: 20px; text-shadow:  0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000;">製品開発のお手伝いを通じて豊かな食文化の発展に貢献いたします。</span>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/media/pages/slider_100year_04.jpg" alt="topimg"  style="border:solid 2px #0000ff" class="d-block w-100">
+              <div class="carousel-caption d-none d-sm-block">
+                <span style="font-size: 40px; text-shadow:  0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000;">食と向き合って100年</span>
+                <br>
+                <br>
+                <span style="font-size: 20px; text-shadow:  0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000;">池田糖化工業は製品作りに欠かかすことができない原料の提供、</span>
+                <br>
+                <span style="font-size: 20px; text-shadow:  0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000;">製品開発のお手伝いを通じて豊かな食文化の発展に貢献いたします。</span>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br>
+              </div>
+            </div>
+          </div>
+          <a href="#sample" class="carousel-control-prev" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="sr-only">前の画像へ</span>
+          </a>
+          <a href="#sample" class="carousel-control-next" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="sr-only">次の画像へ</span>
+          </a>
+        </div>
+      </div>
+        <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+      
+      
+    </body>
+    <hr>
+  </div>
+
+
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+    <!--<link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/css/6-1-6.css">
+  </head>
+  <body>
+    <div style="display: inline-block; background: #00ff00; padding: 3px 10px; color: #000000;"><font size="6"><strong>商品のご案内</strong></font></div>
+      <div style="padding: 10px; border: 20px ridge #00ff00; background: #ffffff;">
+        <div style="padding: 15px;">
+            <p style="margin: 0;"> 
+              <ul class="slider">
+                <li>
+                  <img src="/media/pages/液体・調味.jpg"           alt="" width="250" height="290" border="2"   hspace='1' vspace='1' style="border:solid 2px #0000ff">
+                <span style="background:#0000cd; color:#ffffff; font-family:HGP創英角ﾎﾟｯﾌﾟ体;text-align: center; font-size: 40px; padding: 15px 183px;">
+                  液体・調味<br></span>
+                </li>
+                <li>
+                  <img src="/media/pages/エキス・だし.jpg"           alt="" width="250" height="290" border="2"   hspace='1' vspace='1' style="border:solid 2px #0000ff">
+                  <span style="background:#0000cd; color:#ffffff; font-family:HGP創英角ﾎﾟｯﾌﾟ体;text-align: center; font-size: 40px; padding: 15px 173px;">
+                    エキス・だし<br></span>
+                </li>
+                <li>         
+                  <img src="/media/pages/香味オイル.jpg"             alt="" width="250" height="290" border="2"   hspace='1' vspace='1' style="border:solid 2px #0000ff" >
+                  <span style="background:#0000cd; color:#ffffff; font-family:HGP創英角ﾎﾟｯﾌﾟ体;text-align: center; font-size: 40px; padding: 15px 179px;">
+                  香味オイル<br></span>
+                </li>
+                  <li>
+                  <img src="/media/pages/野菜加工.jpg"               alt="" width="250" height="290" border="2"   hspace='1' vspace='1' style="border:solid 2px #0000ff" >
+                  <span style="background:#0000cd; color:#ffffff; font-family:HGP創英角ﾎﾟｯﾌﾟ体;text-align: center; font-size: 40px; padding: 15px 192px;">
+                  野菜加工<br></span>
+                </li>
+                <li>
+                  <img src="/media/pages/粉体・顆粒.jpg"             alt="" width="250" height="290" border="2"   hspace='1' vspace='1' style="border:solid 2px #0000ff">
+                  <span style="background:#0000cd; color:#ffffff; font-family:HGP創英角ﾎﾟｯﾌﾟ体;text-align: center; font-size: 40px; padding: 15px 182px;">
+                  粉体・顆粒<br></span>
+                </li>
+                <li> 
+                  <img src="/media/pages/フリーズドライ.jpg"         alt="" width="250" height="290" border="2"   hspace='1' vspace='1' style="border:solid 2px #0000ff">
+                  <span style="background:#0000cd; color:#ffffff; font-family:HGP創英角ﾎﾟｯﾌﾟ体;text-align: center; font-size: 40px; padding: 15px 156px;">
+                フリーズドライ<br></span>
+                </li>
+                <li>
+                  <img src="/media/pages/顆粒・固形.jpg"             alt="" width="250" height="290" border="2"   hspace='1' vspace='1' style="border:solid 2px #0000ff">
+                  <span style="background:#0000cd; color:#ffffff; font-family:HGP創英角ﾎﾟｯﾌﾟ体;text-align: center; font-size: 40px; padding: 15px 183px;">
+                  顆粒・固形<br></span>
+                </li>
+                <li>           
+                  <img src="/media/pages/粉体.jpg"                   alt="" width="250" height="290" border="2"   hspace='1' vspace='1' style="border:solid 2px #0000ff">
+                  <span style="background:#0000cd; color:#ffffff; font-family:HGP創英角ﾎﾟｯﾌﾟ体;text-align: center; font-size: 40px; padding: 15px 233px;">
+                  粉体<br></span>
+                </li>
+                <li>
+                  <img src="/media/pages/液体（デザートソース）.jpg"  alt="" width="250" height="290" border="2"   hspace='1' vspace='1' style="border:solid 2px #0000ff">
+                  <span style="background:#0000cd; color:#ffffff; font-family:HGP創英角ﾎﾟｯﾌﾟ体;text-align: center; font-size: 40px; padding: 15px 90px;">
+                  液体（デザートソース）<br></span>
+                </li>
+                <li>
+                  <img src="/media/pages/キャラメルソース・カラメルソース.jpg" alt="" width="250" height="290" border="2"  hspace='1' vspace='1'  style="border:solid 2px #0000ff">
+                  <span style="background:#0000cd; color:#ffffff; font-family:HGP創英角ﾎﾟｯﾌﾟ体;text-align: center; font-size: 40px; padding: 15px 0px;">
+                  キャラメルソース・カラメルソース<br></span>
+                </li>
+                <li>
+                  <img src="/media/pages/カラメル色素・天然系色素.jpg"         alt="" width="250" height="290" border="2" hspace='1' vspace='1'  style="border:solid 2px #0000ff">
+                  <span style="background:#0000cd; color:#ffffff; font-family:HGP創英角ﾎﾟｯﾌﾟ体;text-align: center; font-size: 40px; padding: 15px 51px;">
+                  カラメル色素・天然系色素<br></span>
+                </li>
+                <li>
+                  <img src="/media/pages/カンゾウ甘味料.jpg"                   alt="" width="250" height="290" border="2" hspace='1'  vspace='1'  style="border:solid 2px #0000ff">
+                  <span style="background:#0000cd; color:#ffffff; font-family:HGP創英角ﾎﾟｯﾌﾟ体;text-align: center; font-size: 40px; padding: 15px 141px;">
+                  カンゾウ甘味料<br></span>
+                </li>
+                <li>
+                  <img src="/media/pages/ステビア甘味料.jpg"                   alt="" width="250" height="290" border="2" hspace='1' vspace='1'  style="border:solid 2px #0000ff">
+                  <span style="background:#0000cd; color:#ffffff; font-family:HGP創英角ﾎﾟｯﾌﾟ体;text-align: center; font-size: 40px; padding: 15px 141px;">
+                  ステビア甘味料<br></span>
+                </li>
+                <li>
+                  <img src="/media/pages/香味オイル.jpg"                       alt="" width="250" height="290" border="2" hspace='1' vspace='1'  style="border:solid 2px #0000ff">
+                  <span style="background:#0000cd; color:#ffffff; font-family:HGP創英角ﾎﾟｯﾌﾟ体;text-align: center; font-size: 40px; padding: 15px 179px;">
+                香味オイル<br></span>
+                </li>
+                <li>
+                  <img src="/media/pages/機能性素材.jpg"                       alt="" width="250" height="290" border="2" hspace='1' vspace='1'  style="border:solid 2px #0000ff">
+                  <span style="background:#0000cd; color:#ffffff; font-family:HGP創英角ﾎﾟｯﾌﾟ体;text-align: center; font-size: 40px; padding: 15px 173px;">
+                  機能性素材<br></span>
+                </li>
+                <li>
+                  <img src="/media/pages/植物エキス.jpg"                       alt="" width="250" height="290" border="2" hspace='1'  vspace='1'  style="border:solid 2px #0000ff">
+                  <span style="background:#0000cd; color:#ffffff; font-family:HGP創英角ﾎﾟｯﾌﾟ体;text-align: center; font-size: 40px; padding: 15px 179px;">
+                  植物エキス<br></span>
+                </li>
+                <li>
+                <img src="/media/pages/グリチルリチン酸ジカリウム.jpg"       alt="" width="250" height="290" border="2" hspace='1'  vspace='1'  style="border:solid 2px #0000ff">
+                <span style="background:#0000cd; color:#ffffff; font-family:HGP創英角ﾎﾟｯﾌﾟ体;text-align: center; font-size: 40px; padding: 15px 45px;">
+                グリチルリチン酸ジカリウム<br></span>
+                </li>
+                <li>
+                  <img src="/media/pages/酵素.jpg"                            alt="" width="250" height="290" border="2" hspace='1'  vspace='1'  style="border:solid 2px #0000ff">
+                  <span style="background:#0000cd; color:#ffffff; font-family:HGP創英角ﾎﾟｯﾌﾟ体;text-align: center; font-size: 40px; padding: 15px 233px;">
+                  酵素<br></span>
+                </li>
+              </ul>
+            </p>
+            <h2>
+              プランdeリッチとは、『プラントベースフードを美味しくしたい』という思いを込めてつくったプラントベース製品のブランドです。
+              <br>植物性の食べ物をよりリッチな味わいに、より満足感のあるものにするお手伝いをさせてください。
+              <br>プラントベースフードのお困りごとは池田糖化工業にご相談ください。
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/js/6-1-6.js"></script>
+  </body>
+
+<br>
+<br>
+
+{% endblock %}
+ 

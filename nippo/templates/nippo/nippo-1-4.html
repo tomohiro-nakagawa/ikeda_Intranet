@@ -1,0 +1,286 @@
+{% extends "base.html" %}
+{% block head_title %}住所録{% endblock %}
+
+{% block content %}
+
+
+
+<div class="container" >
+    <h1 class="my-3" style="text-align:center">{% if not profile %}4.住所録{% else %}{{profile.username}}の住所録{% endif %}</h1>
+</div>
+
+<hr>
+<h2 style="text-align:centyer">◆◇◆◇◆◇◆ 住　所　録 ◆◇◆◇◆◆◇　<a href="/media/juusho&tel/jyusho.pdf"><font size="2">プリントアウトはこちらから </font></a></h2>
+<h5 style="text-align:center">　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　最終更新日： 2023/12/7</h5>
+<h5 style="text-align:center"><font color="red">※ 誤記がありましたらITS･統括室(TEL：084-957-3380)まで御連絡ください</font></h5>
+<div class="container" >
+    <div class="p-3 ">
+        <table class="table table-hover table-warning table-bordered border-dark table-sm     d-flex justify-content-center" >
+            <tbody>
+                <tr class="table-dark" >
+                    <th style="width: 250px"><div class="text-center">名　　称</div></th>
+                    <th style="width: 90px"><div class="text-center">〒</div></th>
+                    <th style="width: 700px"><div class="text-center">住　　所</div></th>
+                    <th style="width: 170px"><div class="text-center">電話番号</div></th>
+                    <th style="width: 170PX"><div class="text-center">ＦＡＸ</div></th>
+                    <th style="width: 280PX"><div class="text-center">備　　考</div></th>
+                </tr>
+                <tr>
+                    <td valign="middle"><div>本社</div></td>
+                    <td valign="middle"><div class="text-center">720-8638</div></td>
+                    <td valign="middle"><div>広島県福山市桜馬場町２番２８号</div></td>
+                    <td valign="middle"><div class="text-center">084-921-3141</div></td>
+                    <td valign="middle"><div class="text-center">084-927-1459</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+                <tr>
+                    <td valign="middle"><div>法務・コンプライアンス室</div></td>
+                    <td valign="middle"><div class="text-center">564-0063</div></td>
+                    <td valign="middle"><div>大阪府吹田市江坂町一丁目23番101号 大同生命江坂ビル 13階12号室</div></td>
+                    <td valign="middle"><div class="text-center">06-6105-8641</div></td>
+                    <td valign="middle"><div class="text-center">-</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+                <tr>   
+                    <td valign="middle"><div>箕島工場</div></td>
+                    <td valign="middle"><div class="text-center">721-8558</div></td>
+                    <td valign="middle"><div>広島県福山市箕沖町９７番地</div></td>
+                    <td valign="middle"><div class="text-center">084-953-5322</div></td>
+                    <td valign="middle"><div class="text-center">084-953-8323</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+                <tr>
+                    <td valign="middle"><div>池田食研</div></td>
+                    <td valign="middle"><div class="text-center">721-0956</div></td>
+                    <td valign="middle"><div>広島県福山市箕沖町９５番地７</div></td>
+                    <td valign="middle"><div class="text-center">084-957-3400</div></td>
+                    <td valign="middle"><div class="text-center">084-957-3420</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+                <tr>   
+                    <td valign="middle"><div>東京本社</div></td>
+                    <td valign="middle" rowspan="3"><div class="text-center">151-0071</div></td>
+                    <td valign="middle" rowspan="3"><div>東京都渋谷区本町三丁目４７番１２号</div></td>
+                    <td valign="middle"><div class="text-center">03-3320-9355</div></td>
+                    <td valign="middle"><div class="text-center">03-5351-7831</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>  
+                <tr> 
+                    <td valign="middle"><div>東京開発</div></td>
+                    <td valign="middle"><div class="text-center">03-3320-8121</div></td>
+                    <td valign="middle"><div class="text-center">03-5351-7833</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>  
+                <tr>  
+                    <td valign="middle"><div>ｲｹﾀﾞｲﾝﾀｰﾅｼｮﾅﾙ</div></td>
+                    <td valign="middle"><div class="text-center">03-3320-8186</div></td>
+                    <td valign="middle"><div class="text-center">03-5351-7832</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+                <tr>    
+                    <td valign="middle"><div>名古屋支店</div></td>
+                    <td valign="middle"><div class="text-center">453-0833</div></td>
+                    <td valign="middle"><div>愛知県名古屋市中村区押木田町二丁目１８番地６</div></td>
+                    <td valign="middle"><div class="text-center">052-483-2571</div></td>
+                    <td valign="middle"><div class="text-center">052-483-2583</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+                <tr>
+                    <td valign="middle"><div>大阪支店</div></td>
+                    <td valign="middle"><div class="text-center">564-0063</div></td>
+                    <td valign="middle"><div>大阪府吹田市江坂町一丁目２３番２６号 ﾆｯｾｲ江坂ｾﾝﾄﾗﾙﾋﾞﾙ4F</div></td>
+                    <td valign="middle"><div class="text-center">06-6337-4411</div></td>
+                    <td valign="middle"><div class="text-center">06-6337-8411</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr> 
+                <tr>   
+                    <td valign="middle"><div>福山営業所</div></td>
+                    <td valign="middle"><div class="text-center">720-0824</div></td>
+                    <td valign="middle"><div>広島県福山市多治米町５丁目２５－８ レジデンスマサノⅢ</div></td>
+                    <td valign="middle"><div class="text-center">084-957-3444</div></td>
+                    <td valign="middle"><div class="text-center">084-957-2980</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+                <tr>
+                    <td valign="middle"><div>広島営業所</div></td>
+                    <td valign="middle"><div class="text-center">731-5125</div></td>
+                    <td valign="middle"><div>広島県広島市佐伯区五日市駅前２丁目14番4-1号　安達ビル２階</div></td>
+                    <td valign="middle"><div class="text-center">082-923-1213</div></td>
+                    <td valign="middle"><div class="text-center">082-923-8267</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+                <tr>
+                    <td valign="middle"><div>福岡支店</div></td>
+                    <td valign="middle"><div class="text-center">816-0922</div></td>
+                    <td valign="middle"><div>福岡県大野城市山田二丁目１４番２１号</div></td>
+                    <td valign="middle"><div class="text-center">092-581-6141</div></td>
+                    <td valign="middle"><div class="text-center">092-581-2089</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+                <tr>
+                    <td valign="middle"><div>鹿児島出張所</div></td>
+                    <td valign="middle"><div class="text-center">890-0067</div></td>
+                    <td valign="middle"><div>鹿児島県鹿児島市真砂本町６番１９号小薗ビル１Ｆ</div></td>
+                    <td valign="middle"><div class="text-center">099-214-9350</div></td>
+                    <td valign="middle"><div class="text-center">099-214-9351</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+                <tr>
+                    <td valign="middle"><div>キサイフーズ </div></td>
+                    <td valign="middle" rowspan="3"><div class="text-center">347-0195</div></td>
+                    <td valign="middle" rowspan="3"><div>埼玉県加須市戸崎３０８番地６</div></td>
+                    <td valign="middle" rowspan="3"><div class="text-center">0480-73-2222</div></td>
+                    <td valign="middle"><div class="text-center">0480-70-1024</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+                <tr>
+                    <td valign="middle"><div>キサイフーズ　第２工場</div></td>
+                    <td valign="middle"><div class="text-center">0480-73-4342</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+                <tr>
+                    <td valign="middle"><div>キサイフーズ　生産物流部</div></td>
+                    <td valign="middle"><div class="text-center">0480-53-8841</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+                <tr>    
+                    <td valign="middle"><div>上越フーズ </div></td>
+                    <td valign="middle"><div class="text-center">942-0032</div></td>
+                    <td valign="middle"><div>新潟県上越市福田町１番地　上越テクノセンター内</div></td>
+                    <td valign="middle"><div class="text-center">025-543-1241</div></td>
+                    <td valign="middle"><div class="text-center">025-543-0431</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+                <tr>
+                    <td valign="middle"><div>上越フーズ　第２工場</div></td>
+                    <td valign="middle"><div class="text-center">942-0231</div></td>
+                    <td valign="middle"><div>新潟県上越市大字下吉野字追田１７０６番地１０</div></td>
+                    <td valign="middle"><div class="text-center">025-520-3605</div></td>
+                    <td valign="middle"><div class="text-center">025-520-3606</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+                <tr>
+                    <td valign="middle"><div>タヌマフーズ</div></td>
+                    <td valign="middle"><div class="text-center">327-0324</div></td>
+                    <td valign="middle"><div>栃木県佐野市山形町５６１番地１</div></td>
+                    <td valign="middle"><div class="text-center">0283-65-1316</div></td>
+                    <td valign="middle"><div class="text-center">0283-65-1319</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+                <tr>
+                    <td valign="middle" rowspan="2"><div>日本リコス</div></td>
+                    <td valign="middle" rowspan="2"><div class="text-center">721-0963</div></td>
+                    <td valign="middle" rowspan="2"><div>広島県福山市南手城町二丁目３２番１４号</div></td>
+                    <td valign="middle"><div class="text-center">084-923-0462</div></td>
+                    <td valign="middle"><div class="text-center"> -  </div></td>
+                    <td valign="middle"><div>｢日本リコス｣の代表電話番号</div></td>
+                </tr>
+                <tr>
+                    <td valign="middle"><div class="text-center">084-932-1478</div></td>
+                    <td valign="middle"><div class="text-center">084-932-3231</div></td>
+                    <td valign="middle"><div> ｢池田糖化工業 手城工場｣ </div></td>
+                </tr>
+                <tr>
+                    <td valign="middle"><div>リコス松浜工場</div></td>
+                    <td valign="middle"><div class="text-center">720-0802</div></td>
+                    <td valign="middle"><div>広島県福山市松浜町二丁目１番１号</div></td>
+                    <td valign="middle"><div class="text-center">084-923-0407</div></td>
+                    <td valign="middle"><div class="text-center">084-931-5934</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+                <tr>
+                    <td valign="middle"><div>リコス東京営業所</div></td>
+                    <td valign="middle"><div class="text-center">151-0071</div></td>
+                    <td valign="middle"><div>東京都渋谷区本町三丁目４７番１２号</div></td>
+                    <td valign="middle"><div class="text-center">03-3320-0550</div></td>
+                    <td valign="middle"><div class="text-center">03-3320-0556</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+
+                <tr>
+                    <td valign="middle"><div>リコス大阪営業所</div></td>
+                    <td valign="middle"><div class="text-center">564-0063</div></td>
+                    <td valign="middle"><div>大阪府吹田市江坂町一丁目２３番２６号</div></td>
+                    <td valign="middle"><div class="text-center">06-6337-1114</div></td>
+                    <td valign="middle"><div class="text-center">06-6337-1129</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+
+                <tr>
+                    <td valign="middle"><div>リコス笠岡工場     </div></td>
+                    <td valign="middle"><div class="text-center">714-0042</div></td>
+                    <td valign="middle"><div>岡山県笠岡市美の浜３番地２</div></td>
+                    <td valign="middle"><div class="text-center">0865-67-4157</div></td>
+                    <td valign="middle"><div class="text-center">0865-67-4168</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+
+                <tr>
+                    <td valign="middle"><div>岡山アグリフーズ   </div></td>
+                    <td valign="middle"><div class="text-center">714-0042</div></td>
+                    <td valign="middle"><div>岡山県笠岡市美の浜３番地２</div></td>
+                    <td valign="middle"><div class="text-center">0865-67-4741</div></td>
+                    <td valign="middle"><div class="text-center">0865-67-4747</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+
+                <tr>
+                    <td valign="middle"><div>ＩＴＫ総務</div></td>
+                    <td valign="middle"><div class="text-center">721-0956</div></td>
+                    <td valign="middle"><div>広島県福山市箕沖町１２７番地４</div></td>
+                    <td valign="middle"><div class="text-center">084-957-3450</div></td>
+                    <td valign="middle" rowspan="2"><div class="text-center">084-957-3457</div></td>
+                    <td valign="middle" rowspan="2"><div></div></td>
+                </tr>
+
+                <tr>
+                    <td valign="middle"><div>ＩＴＫ配送センター</div></td>
+                    <td valign="middle"><div class="text-center">721-0956</div></td>
+                    <td valign="middle"><div>広島県福山市箕沖町１２７番地４</div></td>
+                    <td valign="middle"><div class="text-center">084-957-3456</div></td>
+                </tr>
+
+                <tr>
+                    <td valign="middle"><div>ＩＴＳ</div></td>
+                    <td valign="middle"><div class="text-center">721-0956</div></td>
+                    <td valign="middle"><div>広島県福山市箕沖町９５番地７</div></td>
+                    <td valign="middle"><div class="text-center">084-957-3380</div></td>
+                    <td valign="middle"><div class="text-center">084-957-3381</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+
+                <tr>
+                    <td valign="middle"><div>千石商事（有）</div></td>
+                    <td valign="middle"><div class="text-center">112-0011</div></td>
+                    <td valign="middle"><div>東京都文京区千石四丁目１番１７号　池田ビル</div></td>
+                    <td valign="middle"><div class="text-center">03-3946-9355</div></td>
+                    <td valign="middle"><div class="text-center">03-3947-7192</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+
+                <tr>
+                    <td valign="middle"><div>東京・西台社員寮</div></td>
+                    <td valign="middle"><div class="text-center">174-0046</div></td>
+                    <td valign="middle"><div>東京都板橋区蓮根二丁目２７番１３号</div></td>
+                    <td valign="middle"><div class="text-center">-</div></td>
+                    <td valign="middle"><div class="text-center">-</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+
+                <tr>
+                    <td valign="middle"><div>手城・社員寮</div></td>
+                    <td valign="middle"><div class="text-center">721-0963</div></td>
+                    <td valign="middle"><div>広島県福山市南手城町二丁目３０番１２号</div></td>
+                    <td valign="middle"><div class="text-center">084-924-5649</div></td>
+                    <td valign="middle"><div class="text-center">-</div></td>
+                    <td valign="middle"><div></div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+{% endblock %}

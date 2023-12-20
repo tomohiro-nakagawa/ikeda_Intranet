@@ -1,0 +1,3652 @@
+{% extends "base.html" %}
+{% block head_title %}電話番号表{% endblock %}
+
+{% block content %}
+
+
+
+<div class="container" >
+    <h1 class="my-3" style="text-align:center">{% if not profile %}3.電話番号表{% else %}{{profile.username}}の電話番号表{% endif %}</h1>
+</div>
+
+<div class="p-3" id="1-3-1">
+    <p>&nbsp;</p> 
+    <hr>
+    <h2 style="text-align:CENTER">3-1.　各支店・事業所　短縮電話番号一覧　<a href="/media/juusho&tel/desaki.xls"><font size="2">プリントアウトはこちらから </font></a></h2>
+</div>
+<div class="container" >
+    <table class="table table-hover table-warning table-bordered border-dark table-sm    d-flex justify-content-center" >
+        <thead>
+        </thead>
+        <tbody>
+            <tr class="table-dark" >
+                <th style="width: 60PX" ><div class="text-center">短縮</div></th>
+                <th style="width: 400PX"><div class="text-center">相手先名</div></th>
+                <th style="width: 200PX"><div class="text-center">実番号</div></th>
+                <th style="width: 340PX"><div class="text-center">備考</div></th>
+            </tr>
+            <tr><td><div class="text-center">000</div></td><td>本社</td><td>084-921-3141</td><td></td></tr>
+            <tr><td><div class="text-center">001</div></td><td>本社時間外用</td><td>084-973-6668</td><td></td></tr>
+            <tr><td><div class="text-center">010</div></td><td>東京本社　営業・業務</td><td>03-3320-9355</td><td></td></tr>
+            <tr><td><div class="text-center">011</div></td><td>東京食研　開発代表・市場開発課（サンプル室）</td><td>03-3320-8121</td><td></td></tr>
+            <tr><td><div class="text-center">012</div></td><td>東京食研　開発課_乳業・製菓</td><td>03-3320-8182</td><td></td></tr>
+            <tr><td><div class="text-center">013</div></td><td>東京食研　統括部・開発課_加工食品</td><td>03-3320-8176</td><td></td></tr>
+            <tr><td><div class="text-center">015</div></td><td>IDI</td><td>03-3320-8186</td><td></td></tr>
+            <tr><td><div class="text-center">016</div></td><td>東京本社　総務</td><td>03-3320-9359</td><td></td></tr>
+            <tr><td><div class="text-center">017</div></td><td>東京食研　開発課_中外食</td><td>03-3320-9357</td><td></td></tr>
+            <tr><td><div class="text-center">018</div></td><td>東京本社　海外事業本部</td><td>03-3320-9361</td><td></td></tr>
+            <tr><td><div class="text-center">019</div></td><td>東京食研　品質情報室</td><td>03-3320-9363</td><td></td></tr>
+            <tr><td><div class="text-center">020</div></td><td>大阪支店</td><td>06-6337-4411</td><td></td></tr>
+            <tr><td><div class="text-center">021</div></td><td>名古屋支店</td><td>052-483-2571</td><td></td></tr>
+            <tr><td><div class="text-center">022</div></td><td>福岡支店</td><td>092-581-6141</td><td></td></tr>
+            <tr><td><div class="text-center">023</div></td><td>広島営業所</td><td>082-923-1213</td><td></td></tr>
+            <tr><td><div class="text-center">024</div></td><td>福山営業所</td><td>084-957-3444</td><td></td></tr>
+            <tr><td><div class="text-center">025</div></td><td>鹿児島出張所</td><td>099-214-9350</td><td></td></tr>
+            <tr><td><div class="text-center">028</div></td><td>総務部　法務・コンプライアンス室</td><td>06-6105-8641</td><td></td></tr>
+            <tr><td><div class="text-center">040</div></td><td>キサイフーズ　総務部・管理部</td><td>0480-73-2237</td><td></td></tr>
+            <tr><td><div class="text-center">041</div></td><td>キサイフーズ　生産物流部</td><td>0480-73-2222</td><td></td></tr>
+            <tr><td><div class="text-center">043</div></td><td>キサイフーズ　第２工場 製造部</td><td>0480-73-4756</td><td></td></tr>
+            <tr><td><div class="text-center">044</div></td><td>キサイフーズ　品質管理</td><td>0480-73-0442</td><td></td></tr>
+            <tr><td><div class="text-center">046</div></td><td>キサイフーズ　開発室</td><td>0480-73-8761</td><td></td></tr>
+            <tr><td><div class="text-center">050</div></td><td>上越フーズ</td><td>025-520-9100</td><td></td></tr>
+            <tr><td><div class="text-center">055</div></td><td>上越フーズ　第２工場</td><td>025-520-3618</td><td></td></tr>
+            <tr><td><div class="text-center">060</div></td><td>タヌマフーズ</td><td>0283-65-1316</td><td></td></tr>
+            <tr><td><div class="text-center">061</div></td><td>タヌマフーズ　時間外用</td><td>0283-65-1317</td><td></td></tr>
+            <tr><td><div class="text-center">070</div></td><td>日本リコス　手城</td><td>084-923-0462</td><td></td></tr>
+            <tr><td><div class="text-center">071</div></td><td>日本リコス　松浜甘味料</td><td>084-923-0407</td><td></td></tr>
+            <tr><td><div class="text-center">072</div></td><td>日本リコス　東京</td><td>03-3320-0550</td><td></td></tr>
+            <tr><td><div class="text-center">073</div></td><td>日本リコス　東倉庫</td><td>084-941-7872 </td><td></td></tr>
+            <tr><td><div class="text-center">074</div></td><td>日本リコス　笠岡</td><td>0865-67-4157</td><td></td></tr>
+            <tr><td><div class="text-center">076</div></td><td>日本リコス　笠岡　時間外用</td><td>0865-67-5209</td><td></td></tr>
+            <tr><td><div class="text-center">080</div></td><td>岡山アグリフーズ</td><td>0865-67-4741</td><td></td></tr>
+            <tr><td><div class="text-center">093</div></td><td>千石商事</td><td>03-3946-9355</td><td></td></tr>
+            <tr><td><div class="text-center">094</div></td><td>社員寮</td><td>084-924-5649</td><td></td></tr>
+            <tr><td><div class="text-center">110</div></td><td>安丘福華</td><td>010-86-536-426-1333</td><td></td></tr>
+            <tr><td><div class="text-center">111</div></td><td>安丘福華</td><td>010-86-536-426-1444</td><td></td></tr>
+            <tr><td><div class="text-center">112</div></td><td>安丘福華</td><td>010-86-536-426-1111</td><td></td></tr>
+            <tr><td><div class="text-center">115</div></td><td>安丘福華 農薬検査室</td><td>010-86-536-426-3911</td><td></td></tr>
+            <tr><td><div class="text-center">108</div></td><td>安丘福華　甲斐MG 携帯</td><td>010-86-155-8966-5880</td><td></td></tr>
+            <tr><td><div class="text-center">116</div></td><td>安丘福華 上海分公司</td><td>010-86-21-6124-3832</td><td></td></tr>
+            <tr><td><div class="text-center">109</div></td><td>安丘福華 上海分公司 蒋副總経理</td><td>010-86-158-2180-1449</td><td></td></tr>
+            <tr><td><div class="text-center">128</div></td><td>安丘福華 上海分公司 風間MG 携帯</td><td>010-86-166-5287-8676</td><td></td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="p-3" id="1-3-2">
+    <p>&nbsp;</p> 
+    <hr>
+    <h2 style="text-align:center">3-2.　携帯電話番号短縮一覧　<a href="/media/juusho&tel/keitai.xlsx"><font size="2">プリントアウトはこちらから </font></a></h2>  
+    <h5 style="text-align:center">先頭に「１４」を付けてご利用ください。 例 ： 短縮 「７００」　→　「１４７００」</h5>
+</div>
+<div class="container" >
+    <table class="table table-hover table-warning table-bordered border-dark table-sm d-flex justify-content-center" >
+        <thead>
+        </thead>
+        <tbody>
+            <tr class="table-dark" >
+                <th style="width: 200px"><div class="text-center">地区</div></th>
+                <th style="width: 100px"><div class="text-center">短縮</div></th>
+                <th style="width: 200px"><div class="text-center">氏名</div></th>
+                <th style="width: 500px"><div class="text-center">備考</div></th>
+            </tr>
+            <tr><td><div class="text-center">南関東</div></td><td><div class="text-center">738</div></td><td>日高浩二</td><td>　</td></tr>
+            <tr><td valign="middle" rowspan="2"><div class="text-center">海外事業本部</div></td><td><div class="text-center">875</div></td><td>飯尾宏</td><td>　</td></tr>
+            <tr><td><div class="text-center">650</div></td><td>佐藤圭昭</td><td>　</td></tr>
+            <tr><td valign="middle" rowspan="47"><div class="text-center">東京</div></td><td><div class="text-center">763</div></td><td>安達康弘</td><td>　</td></tr>
+            <tr><td><div class="text-center">872</div></td><td>阿部和彦</td><td>　</td></tr>
+            <tr><td><div class="text-center">554</div></td><td>安保 隆之</td><td>　</td></tr>
+            <tr><td><div class="text-center">754</div></td><td>池田昭</td><td>　</td></tr>
+            <tr><td><div class="text-center">887</div></td><td>池田厚典</td><td>　</td></tr>
+            <tr><td><div class="text-center">952</div></td><td>石川一希</td><td>　</td></tr>
+            <tr><td><div class="text-center">743</div></td><td>井上勉</td><td>　</td></tr>
+            <tr><td><div class="text-center">953</div></td><td>今村維伸</td><td>　</td></tr>
+            <tr><td><div class="text-center">602</div></td><td>岩﨑拓哉</td><td>　</td></tr>
+            <tr><td><div class="text-center">749</div></td><td>宇田誠</td><td>　</td></tr>
+            <tr><td><div class="text-center">727</div></td><td>大竹誠矢</td><td>　</td></tr>
+            <tr><td><div class="text-center">884</div></td><td>数田皓平</td><td>　</td></tr>
+            <tr><td><div class="text-center">873</div></td><td>金尾哲郎</td><td>　</td></tr>
+            <tr><td><div class="text-center">644</div></td><td>金子俊一郎</td><td>　</td></tr>
+            <tr><td><div class="text-center">878</div></td><td>神野知之</td><td>　</td></tr>
+            <tr><td><div class="text-center">636</div></td><td>川内範雄</td><td>　</td></tr>
+            <tr><td><div class="text-center">724</div></td><td>桑田浩幸</td><td>　</td></tr>
+            <tr><td><div class="text-center">552</div></td><td>後藤真菜</td><td>　</td></tr>
+            <tr><td><div class="text-center">788</div></td><td>小林和史</td><td>　</td></tr>
+            <tr><td><div class="text-center">896</div></td><td>笹井 健永</td><td>　</td></tr>
+            <tr><td><div class="text-center">655</div></td><td>佐藤晃生</td><td>　</td></tr>
+            <tr><td><div class="text-center">651</div></td><td>志田原一紀</td><td>　</td></tr>
+            <tr><td><div class="text-center">752</div></td><td>白石剛一郎</td><td>　</td></tr>
+            <tr><td><div class="text-center">613</div></td><td>須藤浩章</td><td>　</td></tr>
+            <tr><td><div class="text-center">880</div></td><td>髙田秀和</td><td>　</td></tr>
+            <tr><td><div class="text-center">791</div></td><td>高森雅之</td><td>　</td></tr>
+            <tr><td><div class="text-center">954</div></td><td>田所大登</td><td>　</td></tr>
+            <tr><td><div class="text-center">898</div></td><td>田中滉起</td><td>　</td></tr>
+            <tr><td><div class="text-center">747</div></td><td>千葉美樹</td><td>　</td></tr>
+            <tr><td><div class="text-center">893</div></td><td>出原智</td><td>　</td></tr>
+            <tr><td><div class="text-center">742</div></td><td>南原利昭</td><td>　</td></tr>
+            <tr><td><div class="text-center">681</div></td><td>西上昌克</td><td>　</td></tr>
+            <tr><td><div class="text-center">899</div></td><td>野津田健</td><td>　</td></tr>
+            <tr><td><div class="text-center">551</div></td><td>野々村千広</td><td>　</td></tr>
+            <tr><td><div class="text-center">751</div></td><td>長谷川陽一</td><td>　</td></tr>
+            <tr><td><div class="text-center">871</div></td><td>畑幸延</td><td>　</td></tr>
+            <tr><td><div class="text-center">786</div></td><td>原口充弘</td><td>　</td></tr>
+            <tr><td><div class="text-center">653</div></td><td>馬場栄一</td><td>　</td></tr>
+            <tr><td><div class="text-center">722</div></td><td>昼田一之</td><td>　</td></tr>
+            <tr><td><div class="text-center">764</div></td><td>福原光海</td><td>　</td></tr>
+            <tr><td><div class="text-center">548</div></td><td>前迫一輝</td><td>　</td></tr>
+            <tr><td><div class="text-center">895</div></td><td>町村孟洋</td><td>　</td></tr>
+            <tr><td><div class="text-center">725</div></td><td>矢野勝己</td><td>　</td></tr>
+            <tr><td><div class="text-center">641</div></td><td>山本将彰</td><td>　</td</tr>
+            <tr><td><div class="text-center">789</div></td><td>余越由教</td><td>　</td></tr>
+            <tr><td><div class="text-center">746</div></td><td>若林勇厚</td><td>　</td></tr>
+            <tr><td><div class="text-center">600</div></td><td>渡邊通子</td><td>　</td></tr>
+            <tr><td valign="middle" rowspan="32"><div class="text-center">東京食研</div></td><td><div class="text-center">558</div></td><td>相原穂奈美</td><td>　</td></tr>
+            <tr><td><div class="text-center">569</div></td><td>青木めぐみ</td><td>　</td></tr>
+            <tr><td><div class="text-center">792</div></td><td>有森宏治</td><td>　</td></tr>
+            <tr><td><div class="text-center">637</div></td><td>池嶋聖史</td><td>　</td></tr>
+            <tr><td><div class="text-center">897</div></td><td>池原匡彦</td><td>　</td></tr>
+            <tr><td><div class="text-center">597</div></td><td>石井亜希子</td><td>　</td></tr>
+            <tr><td><div class="text-center">594</div></td><td>岩越奈々</td><td>　</td></tr>
+            <tr><td><div class="text-center">561</div></td><td>尾崎麻美</td><td>　</td></tr>
+            <tr><td><div class="text-center">604</div></td><td>金岡研生</td><td>　</td></tr>
+            <tr><td><div class="text-center">565</div></td><td>刈屋悠</td><td>　</td></tr>
+            <tr><td><div class="text-center">585</div></td><td>神林知里</td><td>　</td></tr>
+            <tr><td><div class="text-center">886</div></td><td>北山太一</td><td>　</td></tr>
+            <tr><td><div class="text-center">556</div></td><td>清田麻未</td><td>　</td></tr>
+            <tr><td><div class="text-center">586</div></td><td>小島里菜</td><td>　</td></tr>
+            <tr><td><div class="text-center">570</div></td><td>五味明季子</td><td>　</td></tr>
+            <tr><td><div class="text-center">598</div></td><td>坂原彌生</td><td>　</td></tr>
+            <tr><td><div class="text-center">542</div></td><td>髙須 浩</td><td>　</td></tr>
+            <tr><td><div class="text-center">562</div></td><td>田﨑友香</td><td>　</td></tr>
+            <tr><td><div class="text-center">555</div></td><td>鳥越有二</td><td>　</td></tr>
+            <tr><td><div class="text-center">892</div></td><td>平山大剛</td><td>　</td></tr>
+            <tr><td><div class="text-center">560</div></td><td>藤倉眞子</td><td>　</td></tr>
+            <tr><td><div class="text-center">596</div></td><td>藤島由里子</td><td>　</td></tr>
+            <tr><td><div class="text-center">568</div></td><td>二井広平</td><td>　</td></tr>
+            <tr><td><div class="text-center">573</div></td><td>星野文菜</td><td>　</td></tr>
+            <tr><td><div class="text-center">614</div></td><td>堀田直子</td><td>　</td></tr>
+            <tr><td><div class="text-center">563</div></td><td>峯﨑綾乃</td><td>　</td></tr>
+            <tr><td><div class="text-center">583</div></td><td>武笠由依</td><td>　</td></tr>
+            <tr><td><div class="text-center">584</div></td><td>村井弥夢</td><td>　</td></tr>
+            <tr><td><div class="text-center">645</div></td><td>山田大介</td><td>　</td></tr>
+            <tr><td><div class="text-center">577</div></td><td>山田格子</td><td>　</td></tr>
+            <tr><td><div class="text-center">581</div></td><td>吉留和麿</td><td>　</td></tr>
+            <tr><td><div class="text-center">580</div></td><td>渡邊裕香</td><td>　</td></tr>
+            <tr><td valign="middle" rowspan="8"><div class="text-center">キサイ</div></td><td><div class="text-center">553</div></td><td>伊藤 和也</td><td>　</td></tr>
+            <tr><td><div class="text-center">589</div></td><td>岡田 晃臣</td><td>　</td></tr>
+            <tr><td><div class="text-center">588</div></td><td>川中 美幸</td><td>　</td></tr>
+            <tr><td><div class="text-center">590</div></td><td>神保 成一</td><td>　</td></tr>
+            <tr><td><div class="text-center">698</div></td><td>日吉圭介</td><td>　</td></tr>
+            <tr><td><div class="text-center">591</div></td><td>藤崎 裕子</td><td>　</td></tr>
+            <tr><td><div class="text-center">593</div></td><td>水田 敦</td><td>　</td></tr>
+            <tr><td><div class="text-center">592</div></td><td>諸杉 健志</td><td>　</td></tr>
+            <tr><td valign="middle" rowspan="6"><div class="text-center">タヌマ</div></td><td><div class="text-center">901</div></td><td>坂本寛久</td><td>　</td></tr>
+            <tr><td><div class="text-center">902</div></td><td>砂原真二</td><td>　</td></tr>
+            <tr><td><div class="text-center">903</div></td><td>上原知之</td><td>　</td></tr>
+            <tr><td><div class="text-center">904</div></td><td>掛本栄治</td><td>　</td></tr>
+            <tr><td><div class="text-center">905</div></td><td>諏訪紘史</td><td>　</td></tr>
+            <tr><td><div class="text-center">906</div></td><td>高田良平</td><td>　</td></tr>
+            <tr><td valign="middle" rowspan="4"><div class="text-center">IDI</div></td><td><div class="text-center">753</div></td><td>大原一真</td><td>　</td></tr>
+            <tr><td><div class="text-center">601</div></td><td>重政宏幸</td><td>　</td></tr>
+            <tr><td><div class="text-center">881</div></td><td>立山壮</td><td>　</td></tr>
+            <tr><td><div class="text-center">761</div></td><td>平川正志</td><td>　</td></tr>
+            <tr><td valign="middle" rowspan="8"><div class="text-center">名古屋</div></td><td><div class="text-center">771</div></td><td>桒田浩明</td><td>　</td></tr>
+            <tr><td><div class="text-center">543</div></td><td>小泉颯太朗 </td><td>　</td></tr>
+            <tr><td><div class="text-center">658</div></td><td>谷本章</td><td>　</td></tr>
+            <tr><td><div class="text-center">675</div></td><td>西野倭</td><td>　</td></tr>
+            <tr><td><div class="text-center">794</div></td><td>日野慶吾</td><td>　</td></tr>
+            <tr><td><div class="text-center">736</div></td><td>安原雅洋</td><td>　</td></tr>
+            <tr><td><div class="text-center">772</div></td><td>山田晋也</td><td>　</td></tr>
+            <tr><td><div class="text-center">603</div></td><td>米村祥希</td><td>　</td></tr>
+            <tr><td valign="middle" rowspan="9"><div class="text-center">大阪</div></td><td><div class="text-center">793</div></td><td>石井秀典</td><td>　</td></tr>
+            <tr><td><div class="text-center">889</div></td><td>石田博義</td><td>　</td></tr>
+            <tr><td><div class="text-center">787</div></td><td>井上貴裕</td><td>　</td></tr>
+            <tr><td><div class="text-center">894</div></td><td>神谷岳志</td><td>　</td></tr>
+            <tr><td><div class="text-center">642</div></td><td>河村恒太</td><td>　</td></tr>
+            <tr><td><div class="text-center">659</div></td><td>齊藤暢之</td><td>　</td></tr>
+            <tr><td><div class="text-center">726</div></td><td>田中智裕</td><td>　</td></tr>
+            <tr><td><div class="text-center">549</div></td><td>長谷川賢</td><td>　</td></tr>
+            <tr><td><div class="text-center">741</div></td><td>藤井佳努</td><td>　</td></tr>
+            <tr><td valign="middle"  rowspan="3"><div class="text-center">福山</div></td><td><div class="text-center">870</div></td><td>田邊大樹</td><td>　</td></tr>
+            <tr><td><div class="text-center">766</div></td><td>廣森徹</td><td>　</td></tr>
+            <tr><td><div class="text-center">703</div></td><td>藤本真治</td><td>　</td></tr>
+            <tr><td valign="middle"  rowspan="2"><div class="text-center">広島</div></td><td><div class="text-center">750</div></td><td>楢村博文</td><td>　</td></tr>
+            <tr><td><div class="text-center">587</div></td><td>西廣朋子</td><td>　</td></tr>
+            <tr><td valign="middle"  rowspan="5"><div class="text-center">福岡</div></td><td><div class="text-center">696</div></td><td>五十嵐薫</td><td>　</td></tr>
+            <tr><td><div class="text-center">545</div></td><td>津間優作</td><td>　</td></tr>
+            <tr><td><div class="text-center">737</div></td><td>供利潤</td><td>　</td></tr>
+            <tr><td><div class="text-center">674</div></td><td>中島陵汰</td><td>　</td></tr>
+            <tr><td><div class="text-center">735</div></td><td>中屋一秀</td><td>　</td></tr>
+            <tr><td valign="middle"  rowspan="2"><div class="text-center">ソラサン</div></td><td><div class="text-center">882</div></td><td>加茂俊児</td><td>　</td></tr>
+            <tr><td><div class="text-center">648</div></td><td>古志一朗</td><td>　</td></tr>
+            <tr><td><div class="text-center">ｷｬﾗﾒﾗｲﾌ</div></td><td><div class="text-center">639</div></td><td>小西篤雄</td><td>　</td></tr>
+            <tr><td valign="middle"  rowspan="10"><div class="text-center">ＩＴＳ</div></td><td><div class="text-center">926</div></td><td>相川和久</td><td>　</td></tr>
+            <tr><td><div class="text-center">876</div></td><td>枝松弘晃</td><td>　</td></tr>
+            <tr><td><div class="text-center">701</div></td><td>久保匡弘</td><td>　</td></tr>
+            <tr><td><div class="text-center">669</div></td><td>倉田隆之</td><td>　</td></tr>
+            <tr><td><div class="text-center">779</div></td><td>佐藤和仁</td><td>　</td></tr>
+            <tr><td><div class="text-center">685</div></td><td>稗田直紹</td><td>　</td></tr>
+            <tr><td><div class="text-center">785</div></td><td>樋口史晃</td><td>　</td></tr>
+            <tr><td><div class="text-center">780</div></td><td>宮地隆幸</td><td>　</td></tr>
+            <tr><td><div class="text-center">797</div></td><td>吉岡博文</td><td>　</td></tr>
+            <tr><td><div class="text-center">773</div></td><td>渡邊浩二</td><td>　</td></tr>
+            <tr><td valign="middle"  rowspan="7"><div class="text-center">ＩＴＫ</div></td><td><div class="text-center">660</div></td><td>市川俊文</td><td>　</td></tr>
+            <tr><td><div class="text-center">661</div></td><td>宍戸克年</td><td>　</td></tr>
+            <tr><td><div class="text-center">662</div></td><td>相方將伸</td><td>　</td></tr>
+            <tr><td><div class="text-center">663</div></td><td>徳永博昭</td><td>　</td></tr>
+            <tr><td><div class="text-center">664</div></td><td>長谷山正幸</td><td>　</td></tr>
+            <tr><td><div class="text-center">665</div></td><td>寺岡真司</td><td>　</td></tr>
+            <tr><td><div class="text-center">666</div></td><td>横山記之</td><td>　</td></tr>
+            <tr><td><div class="text-center">上海</div></td><td><div class="text-center">610</div></td><td>風間聡司</td><td>　</td></tr>
+            <tr><td valign="middle"  rowspan="19"><div class="text-center">上越</div></td><td><div class="text-center">921</div></td><td>池上由美</td><td>　</td></tr>
+            <tr><td><div class="text-center">885</div></td><td>小川一也</td><td>　</td></tr>
+            <tr><td><div class="text-center">919</div></td><td>尾崎佳一</td><td>　</td></tr>
+            <tr><td><div class="text-center">914</div></td><td>岡野勝</td><td>　</td></tr>
+            <tr><td><div class="text-center">908</div></td><td>小池孝</td><td>　</td></tr>
+            <tr><td><div class="text-center">918</div></td><td>笹川央</td><td>　</td></tr>
+            <tr><td><div class="text-center">924</div></td><td>竹内博文 </td><td>　</td></tr>
+            <tr><td><div class="text-center">922</div></td><td>竹内大和</td><td>　</td></tr>
+            <tr><td><div class="text-center">910</div></td><td>武田晃法</td><td>　</td></tr>
+            <tr><td><div class="text-center">917</div></td><td>竹田裕弥</td><td>　</td></tr>
+            <tr><td><div class="text-center">920</div></td><td>西山智美</td><td>　</td></tr>
+            <tr><td><div class="text-center">912</div></td><td>古川博之</td><td>　</td></tr>
+            <tr><td><div class="text-center">911</div></td><td>松苗雄太</td><td>　</td></tr>
+            <tr><td><div class="text-center">916</div></td><td>皆川将士</td><td>　</td></tr>
+            <tr><td><div class="text-center">925</div></td><td>村上秀彦</td><td>　</td></tr>
+            <tr><td><div class="text-center">907</div></td><td>山﨑貢</td><td>　</td></tr>
+            <tr><td><div class="text-center">915</div></td><td>山﨑美由紀</td><td>　</td></tr>
+            <tr><td><div class="text-center">909</div></td><td>吉村輝夫</td><td>　</td></tr>
+            <tr><td><div class="text-center">913</div></td><td>渡部和人</td><td>　</td></tr>
+            <tr><td><div class="text-center">社長</div></td><td><div class="text-center">700</div></td><td>池田直之</td><td>　</td></tr>
+            <tr><td valign="middle"  rowspan="3"><div class="text-center">人事</div></td><td><div class="text-center">635</div></td><td>今岡裕介</td><td>　</td></tr>
+            <tr><td><div class="text-center">654</div></td><td>山岡弘典</td><td>　</td></tr>
+            <tr><td><div class="text-center">927</div></td><td>村上亜矢子</td><td>　</td></tr>
+            <tr><td valign="middle"  rowspan="2"><div class="text-center">第1工場</div></td><td><div class="text-center">693</div></td><td>頭山和義</td><td>　</td></tr>
+            <tr><td><div class="text-center">868</div></td><td>高橋高一郎</td><td>　</td></tr>
+            <tr><td valign="middle"  rowspan="6"><div class="text-center">第3工場</div></td><td><div class="text-center">657</div></td><td>岩本浩二</td><td>　</td></tr>
+            <tr><td><div class="text-center">718</div></td><td>漆原幸治</td><td>　</td></tr>
+            <tr><td><div class="text-center">634</div></td><td>川ノ上靖子</td><td>　</td></tr>
+            <tr><td><div class="text-center">647</div></td><td>桑田陽二</td><td>　</td></tr>
+            <tr><td><div class="text-center">679</div></td><td>橋本正雄</td><td>　</td></tr>
+            <tr><td><div class="text-center">672</div></td><td>吉本崇</td><td>　</td></tr>
+            <tr><td><div class="text-center">第4工場</div></td><td><div class="text-center">676</div></td><td>吉出誠</td><td>　</td></tr>
+            <tr><td><div class="text-center">第5工場</div></td><td><div class="text-center">621</div></td><td>道下和茂 </td><td>　</td></tr>
+            <tr><td valign="middle"  rowspan="2"><div class="text-center">アグリ</div></td><td><div class="text-center">795</div></td><td>岡部裕記</td><td>　</td></tr>
+            <tr><td><div class="text-center">774</div></td><td>田中徳夫</td><td>　</td></tr>
+            <tr><td><div class="text-center">BP</div></td><td><div class="text-center">540</div></td><td>小田圭一</td><td>　</td></tr>
+            <tr><td valign="middle"  rowspan="13"><div class="text-center">生産技術</div></td><td><div class="text-center">682</div></td><td>明石浩之</td><td>　</td></tr>
+            <tr><td><div class="text-center">706</div></td><td>石井俊也</td><td>　</td></tr>
+            <tr><td><div class="text-center">770</div></td><td>大本信治</td><td>　</td></tr>
+            <tr><td><div class="text-center">757</div></td><td>川上洋志</td><td>　</td></tr>
+            <tr><td><div class="text-center">713</div></td><td>河野淳</td><td>　</td></tr>
+            <tr><td><div class="text-center">729</div></td><td>河野淳(海外出張時) </td><td>　</td></tr>
+            <tr><td><div class="text-center">677</div></td><td>小林雅人</td><td>　</td></tr>
+            <tr><td><div class="text-center">796</div></td><td>中村十夢</td><td>　</td></tr>
+            <tr><td><div class="text-center">769</div></td><td>丸本貴史</td><td>　</td></tr>
+            <tr><td><div class="text-center">765</div></td><td>村上裕樹</td><td>　</td></tr>
+            <tr><td><div class="text-center">758</div></td><td>岡田眞和</td><td>　</td></tr>
+            <tr><td><div class="text-center">715</div></td><td>栗山雅行</td><td>　</td></tr>
+            <tr><td><div class="text-center">900</div></td><td>ボイラー管理者</td><td>　</td></tr>
+            <tr><td valign="middle"  rowspan="2"><div class="text-center">品質保証</div></td><td><div class="text-center">704</div></td><td>熊代丈二</td><td>　</td></tr>
+            <tr><td><div class="text-center">784</div></td><td>西田哲也</td><td>　</td></tr>
+            <tr><td><div class="text-center">Ｓ精製</div></td><td><div class="text-center">850</div></td><td>谷本頼保</td><td>　</td></tr>
+            <tr><td valign="middle"  rowspan="49"><div class="text-center">箕島食研</div></td><td><div class="text-center">609</div></td><td>荒木 俊雄</td><td>　</td></tr>
+            <tr><td><div class="text-center">606</div></td><td>上﨑 英範</td><td>　</td></tr>
+            <tr><td><div class="text-center">940</div></td><td>岡田 圭司</td><td>　</td></tr>
+            <tr><td><div class="text-center">936</div></td><td>岡田 るみ</td><td>　</td></tr>
+            <tr><td><div class="text-center">619</div></td><td>大隅 香織</td><td>　</td></tr>
+            <tr><td><div class="text-center">937</div></td><td>木村 ちづる</td><td>　</td></tr>
+            <tr><td><div class="text-center">932</div></td><td>清原 裕之</td><td>　</td></tr>
+            <tr><td><div class="text-center">628</div></td><td>小村 啓悟</td><td>　</td></tr>
+            <tr><td><div class="text-center">622</div></td><td>小畠 孝広</td><td>　</td></tr>
+            <tr><td><div class="text-center">667</div></td><td>今野北斗</td><td>　</td></tr>
+            <tr><td><div class="text-center">941 </div></td><td>佐藤 洸司</td><td>　</td></tr>
+            <tr><td><div class="text-center">938</div></td><td>佐藤 純菜</td><td>　</td></tr>
+            <tr><td><div class="text-center">626</div></td><td>澤田 一成</td><td>　</td></tr>
+            <tr><td><div class="text-center">933 </div></td><td>杉之原 正美</td><td>　</td></tr>
+            <tr><td><div class="text-center">942</div></td><td>高柿 春花</td><td>　</td></tr>
+            <tr><td><div class="text-center">618</div></td><td>宅和 展生</td><td>　</td></tr>
+            <tr><td><div class="text-center">607</div></td><td>永見 拓也</td><td>　</td></tr>
+            <tr><td><div class="text-center">943</div></td><td>中畑 花織</td><td>　</td></tr>
+            <tr><td><div class="text-center">625</div></td><td>中村 直樹</td><td>　</td></tr>
+            <tr><td><div class="text-center">883</div></td><td>中本純一</td><td>　</td></tr>
+            <tr><td><div class="text-center">629</div></td><td>西岡 功志</td><td>　</td></tr>
+            <tr><td><div class="text-center">615</div></td><td>西山 弘介</td><td>　</td></tr>
+            <tr><td><div class="text-center">620</div></td><td>橋本 暁</td><td>　</td></tr>
+            <tr><td><div class="text-center">939</div></td><td>萩原 久貴</td><td>　</td></tr>
+            <tr><td><div class="text-center">930</div></td><td>原 望美</td><td>　</td></tr>
+            <tr><td><div class="text-center">944</div></td><td>平川 さゆり</td><td>　</td></tr>
+            <tr><td><div class="text-center">632</div></td><td>平原 利克</td><td>　</td></tr>
+            <tr><td><div class="text-center">928</div></td><td>廣瀬 花穂</td><td>　</td></tr>
+            <tr><td><div class="text-center">683</div></td><td>福松敏彦</td><td>　</td></tr>
+            <tr><td><div class="text-center">934</div></td><td>藤丸 美南海</td><td>　</td></tr>
+            <tr><td><div class="text-center">945</div></td><td>別所 菜緒</td><td>　</td></tr>
+            <tr><td><div class="text-center">627</div></td><td>本田 通済</td><td>　</td></tr>
+            <tr><td><div class="text-center">929</div></td><td>本間 優衣</td><td>　</td></tr>
+            <tr><td><div class="text-center">947</div></td><td>増田 成穂</td><td>　</td></tr>
+            <tr><td><div class="text-center">617</div></td><td>松浦 弘和</td><td>　</td></tr>
+            <tr><td><div class="text-center">946</div></td><td>松尾 拓俊</td><td>　</td></tr>
+            <tr><td><div class="text-center">948</div></td><td>松尾 弥俊</td><td>　</td></tr>
+            <tr><td><div class="text-center">950</div></td><td>正木 直子</td><td>　</td></tr>
+            <tr><td><div class="text-center">623</div></td><td>松永 範久</td><td>　</td></tr>
+            <tr><td><div class="text-center">931</div></td><td>松本 英子</td><td>　</td></tr>
+            <tr><td><div class="text-center">633</div></td><td>松本 隆</td><td>　</td></tr>
+            <tr><td><div class="text-center">935</div></td><td>松本 望未</td><td>　</td></tr>
+            <tr> <td><div class="text-center">630</div></td><td>三嶋 香苗</td><td>　</td></tr>
+            <tr><td><div class="text-center">949</div></td><td>三藤 郁佳</td><td>　</td></tr>
+            <tr><td><div class="text-center">608</div></td><td>宮本 浩士</td><td>　</td></tr>
+            <tr><td><div class="text-center">631</div></td><td>森田 真理子</td><td>　</td></tr>
+            <tr> <td><div class="text-center">616</div></td><td>森原 雅弘</td><td>　</td></tr>
+            <tr><td><div class="text-center">547</div></td><td>山口 久美子</td><td>　</td></tr>
+            <tr><td><div class="text-center">951</div></td><td>山口 涼華</td><td>　</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="p-3" id="1-3-3"></div>
+
+    <hr>
+    <h2 style="text-align:center">3-3.　箕島工場　内線番号表　<a href="/media/juusho&tel/koujounai.xlsx"><font size="2">プリントアウトはこちらから </font></a></h2>    
+</div>
+<div class="container" >
+    
+    <table class="table table-hover table-warning table-bordered border-dark table-sm d-flex justify-content-center" >
+        <tbody>
+            <tr class="table-dark" >
+                <th style="width: 100px"><div class="text-center">工場</div></th>
+                <th style="width: 100px"><div class="text-center">棟名</div></th>
+                <th style="width: 200px"><div class="text-center">部署</div></th>
+                <th style="width: 100px"><div class="text-center">内線番号</div></th>
+                <th style="width: 500px"><div class="text-center">備考</div></th>
+            <tr>
+                <td valign="middle"  rowspan="5"><div class="text-center">第一</div></td>
+                <td><div class="text-center">F棟</div></td>
+                <td><div>F棟管理室</div></td>
+                <td><div class="text-center">4121</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>タル詰め</div></td>
+                <td><div class="text-center">4122</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>スプレー３号</div></td>
+                <td><div class="text-center">4123</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">H棟</div></td>
+                <td><div>砂糖カラメル</div></td>
+                <td><div class="text-center">4131</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>ＧＨ棟管理室</div></td>
+                <td><div class="text-center">4133</div></td>
+                <td><div>　</div></td>
+            </tr>
+
+            <tr>
+                <td valign="middle"  rowspan="20"><div class="text-center">第二</div></td>
+                <td><div class="text-center">Ｅ棟</div></td>
+                <td><div >スプレー２号</div></td>
+                <td><div class="text-center">4112</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div >粉体ブレンド</div></td>
+                <td><div class="text-center">4113</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>粉体ﾌﾞﾚﾝﾄﾞ管理室</div></td>
+                <td><div class="text-center">4114</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>Ｅ棟２Ｆ</div></td>
+                <td><div class="text-center">4115</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">Ｅ２棟</div></td>
+                <td><div>１Ｆ 小分け</div></td>
+                <td><div class="text-center">4181</div></td>
+                <td><div>ＦＡＸも４１８１</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>１Ｆ DD管理室</div></td>
+                <td><div class="text-center">4182</div></td>
+                <td><div>ＦＡＸも４１８２</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>２Ｆ 造粒管理室</div></td>
+                <td><div class="text-center">4183</div></td>
+                <td><div ></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>１Ｆ ﾊﾞｯﾁ分け場</div></td>
+                <td><div class="text-center">4581</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>１Ｆ 小分場</div></td>
+                <td><div class="text-center">4582</div></td>
+                <td><div ></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>１Ｆ DD 制御室1530型</div></td>
+                <td><div class="text-center">4583</div></td>
+                <td><div ></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>２Ｆ 造粒管理室</div></td>
+                <td><div class="text-center">4584</div></td>
+                <td><div ></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>２Ｆ VDD制御室</div></td>
+                <td><div class="text-center">4585</div></td>
+                <td><div ></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>３Ｆ MP管理室</div></td>
+                <td><div class="text-center">4586</div></td>
+                <td><div ></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>１Ｆ DD 制御室1225型</div></td>
+                <td><div class="text-center">4587</div></td>
+                <td><div ></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">Ｋ'棟</div></td>
+                <td><div>シュギ管理室</div></td>
+                <td><div class="text-center">4151</div></td>
+                <td><div ></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>シュギ包装室</div></td>
+                <td><div class="text-center">4555</div></td>
+                <td><div ></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">Ｋ２棟</div></td>
+                <td><div>造粒120型</div></td>
+                <td><div class="text-center">4155</div></td>
+                <td><div ></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>小袋充填</div></td>
+                <td><div class="text-center">4556</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>造粒300型</div></td>
+                <td><div class="text-center">4154</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">ＰＨＳ</div></td>
+                <td><div>加藤</div></td>
+                <td><div class="text-center">3530</div></td>
+                <td><div>外線：084-957-3530</div></td>
+            </tr>
+
+            <tr>
+                <td valign="middle"  rowspan="12"><div class="text-center">第三</div></td>
+                <td><div class="text-center">Ｋ棟</div></td>
+                <td><div>１Ｆ 前処理管理室</div></td>
+                <td><div class="text-center">4141</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>１Ｆ カップレトルト</div></td>
+                <td><div class="text-center">4143</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>１Ｆ Ｋ棟通路</div></td>
+                <td><div class="text-center">4144</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>２Ｆ 包装室</div></td>
+                <td><div class="text-center">4145</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>３Ｆ 管理室</div></td>
+                <td><div class="text-center">4146</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>３Ｆ 分析室</div></td>
+                <td><div class="text-center">4142</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>３Ｆ 包装用</div></td>
+                <td><div class="text-center">4552</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>３Ｆ 殺菌</div></td>
+                <td><div class="text-center">4551</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>３Ｆ 管理室</div></td>
+                <td><div class="text-center">4553</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>３Ｆ 管理室</div></td>
+                <td><div class="text-center">4554</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>３Ｆ 管理室</div></td>
+                <td><div class="text-center">4557</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>３Ｆ 管理室(橋本正) </div></td>
+                <td><div class="text-center">3527</div></td>
+                <td><div>外線：084-957-3527</div></td>
+            </tr>
+
+            <tr>
+                <td valign="middle"  rowspan="12"><div class="text-center">第四</div></td>
+                <td><div class="text-center">Ｌ棟</div></td>
+                <td><div>Ｌ棟管理室</div></td>
+                <td><div class="text-center">4161</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">Ｑ棟</div></td>
+                <td><div>充填</div></td>
+                <td><div class="text-center">4565</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">ＰＨＳ</div></td>
+                <td><div>液体ブレンドⅠ</div></td>
+                <td><div class="text-center">4561</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>〃</div></td>
+                <td><div class="text-center">4564</div></td>
+                <td><div>（加圧）</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>液体ブレンドⅡ</div></td>
+                <td><div class="text-center">4562</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>直火</div></td>
+                <td><div class="text-center">4563</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>ＣＩＰ</div></td>
+                <td><div class="text-center">4567</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>支援</div></td>
+                <td><div class="text-center">4566</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>Ｌ棟１Ｆ 原料倉庫</div></td>
+                <td><div class="text-center">4568</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>Ｅ棟</div></td>
+                <td><div class="text-center">4569</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>Ｅ棟 液体ブレンド</div></td>
+                <td><div class="text-center">4511</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">Ｅ棟</div></td>
+                <td><div>Ｅ棟液体</div></td>
+                <td><div class="text-center">4117</div></td>
+                <td><div></div></td>
+            </tr>
+
+            <tr>
+                <td valign="middle"  rowspan="23"><div class="text-center">第五</div></td>
+                <td><div class="text-center">Ｋ２棟</div></td>
+                <td><div>１Ｆ 充填室</div></td>
+                <td><div class="text-center">4171</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>１Ｆ 前処理室</div></td>
+                <td><div class="text-center">4172</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>２Ｆ 管理室</div></td>
+                <td><div class="text-center">4173</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>３Ｆ 調合室</div></td>
+                <td><div class="text-center">4175</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>４Ｆ 前処理室</div></td>
+                <td><div class="text-center">4624</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>１Ｆ 充填室(山下)</div></td>
+                <td><div class="text-center">4571</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>工場管理(藤田)</div></td>
+                <td><div class="text-center">4572</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>アセプ(石川博規)</div></td>
+                <td><div class="text-center">3521</div></td>
+                <td><div>外線：084-957-3521</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>前処理室(山本)</div></td>
+                <td><div class="text-center">4574</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>調合室(小林寿)</div></td>
+                <td><div class="text-center">4573</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>工場管理(岡﨑)</div></td>
+                <td><div class="text-center">4575</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>工場管理(桒田)</div></td>
+                <td><div class="text-center">3513</div></td>
+                <td><div>外線：084-957-3513</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>工場管理(小林敏)</div></td>
+                <td><div class="text-center">3514</div></td>
+                <td><div>外線：084-957-3514</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">ＡＡ棟</div></td>
+                <td><div>２Ｆ 管理室</div></td>
+                <td><div class="text-center">4413</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>２Ｆ 食堂</div></td>
+                <td><div class="text-center">4414</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>ＰＳ(荒谷)</div></td>
+                <td><div class="text-center">4611</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>ＰＳ(稲葉)</div></td>
+                <td><div class="text-center">4612</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>ＰＳ(藤本)</div></td>
+                <td><div class="text-center">4614</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>ＢＣ(岸本匡史)</div></td>
+                <td><div class="text-center">4616</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>ＢＣ(真田)</div></td>
+                <td><div class="text-center">4623</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>ＦＦ(吉岡)</div></td>
+                <td><div class="text-center">4619</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>ＦＦ(吉冨)</div></td>
+                <td><div class="text-center">4617</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>工場管理(遊免)</div></td>
+                <td><div class="text-center">4625</div></td>
+                <td><div></div></td>
+            </tr>
+
+            <tr>
+                <td valign="middle"  rowspan="6"><div class="text-center">生産技術</div></td>
+                <td><div class="text-center">Ｊ棟</div></td>
+                <td><div>早川･佐藤</div></td>
+                <td><div class="text-center">4231</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>田村(有里)･岸浦</div></td>
+                <td><div class="text-center">4233</div></td>
+                <td><div>外線：084-957-3367</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>小江･明石</div></td>
+                <td><div class="text-center">4234</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>丸本･石井(俊)･川上</div></td>
+                <td><div class="text-center">4235</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>村上･中村･栗山</div></td>
+                <td><div class="text-center">4236</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>ＦＡＸ</div></td>
+                <td><div class="text-center">4239</div></td>
+                <td><div>外線：084-957-3391</div></td>
+            </tr>
+
+            <tr>
+                <td valign="middle"  rowspan="10"><div class="text-center">その他</div></td>
+                <td><div class="text-center">Ｕ棟</div></td>
+                <td><div></div>１Ｆ・旧ＩＴＫ</div></td>
+                <td><div class="text-center">4391</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">Ｑ棟</div></td>
+                <td><div></div>Ｑ棟応接室</div></td>
+                <td><div class="text-center">4291</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div></div>食堂カウンター</div></td>
+                <td><div class="text-center">4295</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div></div>女子休憩室</div></td>
+                <td><div class="text-center">4297</div></td>
+                <td><div></div></td>
+            </tr>
+
+            <tr>
+                <td><div class="text-center">――――――</div></td>
+                <td><div>テストプラント</div></td>
+                <td><div class="text-center">備考参照</div></td>
+                <td><div>４１７７～４１７９</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>ボイラー室</div></td>
+                <td><div class="text-center">4211</div></td>
+                <td><div>外線：084-957-3368(夜間緊急連絡用・外線番号非公開)</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div></div>受電室</div></td>
+                <td><div class="text-center">4213</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div></div>Ｓ精製</div></td>
+                <td><div class="text-center">4221</div></td>
+                <td><div>ＦＡＸも４２２１（外線：084-957-3390）</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div></div>井上電気工事</div></td>
+                <td><div class="text-center">4232</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div></div>守衛室</div></td>
+                <td><div class="text-center">4299</div></td>
+                <td><div>外線：957-3369(休日緊急連絡用・外線番号非公開)</div></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="p-3" id="1-3-4"></div>
+    
+    <hr>
+    <h2 style="text-align:center">3-4.　箕島北工場　内線番号表　<a href="/media/juusho&tel/newkoujounai.xls"><font size="2">プリントアウトはこちらから </font></a></h2>  
+</div>
+<div class="container" >
+    <table class="table table-hover table-warning table-bordered border-dark table-sm d-flex justify-content-center" >
+        <thead>
+        </thead>
+        <tbody>
+            <tr class="table-dark" >
+                <th style="width: 100px"><div class="text-center">工場</div></th>
+                <th style="width: 100px"><div class="text-center">棟名</div></th>
+                <th style="width: 200px"><div class="text-center">部署</div></th>
+                <th style="width: 100px"><div class="text-center">内線番号</div></th>
+                <th style="width: 500px"><div class="text-center">備考</div></th>
+            </tr>
+            <tr>
+                <td valign="middle"  rowspan="18"><div class="text-center">第五</div></td>
+                <td><div class="text-center">ＡＡ棟</div></td>
+                <td><div>玄関受付</div></td>
+                <td><div class="text-center">4411</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>１Ｆ　計量室</div></td>
+                <td><div class="text-center">4412</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>２Ｆ　管理室</div></td>
+                <td><div class="text-center">4413</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>２Ｆ　食堂</div></td>
+                <td><div class="text-center">4414</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>２Ｆ　応接室</div></td>
+                <td><div class="text-center">4415</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>ＰＳ室　(荒谷)</div></td>
+                <td><div class="text-center">4611</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>ＰＳ室　(稲葉)</div></td>
+                <td><div class="text-center">4612</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>ＰＳ室　(岡田行)</div></td>
+                <td><div class="text-center">4613</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>ＰＳ室　(藤本)</div></td>
+                <td><div class="text-center">4614</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>ＰＳ室　(高橋陽)</div></td>
+                <td><div class="text-center">4615</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>ＢＣ室　(岸本匡)</div></td>
+                <td><div class="text-center">4616</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>ＢＣ室　(共用)</div></td>
+                <td><div class="text-center">4618</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>ＢＣ室　(真田)</div></td>
+                <td><div class="text-center">4623</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>ＦＦ室　(吉冨))</div></td>
+                <td><div class="text-center">4617</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>ＦＦ室　(吉岡)</div></td>
+                <td><div class="text-center">4619</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>ＦＦ室　(小田原)</div></td>
+                <td><div class="text-center">4621</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>ＦＦ室　(共用)</div></td>
+                <td><div class="text-center">4622</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>ＡＡ棟　(遊免)</div></td>
+                <td><div class="text-center">4625</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td valign="middle"  rowspan="9"><div class="text-center"></div></td>
+                <td><div class="text-center">ＢＢ棟</div></td>
+                <td><div>1F　玄関受付</div></td>
+                <td><div class="text-center">4421</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>1F　事務室</div></td>
+                <td><div class="text-center">4422</div></td>
+                <td><div>ＦＡＸも４４２２</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>1F　管理室</div></td>
+                <td><div class="text-center">4423</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>1F　前室３</div></td>
+                <td><div class="text-center">4424</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>2F　品質管理室</div></td>
+                <td><div class="text-center">4431</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>2F　品質管理室</div></td>
+                <td><div class="text-center">4432</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>2F　分析室</div></td>
+                <td><div class="text-center">4433</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>2F　応接室兼予備室</div></td>
+                <td><div class="text-center">4434</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">〃</div></td>
+                <td><div>2F　予備室</div></td>
+                <td><div class="text-center">4435</div></td>
+                <td><div>　</div></td>
+            </tr>
+          
+            <tr>
+                <td><div class="text-center"></div></td>
+                <td><div class="text-center"></div></td>
+                <td><div>受電室</div></td>
+                <td><div class="text-center">4241</div></td>
+                <td><div>　</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center"></div></td>
+                <td><div class="text-center"></div></td>
+                <td><div>排水処理室</div></td>
+                <td><div class="text-center">4242</div></td>
+                <td><div>　</div></td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<div class="p-3" id="1-3-5"></div>
+    
+    <hr>
+    <h2 style="text-align:center">3-5.　工場事務所　内線番号表　<a href="/media/juusho&tel/layout.pdf"><font size="2">プリントアウトはこちらから </font></a></h2>  
+    <h5 style="text-align:center">　　箕島工場代表番号：９５３－５３２２　　ＦＡＸ番号：９５３－８３２３（内線：３２９１）</h5>
+</div>
+<div class="container" > 
+    <table class="table table-hover table-warning table-bordered border-dark table-sm d-flex justify-content-center" >
+        <thead>
+
+        </thead>
+        <tbody>
+            <tr class="table-dark" >
+                <th style="width: 100px"><div class="text-center">部署</div></th>
+                <th style="width: 100px"><div class="text-center">内線番号</div></th>
+                <th style="width: 200px"><div class="text-center">担当</div></th>
+                <th style="width: 100px"><div class="text-center">外線</div></th>
+                <th style="width: 500px"><div class="text-center">備考</div></th>
+            </tr>
+            <tr>
+                <td valign="middle"  rowspan="2"><div class="text-center">製造本部</div></td>
+                <td><div class="text-center">3524</div></td>
+                <td><div>大本</div></td>
+                <td><div class="text-center">957-3524</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3372</div></td>
+                <td><div>片芝</div></td>
+                <td><div class="text-center">957-3372</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"  rowspan="8"><div class="text-center">品質保証</div></td>
+                <td><div class="text-center">3362</div></td>
+                <td><div>高垣（康）</div></td>
+                <td><div class="text-center">957-3362</div></td>
+                <td><div></div></td>
+            <tr>
+                <td><div class="text-center">3347</div></td>
+                <td><div>梅村</div></td>
+                <td><div class="text-center">957-3347</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3304</div></td>
+                <td><div>上池</div></td>
+                <td><div class="text-center">957-3304</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3378</div></td>
+                <td><div>熊代</div></td>
+                <td><div class="text-center">957-3378</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3357</div></td>
+                <td><div>董</div></td>
+                <td><div class="text-center">957-3357</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3354</div></td>
+                <td><div>西浦</div></td>
+                <td><div class="text-center">957-3354</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3308</div></td>
+                <td><div>西田</div></td>
+                <td><div class="text-center">957-3308</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3342</div></td>
+                <td><div>宮地（啓）</div></td>
+                <td><div class="text-center">957-3342</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"  rowspan="5"><div class="text-center">第１工場</div></td>
+                <td><div class="text-center">3501</div></td>
+                <td><div>頭山</div></td>
+                <td><div class="text-center">957-3501</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3506</div></td>
+                <td><div>島田</div></td>
+                <td><div class="text-center">957-3506</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3306</div></td>
+                <td><div>樋口（奈）</div></td>
+                <td><div class="text-center">957-3306</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3353</div></td>
+                <td><div>山田</div></td>
+                <td><div class="text-center">957-3353</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3384</div></td>
+                <td><div>皿田</div></td>
+                <td><div class="text-center">957-3384</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"  rowspan="10"><div class="text-center">第２工場</div></td>
+                <td><div class="text-center">3502</div></td>
+                <td><div>井上（誉）</div></td>
+                <td><div class="text-center">957-3502</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3508</div></td>
+                <td><div>妹尾(憲)</div></td>
+                <td><div class="text-center">957-3508</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3509</div></td>
+                <td><div>妹尾(昌)</div></td>
+                <td><div class="text-center">957-3509</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3311</div></td>
+                <td><div>奥川</div></td>
+                <td><div class="text-center">957-3311</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3339</div></td>
+                <td><div>藤井（哲）</div></td>
+                <td><div class="text-center">957-3339</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3323</div></td>
+                <td><div>磯田</div></td>
+                <td><div class="text-center">957-3323</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3352</div></td>
+                <td><div>河本（拓）</div></td>
+                <td><div class="text-center">957-3352</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3305</div></td>
+                <td><div>松枝</div></td>
+                <td><div class="text-center">957-3305</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3327</div></td>
+                <td><div>川村</div></td>
+                <td><div class="text-center">957-3327</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3310</div></td>
+                <td><div>坂本(和)</div></td>
+                <td><div class="text-center">957-3310</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"  rowspan="7"><div class="text-center">第３工場</div></td>
+                <td><div class="text-center">3503</div></td>
+                <td><div>吉本</div></td>
+                <td><div class="text-center">957-3503</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+               
+                <td><div class="text-center">3510</div></td>
+                <td><div>川ノ上</div></td>
+                <td><div class="text-center">957-3510</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3527</div></td>
+                <td><div>橋本</div></td>
+                <td><div class="text-center">957-3527</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3511</div></td>
+                <td><div>桑田（陽）</div></td>
+                <td><div class="text-center">957-3511</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3324</div></td>
+                <td><div>谷口</div></td>
+                <td><div class="text-center">957-3324</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3326</div></td>
+                <td><div>金川</div></td>
+                <td><div class="text-center">957-3526</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3329</div></td>
+                <td><div>藤原</div></td>
+                <td><div class="text-center">957-3329</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"  rowspan="8"><div class="text-center">第４工場</div></td>
+                <td><div class="text-center">3504</div></td>
+                <td><div>吉出</div></td>
+                <td><div class="text-center">957-3504</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3512</div></td>
+                <td><div>石川（博）</div></td>
+                <td><div class="text-center">957-3512</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3338</div></td>
+                <td><div>延谷</div></td>
+                <td><div class="text-center">957-3338</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3358</div></td>
+                <td><div>津島</div></td>
+                <td><div class="text-center">957-35358</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3345</div></td>
+                <td><div>直野</div></td>
+                <td><div class="text-center">957-3345</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3343</div></td>
+                <td><div>岩原</div></td>
+                <td><div class="text-center">957-3343</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3325</div></td>
+                <td><div>森</div></td>
+                <td><div class="text-center">957-3325</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3386</div></td>
+                <td><div>井上（久）</div></td>
+                <td><div class="text-center">957-3386</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"  rowspan="8"><div class="text-center">第５工場</div></td>
+                <td><div class="text-center">3505</div></td>
+                <td><div>道下</div></td>
+                <td><div class="text-center">957-3505</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3514</div></td>
+                <td><div>小林</div></td>
+                <td><div class="text-center">957-3514</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3513</div></td>
+                <td><div>桒田</div></td>
+                <td><div class="text-center">957-3513</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3302</div></td>
+                <td><div>岡森</div></td>
+                <td><div class="text-center">957-3302</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3303</div></td>
+                <td><div>松井</div></td>
+                <td><div class="text-center">957-3303</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3340</div></td>
+                <td><div>三浦</div></td>
+                <td><div class="text-center">957-3340</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3344</div></td>
+                <td><div>藤井（仁）</div></td>
+                <td><div class="text-center">957-3344</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3320</div></td>
+                <td><div>丸田</div></td>
+                <td><div class="text-center">957-3320</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"  rowspan="12"><div class="text-center">業務</div></td>
+                <td><div class="text-center">3312</div></td>
+                <td><div>海野</div></td>
+                <td><div class="text-center">957-3312</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3346</div></td>
+                <td><div>岡田</div></td>
+                <td><div class="text-center">957-3346</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3328</div></td>
+                <td><div>高垣（当）</div></td>
+                <td><div class="text-center">957-3328</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3337</div></td>
+                <td><div>西畑</div></td>
+                <td><div class="text-center">957-3337</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3341</div></td>
+                <td><div>芳賀</div></td>
+                <td><div class="text-center">957-3341</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3331</div></td>
+                <td><div>丹下</div></td>
+                <td><div class="text-center">957-3331</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3321</div></td>
+                <td><div>壇上</div></td>
+                <td><div class="text-center">957-3321</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3388</div></td>
+                <td><div>ターナー</div></td>
+                <td><div class="text-center">957-3388</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3349</div></td>
+                <td><div>亀田</div></td>
+                <td><div class="text-center">957-3349</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3387</div></td>
+                <td><div>守屋</div></td>
+                <td><div class="text-center">957-3387</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3322</div></td>
+                <td><div>吉原</div></td>
+                <td><div class="text-center">957-3322</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3330</div></td>
+                <td><div>赤木</div></td>
+                <td><div class="text-center">957-3330</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"  rowspan="12"><div class="text-center">人事</div></td>
+                <td><div class="text-center">3316</div></td>
+                <td><div>古谷</div></td>
+                <td><div class="text-center">957-3316</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center"></div></td>
+                <td><div>小川</div></td>
+                <td><div class="text-center"></div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3382</div></td>
+                <td><div>山岡</div></td>
+                <td><div class="text-center">957-3382</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3350</div></td>
+                <td><div>今岡</div></td>
+                <td><div class="text-center">957-3350</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3350</div></td>
+                <td><div>村上(将)</div></td>
+                <td><div class="text-center">957-3305</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3375</div></td>
+                <td><div>大隅</div></td>
+                <td><div class="text-center">957-3375</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3301</div></td>
+                <td><div>東</div></td>
+                <td><div class="text-center">957-3301</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3315</div></td>
+                <td><div>村上（亜）</div></td>
+                <td><div class="text-center">957-3315</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3317</div></td>
+                <td><div>北村</div></td>
+                <td><div class="text-center">957-3317</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3379</div></td>
+                <td><div>林原</div></td>
+                <td><div class="text-center">957-3379</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3371</div></td>
+                <td><div>渡辺（育）</div></td>
+                <td><div class="text-center">957-3371</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3383</div></td>
+                <td><div></div></td>
+                <td><div class="text-center">957-3383</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td valign="middle" rowspan="24"><div class="text-center">ＩＴＳ</div></td>
+                <td><div class="text-center">3380</div></td>
+                <td><div>相川</div></td>
+                <td><div class="text-center">957-3380</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3355</div></td>
+                <td><div>樋口(史)</div></td>
+                <td><div class="text-center">957-3355</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3385</div></td>
+                <td><div>久保</div></td>
+                <td><div class="text-center">957-3385</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3313</div></td>
+                <td><div>宮地(隆)</div></td>
+                <td><div class="text-center">957-3313</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">4724</div></td>
+                <td><div>佐藤</div></td>
+                <td><div class="text-center">957-3380</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3287</div></td>
+                <td><div>渡邊</div></td>
+                <td><div class="text-center">957-3314</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3366</div></td>
+                <td><div>堀</div></td>
+                <td><div class="text-center">957-3366</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3376</div></td>
+                <td><div>稗田</div></td>
+                <td><div class="text-center">957-3376</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3356</div></td>
+                <td><div>枝松</div></td>
+                <td><div class="text-center">957-3356</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3314</div></td>
+                <td><div>西川</div></td>
+                <td><div class="text-center">957-3314</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3359</div></td>
+                <td><div>三宅</div></td>
+                <td><div class="text-center">957-3359</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3333</div></td>
+                <td><div>大村</div></td>
+                <td><div class="text-center">957-3333</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3361</div></td>
+                <td><div>小森</div></td>
+                <td><div class="text-center">957-3361</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3332</div></td>
+                <td><div>斎藤</div></td>
+                <td><div class="text-center">957-3332</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3364</div></td>
+                <td><div>前谷</div></td>
+                <td><div class="text-center">957-3364</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3360</div></td>
+                <td><div>佐野</div></td>
+                <td><div class="text-center">957-3360</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3309</div></td>
+                <td><div>小西</div></td>
+                <td><div class="text-center">957-3309</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3334</div></td>
+                <td><div>松原</div></td>
+                <td><div class="text-center">957-3334</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3318</div></td>
+                <td><div>三島</div></td>
+                <td><div class="text-center">957-3318</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3377</div></td>
+                <td><div>河本（美）</div></td>
+                <td><div class="text-center">957-3377</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3365</div></td>
+                <td><div>山根</div></td>
+                <td><div class="text-center">957-3365</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3336</div></td>
+                <td><div>吉岡（千香子）</div></td>
+                <td><div class="text-center">957-3336</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3363</div></td>
+                <td><div>横木</div></td>
+                <td><div class="text-center">957-3363</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3348</div></td>
+                <td><div>松崎</div></td>
+                <td><div class="text-center">957-3348</div></td>
+                <td><div></div></td>
+            </tr>
+
+            <tr>
+                <td valign="middle"  rowspan="7"><div class="text-center">その他</div></td>
+                <td><div class="text-center">3284</div></td>
+                <td><div>受付</div></td>
+                <td><div class="text-center"></div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3281</div></td>
+                <td><div>第１応接室</div></td>
+                <td><div class="text-center"></div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3282</div></td>
+                <td><div>第２応接室</div></td>
+                <td><div class="text-center"></div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3283</div></td>
+                <td><div>第３応接室</div></td>
+                <td><div class="text-center"></div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">3285</div></td>
+                <td><div>第５応接室</div></td>
+                <td><div class="text-center"></div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">4291</div></td>
+                <td><div>Q棟応接室</div></td>
+                <td><div class="text-center"></div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">4295</div></td>
+                <td><div>食堂</div></td>
+                <td><div class="text-center"></div></td>
+                <td><div></div></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="p-3" id="1-3-6"></div>
+    
+    <hr>
+    <h2 style="text-align:center">3-6.　食研　内線番号表　<a href="/media/juusho&tel/shokunai.xls"><font size="2">プリントアウトはこちらから </font></a></h2>  
+</div>
+<div class="container" > 
+    <table class="table table-hover table-warning table-bordered border-dark table-sm d-flex justify-content-center" >
+        <thead>
+
+        </thead>
+        <tbody>
+            <tr class="table-dark" >
+                <th style="width: 200px"><div class="text-center">部署</div></th>
+                <th style="width: 150px"><div class="text-center">内線番号</div></th>
+                <th style="width: 350px"><div class="text-center">担当者</div></th>
+                <th style="width: 150px"><div class="text-center">外線</div></th>
+                <th style="width: 150px"><div class="text-center">備考</div></th>
+            </tr>
+            <tr>
+                <td valign="middle"  rowspan="30"><div class="text-center">第１開発室</div></td>
+                <td><div class="text-center">１４６０６</div></td>
+                <td><div>上﨑</div></td>
+                <td valign="middle"  rowspan="30"><div class="text-center">９５７－３４０１<br>FAX 957-3422<br>（内線 6291）</div></td>
+                <td valign="middle"  rowspan="30"><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">１４９４０</div></td>
+                <td><div>岡田ｹ</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">１４９３６</div></td>
+                <td><div>岡田ﾙ</div></td>
+            </tr>	
+            <tr>
+                <td><div class="text-center">１４９３７</div></td>
+                <td><div>木村ﾁ</div></td>
+            </tr>	
+            <tr>
+                <td><div class="text-center">１４９３２</div></td>
+                <td><div>清原</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">１４６２２</div></td>
+                <td><div>小畠</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">１４６６７</div></td>
+                <td><div>今野</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">１４９４１</div></td>
+                <td><div>佐藤ｺ</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">１４９３８</div></td>
+                <td><div>佐藤ｼﾞ</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">１４９３３</div></td>
+                <td><div>杉之原</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">１４９４２</div></td>
+                <td><div>高柿</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">１４９４３</div></td>
+                <td><div>中畑</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">１４６１５</div></td>
+                <td><div>西山ｺ</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">１４６２０</div></td>
+                <td><div>橋本</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">１４９３９</div></td>
+                <td><div>萩原</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">１４９３０</div></td>
+                <td><div>原</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">１４９４４</div></td>
+                <td><div>平川</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center"> １４９２８</div></td>
+                <td><div>廣瀬</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">１４９３４</div></td>
+                <td><div>藤丸</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">１４９４５</div></td>
+                <td><div>別所</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">１４９２９</div></td>
+                <td><div>本間ﾕ</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">１４９４７</div></td>
+                <td><div>増田</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">１４９４６</div></td>
+                <td><div>松尾拓</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center"> １４９４８</div></td>
+                <td><div>松尾弥</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">１４９５０</div></td>
+                <td><div>正木</div></td>
+            </tr>        	
+            <tr>
+                <td><div class="text-center">１４９３１</div></td>
+                <td><div>松本ｴ</div></td>
+            </tr>   
+            <tr>
+                <td><div class="text-center">１４９３５</div></td>
+                <td><div>松本ﾉ</div></td>
+            </tr>   
+            <tr>
+                <td><div class="text-center">１４９４９</div></td>
+                <td><div>三藤ﾌ</div></td>
+            </tr>   
+            <tr>
+                <td><div class="text-center">１４９５１</div></td>
+                <td><div>山口ｽ</div></td>
+            </tr>   
+            <tr>
+                <td><div class="text-center">６２３０</div></td>
+                <td><div>石倉,稗木,堀,中原ﾚ,中村ｺ</div></td>
+            </tr>   
+          	
+            <tr>
+                <td valign="middle"  rowspan="23"><div class="text-center">第２開発室<br>ＰＨＳ 粉体室４７０９</div></td>
+                <td><div class="text-center">５２５３</div></td>
+                <td><div>森原(ＰＨＳ ４７２９)</div></td>
+                <td valign="middle"  rowspan="16"><div class="text-center">９５７－３４０２<br>FAX 957-3421<br>（内線 5291）</div></td>
+                <td valign="middle"  rowspan="16"><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">５２５３</div></td>
+                <td><div>松浦(ＰＨＳ ３５２５)</div></td>
+            </tr>   
+            <tr>
+                <td><div class="text-center">５２５０</div></td>
+                <td><div>深澤,三橋,小林ｹ,井内,長瀬,石岡,石川</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">５２５１</div></td>
+                <td><div>青井,松本ﾀ</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">５２５２</div></td>
+                <td><div> 池本</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">５２５４</div></td>
+                <td><div>髙橋ﾐ,杉原ﾀ,石原ﾉ,後藤ﾉ,岡田ｷ,榮岩,仲戸,鄧</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">５２５５</div></td>
+                <td><div>藤井ｹ</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">５２５６</div></td>
+                <td><div>木村ｹ,田淵,谷本,桑田</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">５２５７</div></td>
+                <td><div>黒塚</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">５２５８</div></td>
+                <td><div>武村,原口,田坂</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">５２５９</div></td>
+                <td><div>鳥原</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">３５１６</div></td>
+                <td><div>吉森 (直通外線：084-957-3516)</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">３５１８</div></td>
+                <td><div>永見 (直通外線：084-957-3518)</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">５２６３</div></td>
+                <td><div> 杉本,安藤,渡邊ｷ,佐藤ｶ</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">5261～5262</div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">5264～5267</div></td>
+                <td><div> </div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">５２１０</div></td>
+                <td><div> 奥田,金行</div></td>
+                <td valign="middle"  rowspan="7"><div class="text-center">９５７－３４１５<br>FAX 957-3421<br>（内線 5291）</div></td>
+                <td valign="middle"  rowspan="7"><div></div></td>
+            </tr>	           	
+            <tr>
+                <td><div class="text-center">５２１１</div></td>
+                <td><div>加藤ｼ,藤島</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">５２１２</div></td>
+                <td><div>小林ｱ,村上ﾕ</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">５２１４</div></td>
+                <td><div>出水,加藤ﾀ</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">５２１５</div></td>
+                <td><div> 宮島ﾋ,今村</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">５２１６</div></td>
+                <td><div>宗正,佐橋</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">５２１９</div></td>
+                <td><div> 赤木</div></td>
+            </tr>
+	 
+            <tr>
+                <td valign="middle"  rowspan="3"><div class="text-center">第２開発室<br>（具材）</div></td>
+                <td><div class="text-center">５３６０<br>∫<br>５３６３</div></td>
+                <td valign="middle">濵岡,本山,松井,服部,松本ﾖ,登立,高瀬</div></td>
+                <td valign="middle"  rowspan="3"><div class="text-center">９５７－３４０４<br>FAX 957-3424<br>（内線 5391）</div></td>
+                <td valign="middle"  rowspan="3"><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">５３６４</div></td>
+                <td><div>豊田,石黒ｺ,古庄,藤原,江頭</div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">３５１７</div></td>
+                <td><div>見附尚 (直通外線：084-957-3517)</div></td>
+            </tr>
+		
+            <tr>
+                <td valign="middle"  rowspan="18"><div class="text-center">第３開発室</div></td>
+                <td><div class="text-center">３５１９</div></td>
+                <td><div>大隅ｶ (直通外線：084-957-3519)</div></td>
+                <td valign="middle"  rowspan="8"><div class="text-center">９５７－３４１４<br>FAX 957-3422<br>（内線 6291）</div></td>
+                <td valign="middle"  rowspan="1"><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">４７１７</div></td>
+                <td><div>鮫島</div></td>
+                <td valign="middle"  rowspan="7"><div class="text-center">水産 <br>技術構築</div></td>
+            </tr>   		
+            <tr>
+                <td><div class="text-center">４７１２</div></td>
+                <td><div>田中ﾘ</div></td>
+            </tr>  			
+            <tr>
+                <td><div class="text-center">４７２８</div></td>
+                <td><div>共通</div></td>
+            </tr>  	 		
+            <tr>
+                <td><div class="text-center">６２２０</div></td>
+                <td><div>布野,森本ﾀ</div></td>
+            </tr>  	 	
+            <tr>
+                <td><div class="text-center">６２２１</div></td>
+                <td><div>竹㞍</div></td>
+            </tr>  	 	
+            <tr>
+                <td><div class="text-center">６２２２</div></td>
+                <td><div>北村</div></td>
+            </tr>  	 	
+            <tr>
+                <td><div class="text-center">６２２３</div></td>
+                <td><div>馬場,岡﨑,佐藤ｶ</div></td>
+            </tr>  	 	
+            <tr>
+                <td><div class="text-center">４７１０</div></td>
+                <td><div>東浦</div></td>
+                <td valign="middle"  rowspan="10"><div class="text-center">９５７－３４０９<br>FAX 957-3422<br>（内線 6291）</div></td>
+                <td valign="middle"  rowspan="10"><div class="text-center">農産・畜産<br>アグリ</div></td>
+            </tr>  	 	 
+            <tr>
+                <td><div class="text-center">４７２６</div></td>
+                <td><div>皿海</div></td>
+            </tr> 
+            <tr>
+                <td><div class="text-center">４７２７</div></td>
+                <td><div>村山</div></td>
+            </tr>  	 
+            <tr>
+                <td><div class="text-center">４７３１</div></td>
+                <td><div>中本</div></td>
+            </tr>  	 
+            <tr>
+                <td><div class="text-center">３５２９</div></td>
+                <td><div>渡邊ｱ (直通外線：084-957-3529)</div></td>
+            </tr>  	 
+            <tr>
+                <td><div class="text-center">６２２４</div></td>
+                <td><div>樫本,幸吉</div></td>
+            </tr>  	 
+            <tr>
+                <td><div class="text-center">６２２５</div></td>
+                <td><div>岡田ﾚ</div></td>
+            </tr>  	  	 	 	 
+            <tr>
+                <td><div class="text-center"> ６２２６</div></td>
+                <td><div>稲村</div></td>
+            </tr>  	 
+            <tr>
+                <td><div class="text-center">６２２７</div></td>
+                <td><div>伊藤ﾐ</div></td>
+            </tr>  	 
+            <tr>
+                <td><div class="text-center">６２２８</div></td>
+                <td><div>王,宮井</div></td>
+            </tr>  	 
+    	 
+            <tr>
+                <td valign="middle"  rowspan="9"><div class="text-center">第４開発室</div></td>
+                <td><div class="text-center">６３５２</div></td>
+                <td><div>松永　(ＰＨＳ　４７１４)</div></td>
+                <td valign="middle"  rowspan="9"><div class="text-center">９５７－３４０３<br>FAX 957-3422<br>（内線 6291）</div></td>
+                <td valign="middle"  rowspan="7"><div></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center">６３５５</div></td>
+                <td><div>中久保(ＰＨＳ　４７１５)<br>六車(ＰＨＳ　４７１６)</div></td>
+            </tr>   	 
+            <tr>
+                <td><div class="text-center">６３５７</div></td>
+                <td><div>辻</div></td>
+            </tr>   	
+            <tr>
+                <td><div class="text-center">６３５３</div></td>
+                <td><div>後藤ﾁ,箱崎</div></td>
+            </tr>   	
+            <tr>
+                <td><div class="text-center">６３５４</div></td>
+                <td><div>三浦,徳屋</div></td>
+            </tr>   	
+            <tr>
+                <td><div class="text-center">６３５６</div></td>
+                <td><div>市川,上田</div></td>
+            </tr>   	
+            <tr>
+                <td><div class="text-center">６３５１</div></td>
+                <td><div>小田,松本ﾕ</div></td>
+            </tr>   	
+            <tr>
+                <td><div class="text-center">６２４０</div></td>
+                <td><div>香料製造室</div></td>
+                <td valign="middle"  rowspan="2"><div class="text-center">(Ｕ６棟２階)</div></td>
+            </tr>   	
+            <tr>
+                <td><div class="text-center">６２４１</div></td>
+                <td><div>植物ｴｷｽ試作室</div></td>
+            </tr>   	
+          
+            <tr>
+                <td valign="middle"  rowspan="4"><div class="text-center">分析室</div></td>
+                <td><div class="text-center">５１１０<br>∫<br>５１１８</div></td>
+                <td><div>森田ﾏ,平原,鈴木,松枝,渡辺ﾔ,森近,西山ｶ,吉原,<br>吉岡ﾓ,神原ﾅ,天野,粟村,平野ｱ,小林ﾐ,高木,<br>山本,藤重,神野,橋本ﾘ</div></td>
+                <td valign="middle"  rowspan="3"><div class="text-center">９５７－３４１６<br>FAX 957-3423<br>（内線 5191）</div></td>
+                <td valign="middle"  rowspan="2"><div></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center">５１２１</div></td>
+                <td><div></div></td>
+            </tr>   	 
+            <tr>
+                <td><div class="text-center">５１２３</div></td>
+                <td><div>川内,讃岐,高田ｹ,真田ﾏ,安達</div></td>
+                <td valign="middle"><div class="text-center"> ｶﾗﾒﾙ･ｱｾﾌﾟ</div></td>
+            </tr>   	
+            <tr>
+                <td><div class="text-center">６１２０<br>FAX 6192</div></td>
+                <td><div> 松木,川東,深川,小畑,柿原,<br>山根,西村,井藤,北川,中村</div></td>
+                <td valign="middle"><div class="text-center">（内線 6192）</div></td>
+                <td valign="middle"><div class="text-center">細菌検査</div></td>
+            </tr>   	
+
+            <tr>
+                <td valign="middle"  rowspan="6"><div class="text-center">業務推進室</div></td>
+                <td><div class="text-center">６４５０</div></td>
+                <td><div>澤田</div></td>
+                <td valign="middle"  rowspan="6"><div class="text-center">９５７－３４４８<br>FAX 957-3381<br>（内線 6491）</div></td>
+                <td valign="middle"  rowspan="3"><div class="text-center">(業務推進チーム)</div></td>
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center">６４５８</div></td>
+                <td><div>寺川,藤井ﾀ</div></td>
+            </tr>   	 
+            <tr>
+                <td><div class="text-center">６４４０</div></td>
+                <td><div>小林ﾀ,有地</div></td>
+            </tr>   	
+            <tr>
+                <td><div class="text-center">６４５７</div></td>
+                <td><div>笹沼,中川</div></td>
+                <td valign="middle"  rowspan="3"><div class="text-center">(知財担当チーム)</div></td>
+            </tr>   	  	 		
+            <tr>
+                <td valign="middle"><div class="text-center">６４５５</div></td>
+                <td><div> 森ﾋ,矢田</div></td>
+            </tr>   	 
+            <tr>
+                <td><div class="text-center">６４５６</div></td>
+                <td><div> 本間ﾘ</div></td>
+            </tr>   		 		
+            	 	
+            <tr>
+                <td valign="middle"  rowspan="10"><div class="text-center">品質情報室</div></td>
+                <td><div class="text-center">５１８０</div></td>
+                <td><div>三嶋</div></td>
+                <td valign="middle"  rowspan="10"><div class="text-center">９５７－３４１２<br>FAX 957-3423<br>（内線 5191）</div></td>
+                <td valign="middle"  rowspan="10"><div></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center">５１８１</div></td>
+                <td><div>清水,神原ﾏ</div></td> 		
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center">５１８２</div></td>
+                <td><div>伊藤ﾘ</div></td> 		
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center">５１８３</div></td>
+                <td><div>藤田ﾐ,延谷</div></td> 		
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center">５１８４</div></td>
+                <td><div>平中</div></td> 		
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center">５１８５</div></td>
+                <td><div>石原ｱ,見附直</div></td> 		
+            </tr>	 		
+            <tr>
+                <td valign="middle"><div class="text-center">５１８６</div></td>
+                <td><div>廣康</div></td> 		
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center">５１８７</div></td>
+                <td><div> 国安</div></td> 		
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center">５１８８</div></td>
+                <td><div>石井</div></td> 		
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center">５１８９</div></td>
+                <td><div>高田ｼ</div></td> 		
+            </tr>
+
+            <tr>
+                <td valign="middle"  rowspan="3"><div class="text-center"> 食品基盤技術研究室</div></td>
+                <td><div class="text-center">５３３２</div></td>
+                <td><div>中村ﾅ</div></td>
+                <td valign="middle"  rowspan="3"><div class="text-center">９５７－３４１１<br>FAX 957-3424<br>（内線 5391）</div></td>
+                <td valign="middle"  rowspan="3"><div></div></td>
+            </tr>
+            <tr>
+                <td><div class="text-center">５３３１</div></td>
+                <td><div>竹中,佐野,菅</div></td>
+               
+            </tr>   			 		
+            <tr>
+                <td><div class="text-center">５３３０</div></td>
+                <td><div>立川</div></td>
+              
+            </tr>   	
+            			
+            <tr>
+                <td valign="middle"  rowspan="8"><div class="text-center">バイオプロダクツ研究室</div></td>
+                <td><div class="text-center">５３１１</div></td>
+                <td><div> 本田,溝上,小松</div></td>
+                <td valign="middle"  rowspan="5"><div class="text-center">９５７－３４１８<br>FAX 957-3424<br>（内線 5391）</div></td>
+                <td valign="middle"  rowspan="8"><div></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center">５３１０</div></td>
+                <td><div> 青木,喜田,森ﾄ,宅見,佐藤ﾀﾞ,柞磨</div></td> 		
+            </tr>   
+            <tr>
+                <td valign="middle"><div class="text-center">５３１２</div></td>
+                <td><div>眞田ﾋ</div></td> 		
+            </tr>   	
+            <tr>
+                <td valign="middle"><div class="text-center">５３２０</div></td>
+                <td><div>渡邉ｴ,山田ｹ,佐藤ｷ</div></td> 		
+            </tr>   	
+            <tr>
+                <td valign="middle"><div class="text-center">５３２１</div></td>
+                <td><div>荒木,藤井ﾀ,門田</div></td> 		
+            </tr>   	
+            <tr>
+                <td valign="middle"><div class="text-center">５３４１</div></td>
+                <td><div> </div>機器室</td> 	
+                <td valign="middle"  rowspan="3"><div class="text-center"></div></td>	
+            </tr>   	
+            <tr>
+                <td valign="middle"><div class="text-center">５３４３</div></td>
+                <td><div> ｸﾘｰﾝﾙｰﾑ</div></td> 		
+            </tr>   	
+            <tr>
+                <td valign="middle"><div class="text-center">５３４５</div></td>
+                <td><div> 薬事室</div></td> 		
+            </tr>   				
+                   
+            <tr>
+                <td valign="middle"  rowspan="7"><div class="text-center">バイオプロダクツカンパニー</div></td>
+                <td><div class="text-center">３５２０</div></td>
+                <td><div>小村(直通外線：084-957-3520)</div></td>
+                <td valign="middle"  rowspan="4"><div class="text-center">９５７－３４６０<br>FAX 957-3461<br>（内線 4422）</div></td>
+                <td valign="middle"  rowspan="1"><div></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center">４４３０</div></td>
+                <td><div>西江</div></td> 
+                <td valign="middle"  rowspan="2"><div class="text-center">生産管理室</div></td>		
+            </tr>   
+            <tr>
+                <td valign="middle"><div class="text-center">４４３１</div></td>
+                <td><div>小田ｹ</div></td> 		
+            </tr>   
+            <tr>
+                <td valign="middle"><div class="text-center">４４３２</div></td>
+                <td><div>高橋ﾅ,柿木,佐藤ﾐ</div></td> 
+                <td valign="middle"  rowspan="1"><div class="text-center">品質管理室</div></td>				
+            </tr>   
+            <tr>
+                <td valign="middle"><div class="text-center">４４２３</div></td>
+                <td><div>森田ﾃ,金子</div></td> 	
+                <td valign="middle"  rowspan="3"><div class="text-center">９５７－３４６３<br>FAX 957-3461<br>内線 4422）</div></td>				
+                <td valign="middle"  rowspan="3"><div class="text-center">製造管理室</div></td>
+            </tr>   
+            <tr>
+                <td valign="middle"><div class="text-center">４４２５</div></td>
+                <td><div> 猪原,亀田,蟹井,渡邉ｼ,井上,尾木</div></td> 		
+            </tr>   
+            <tr>
+                <td valign="middle"><div class="text-center">３５３２</div></td>
+                <td><div> 亀田(直通外線：084-957-3532)</div></td> 		
+            </tr>   
+
+            <tr>
+                <td valign="middle"  rowspan="3"><div class="text-center">バイオプロセス検討チーム</div></td>
+                <td><div class="text-center">４４３５</div></td>
+                <td><div> 西岡,玉井</div></td>
+                <td valign="middle"   rowspan="3"><div class="text-center">９５７－３４６２<br>FAX 957-3461<br>（内線 4422）</div></td>
+                <td valign="middle"   rowspan="3"><div></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center">４４３６</div></td>
+                <td><div>宮本,小林ﾌ</div></td> 
+            </tr>   
+            <tr>
+                <td valign="middle"><div class="text-center">４４３７</div></td>
+                <td><div>滝,宮島ｱ</div></td> 		
+            </tr>   	 
+                           
+            <tr>
+                <td valign="middle"  rowspan="1"><div class="text-center">役員室</div></td>
+                <td><div class="text-center">６３１２</div></td>
+                <td><div>池田社長</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div></div></td>
+            </tr>
+		
+            <tr>
+                <td valign="middle"  rowspan="1"><div class="text-center">応接室(３Ｆ)</div></td>
+                <td><div class="text-center">６３１８</div></td>
+                <td><div></div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div></div></td>
+            </tr>
+            	
+            <tr>
+                <td valign="middle"  rowspan="4"><div class="text-center"> 人事部</div></td>
+                <td><div class="text-center">６３３０</div></td>
+                <td><div>山岡</div></td>
+                <td valign="middle"   rowspan="4"><div class="text-center">９５７－３４４５<br>FAX 957-3441<br>（内線 6391）</div></td>
+                <td valign="middle"   rowspan="4"><div></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center">６３３１</div></td>
+                <td><div> 諏沢</div></td> 
+            </tr>   
+            <tr>
+                <td valign="middle"><div class="text-center">６３３２</div></td>
+                <td><div>日高</div></td> 
+            </tr>   
+            <tr>
+                <td valign="middle"><div class="text-center">６３３３</div></td>
+                <td><div>馬場ｱ</div></td> 
+            </tr>   
+
+            <tr>
+                <td valign="middle"  rowspan="2"><div class="text-center">総合企画部</div></td>
+                <td><div class="text-center">６３４０</div></td>
+                <td><div>水ノ上</div></td>
+                <td valign="middle"   rowspan="5"><div class="text-center">９５７－３４４５<br>FAX 957-3441<br>（内線 6391）</div></td>
+                <td valign="middle"   rowspan="5"><div></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center">６３４１</div></td>
+                <td><div>三藤ﾄ(ＰＨＳ ４７０４)</div></td> 
+            </tr>   
+            <tr>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-center">６３４７</div></td>
+                <td valign="middle"><div></div></td>
+            </tr>   
+            <tr>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-center">６３４６</div></td>
+                <td valign="middle"><div></div></td>
+            </tr>   
+            <tr>
+                <td valign="middle"><div class="text-center"> 監査役</div></td>
+                <td valign="middle"><div class="text-center">６３４８</div></td>
+                <td valign="middle"><div></div></td>
+            </tr>   
+            
+            <tr>
+                <td valign="middle"  rowspan="2"><div class="text-center">事業企画部</div></td>
+                <td><div class="text-center">３５２０</div></td>
+                <td><div> 小村(直通外線：084-957-3520)</div></td>
+                <td valign="middle"   rowspan="2"><div class="text-center">９５７-３４４６<br>FAX 957-3441<br>（内線6391）</div></td>
+                <td valign="middle"   rowspan="2"><div></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center">６３４５</div></td>
+                <td><div>真砂(直通外線：084-957-3522)</div></td> 
+            </tr>   
+
+            <tr>
+                <td valign="middle"  rowspan="1"><div class="text-center">食研役員室</div></td>
+                <td valign="middle"><div class="text-center">６３２１</div></td>
+                <td valign="middle"><div>福松社長(ＰＨＳ ４７０５)</div></td>
+                <td valign="middle"   rowspan="1"><div class="text-center">９５７－３４００</div></td>
+                <td valign="middle"   rowspan="1"><div></div></td>
+            </tr>
+
+            <tr>
+                <td valign="middle"  rowspan="3"><div class="text-center">事務室</div></td>
+                <td><div class="text-center">６１１２</div></td>
+                <td><div>甲斐ﾕ</div></td>
+                <td valign="middle"   rowspan="3"><div class="text-center">９５７－３４００<br>FAX 957-3420<br>（内線 6191）</div></td>
+                <td valign="middle"   rowspan="3"><div></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center">６１１１</div></td>
+                <td><div>岡本ｼ</div></td> 
+            </tr>   
+            <tr>
+                <td valign="middle"><div class="text-center">６１１０</div></td>
+                <td><div></div></td> 
+            </tr>  
+
+            <tr>
+                <td valign="middle"  rowspan="1"><div class="text-center">カラメル事業部</div></td>
+                <td valign="middle"><div class="text-center">６４５１</div></td>
+                <td valign="middle"><div>藤田</div></td>
+                <td valign="middle" rowspan="1"><div class="text-center">９５７－３４１３<br>FAX 957-3381<br>（内線 6491）</div></td>
+                <td valign="middle" rowspan="1"><div></div></td>
+            </tr>
+
+            <tr>
+                <td valign="middle" rowspan="1"><div class="text-center">アイティエス</div></td>
+                <td><div class="text-center">６４１０<br>∫<br>６４１３</div></td>
+                <td valign="middle"><div> 倉田,吉岡,森本ﾏ,寺崎,田中,高井</div></td>
+                <td valign="middle"  rowspan="1"><div class="text-center">９５７－３４８０<br>FAX 957-3381<br>（内線 6491）</div></td>
+                <td valign="middle"  rowspan="1"><div></div></td>
+            </tr>
+	 
+            <tr>
+                <td valign="middle" rowspan="1"><div class="text-center">第１応接室</div></td>
+                <td><div class="text-center">６１８１</div></td>
+                <td valign="middle"><div></div></td>
+                <td valign="middle"><div></div></td>
+                <td valign="middle"><div></div></td>
+            </tr>
+
+            <tr>
+                <td valign="middle" rowspan="1"><div class="text-center">第２応接室</div></td>
+                <td><div class="text-center">６１８２</div></td>
+                <td valign="middle"><div></div></td>
+                <td valign="middle"><div></div></td>
+                <td valign="middle"><div></div></td>
+            </tr>
+
+            <tr>
+                <td valign="middle" rowspan="1"><div class="text-center">第３応接室</div></td>
+                <td><div class="text-center">６１８３</div></td>
+                <td valign="middle"><div></div></td>
+                <td valign="middle"><div></div></td>
+                <td valign="middle"><div></div></td>
+            </tr>
+
+            <tr>
+                <td valign="middle" rowspan="1"><div class="text-center">受   付</div></td>
+                <td><div class="text-center">６１８８</div></td>
+                <td valign="middle"><div></div></td>
+                <td valign="middle"><div></div></td>
+                <td valign="middle"><div></div></td>
+            </tr>
+
+            <tr>
+                <td valign="middle" rowspan="1"><div class="text-center">官能検査室</div></td>
+                <td><div class="text-center">６３６１</div></td>
+                <td valign="middle"><div></div></td>
+                <td valign="middle"><div></div></td>
+                <td valign="middle"><div></div></td>
+            </tr>
+
+            <tr>
+                <td valign="middle" rowspan="1"><div class="text-center">試食室</div></td>
+                <td><div class="text-center">６３８１</div></td>
+                <td valign="middle"><div></div></td>
+                <td valign="middle"><div></div></td>
+                <td valign="middle"><div></div></td>
+            </tr>
+
+            <tr>
+                <td valign="middle" rowspan="1"><div class="text-center">Ｕ-６棟３Ｆ第２会議室</div></td>
+                <td><div class="text-center">６３７１</div></td>
+                <td valign="middle"><div></div></td>
+                <td valign="middle"><div></div></td>
+                <td valign="middle"><div></div></td>
+            </tr>
+
+            <tr>
+                <td valign="middle" rowspan="1"><div class="text-center">Ｕ-６棟５Ｆ第３会議室</div></td>
+                <td><div class="text-center">６５２１</div></td>
+                <td valign="middle"><div></div></td>
+                <td valign="middle"><div></div></td>
+                <td valign="middle"><div></div></td>
+            </tr>
+
+            <tr>
+                <td valign="middle" rowspan="1"><div class="text-center">Ｕ-６棟６Ｆ第５会議室</div></td>
+                <td><div class="text-center">６６１１</div></td>
+                <td valign="middle"><div></div></td>
+                <td valign="middle"><div></div></td>
+                <td valign="middle"><div></div></td>
+            </tr>
+
+            <tr>
+                <td valign="middle" rowspan="1"><div class="text-center">Ｕ-６棟５Ｆ大会議室</div></td>
+                <td><div class="text-center">６５１１</div></td>
+                <td valign="middle"><div></div></td>
+                <td valign="middle"><div></div></td>
+                <td valign="middle"><div></div></td>
+            </tr>
+
+            <tr>
+                <td valign="middle" rowspan="1"><div class="text-center">Ｕ-６棟４Ｆ食堂</div></td>
+                <td><div class="text-center">６４８１</div></td>
+                <td valign="middle"><div></div></td>
+                <td valign="middle"><div></div></td>
+                <td valign="middle"><div></div></td>
+            </tr>
+
+            <tr>
+                <td valign="middle" rowspan="1"><div class="text-center"> Ｕ-５棟４Ｆ屋上</div></td>
+                <td><div class="text-center">５４１１</div></td>
+                <td valign="middle"><div></div></td>
+                <td valign="middle"><div></div></td>
+                <td valign="middle"><div></div></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div class="p-3" id="1-3-7">
+    <p>&nbsp;</p> 
+    <hr>
+    <h2 style="text-align:center">3-7.　アイティケイ株式会社・池田配送センター　問合せ　電話番号表　<a href="/media/juusho&tel/itk.pdf"><font size="2">プリントアウトはこちらから </font></a></h2>  
+    <h5><p style="margin-left:1420px">2023年10月01日</p></h5>   
+    <h3 style="text-align:center"><font color="red">4桁の内線から、3桁の内線にかける時は、先頭に22を付けてください。</font></h3>  
+</div>
+<div class="container" > 
+    <table class="table table-hover table-warning table-bordered border-dark table-sm d-flex justify-content-center" >
+        <tbody>
+            <tr class="table-dark" >
+                <th style="width: 315px"><div class="text-center"><font size="4">社名</font></div></th>
+                <th style="width: 315px"><div class="text-center"><font size="4">外線</font></div></th>
+            </tr>
+            <tr>
+                <td style="width: 315px" valign="middle"><div class="text-center"><font size="4"><strong>アイティケイ（代表）</strong></font></div></td>
+                <td style="width: 315px" valign="middle"><div class="text-center"><strong>957-3450</strong></div></td>
+            </tr>
+            <tr>
+                <td style="width: 315px" valign="middle"><div class="text-center"><font size="4"><strong>池田配送センター</strong></font></div></td>
+                <td style="width: 315px" valign="middle"><div class="text-center"><strong>957-3456</strong></div></td>
+            </tr>
+   
+            <tr>
+                <td style="width: 315px" valign="middle"><div class="text-center"><font size="4"><strong>FAX</strong></font></div></td>
+                <td style="width: 315px" valign="middle"><div class="text-center"><strong>957-3457</strong></div></td>
+            </tr>
+        </tbody>    
+        <tbody>
+            <tr class="table-dark" >
+                <th style="width: 315px"><div class="text-center"><font size="4">部署</font></div></th>
+                <th style="width: 315px"><div class="text-center"><font size="4">内線</font></div></th>
+            </tr>
+            <tr>
+                <td style="width: 315px" valign="middle"><div class="text-center"><font size="4"><strong>瀬田社長</strong></font></div></td>
+                <td style="width: 315px" valign="middle"><div class="text-center"><strong>731</strong></div></td>
+            </tr>
+            <tr>
+                <td style="width: 315px" valign="middle"><div class="text-center"><font size="4"><strong>1F事務所</strong></font></div></td>
+                <td style="width: 315px" valign="middle"><div class="text-center"><strong>791</strong></div></td>
+            </tr>
+            <tr>
+                <td style="width: 315px" valign="middle"><div class="text-center"><font size="4"><strong>小分け室</strong></font></div></td>
+                <td style="width: 315px" valign="middle"><div class="text-center"><strong>793</strong></div></td>
+            </tr>
+            <tr>
+                <td style="width: 315px" valign="middle"><div class="text-center"><font size="4"><strong>原料事務所</strong></font></div></td>
+                <td style="width: 315px" valign="middle"><div class="text-center"><strong>795</strong></div></td>
+            </tr>
+
+        </tbody>    
+    </table> 
+
+    <table class="table table-hover table-warning table-bordered border-dark table-sm d-flex justify-content-center" >
+            <tr class="table-dark" >
+                <th style="width: 400px"><div class="text-left"><font size="4">■アイティケイ・池田配送センター</font></div></th>
+                <th style="width: 200px"><div class="text-center"><font size="4">担当者</font></div></th>
+                <th style="width: 100px"><div class="text-center"><font size="4">内線番号</font></div></th>
+                <th style="width: 200px"><div class="text-center"><font size="4">外線番号</font></div></th>
+                <th style="width: 360px"><div class="text-center"><font size="4">備考</font></div></th>
+            </tr>
+            <tr>
+                <td valign="middle" rowspan="2"><div class="text-left"><font size="4"><strong>〇業務全般に関する問合せ</strong></font></div></td>
+                <td valign="middle"><div class="text-center"><strong>堀部</strong></div></td>
+                <td valign="middle"><div class="text-center"><strong>818,716</strong></div></td>
+                <td valign="middle"><div class="text-center"><strong></strong></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center"><strong>渡邉</strong></div></td>
+                <td valign="middle"><div class="text-center"><strong>829</strong></div></td>
+                <td valign="middle"><div class="text-center"><strong>959-6785</strong></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+
+            <tr class="table-dark" >
+                <th><div class="text-left"><font size="4">■仕入</font></div></th>
+                <th><div class="text-center"><font size="4">担当者</font></div></th>
+                <th><div class="text-center"><font size="4">内線番号</font></div></th>
+                <th><div class="text-center"><font size="4">外線番号</font></div></th>
+                <th><div class="text-center"><font size="4">備考</font></div></th>
+            </tr>
+            <tr>
+                <td valign="middle" rowspan="2"><div class="text-left"><strong>〇仕入に関する問合わせ</strong></div></td>
+                <td valign="middle"><div class="text-center"><strong>北村</strong></div></td>
+                <td valign="middle"><div class="text-center"><strong>737</strong></div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center">池田</div></td>
+                <td valign="middle"><div class="text-center">722</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+
+            <tr class="table-dark" >
+                <th><div class="text-left"><font size="4">■荷受け</font></div></th>
+                <th><div class="text-center"><font size="4">担当者</font></div></th>
+                <th><div class="text-center"><font size="4">内線番号</font></div></th>
+                <th><div class="text-center"><font size="4">外線番号</font></div></th>
+                <th><div class="text-center"><font size="4">備考</font></div></th>
+            </tr>
+            <tr>
+                <td valign="middle" rowspan="1"><div class="text-left"><strong>〇荷受け全般に関する問合わせ</strong></div></td>
+                <td valign="middle" ><div class="text-center"><strong>後藤</strong></div></td>
+                <td valign="middle"><div class="text-center"><strong>724</strong></div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>
+                <td valign="middle" rowspan="5"><div class="text-left">　　　　　・荷受け</div></td>
+                <td valign="middle"><div class="text-center">後藤</div></td>
+                <td valign="middle"><div class="text-center">724</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center">道路</div></td>
+                <td valign="middle"><div class="text-center">713</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center">倉田</div></td>
+                <td valign="middle"><div class="text-center">715</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center">三宅</div></td>
+                <td valign="middle"><div class="text-center">723</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center">影山</div></td>
+                <td valign="middle"><div class="text-center">714</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>
+                <td valign="middle" rowspan="1"><div class="text-left">　　　　　・輸送確定</div></td>
+                <td valign="middle"><div class="text-center">影山</div></td>
+                <td valign="middle"><div class="text-center">714</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>
+                <td valign="middle" rowspan="1"><div class="text-left">　　　　　・預かり原料確定</div></td>
+                <td valign="middle"><div class="text-center">倉田</div></td>
+                <td valign="middle"><div class="text-center">715</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>
+                <td valign="middle" rowspan="1"><div class="text-left">　　　　　・福山冷凍入荷原料確定</div></td>
+                <td valign="middle"><div class="text-center">道路</div></td>
+                <td valign="middle"><div class="text-center">713</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+
+            <tr class="table-dark" >
+                <th><div class="text-left"><font size="4">■出荷伝票発行</font></div></th>
+                <th><div class="text-center"><font size="4">担当者</font></div></th>
+                <th><div class="text-center"><font size="4">内線番号</font></div></th>
+                <th><div class="text-center"><font size="4">外線番号</font></div></th>
+                <th><div class="text-center"><font size="4">備考</font></div></th>
+            </tr>
+            <tr>
+                <td valign="middle" rowspan="1"><div class="text-left"><strong>〇出荷伝票発行に関する問合わせ</strong></div></td>
+                <td valign="middle"><div class="text-center"><strong>村上</strong></div></td>
+                <td valign="middle"><div class="text-center"><strong>811</strong></div></td>
+                <td valign="middle"><div class="text-center"><strong>957-3455</strong></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+
+            
+            <tr class="table-dark" >
+                <th><div class="text-left"><font size="4">■原料搬入</font></div></th>
+                <th><div class="text-center"><font size="4">担当者</font></div></th>
+                <th><div class="text-center"><font size="4">内線番号</font></div></th>
+                <th><div class="text-center"><font size="4">外線番号</font></div></th>
+                <th><div class="text-center"><font size="4">備考</font></div></th>
+            </tr>
+            <tr>
+                <td valign="middle" rowspan="1"><div class="text-left"><strong>〇原料搬入全般に関する問合わせ</strong></div></td>
+                <td valign="middle"><div class="text-center"><strong>前原（健）</strong></div></td>
+                <td valign="middle"><div class="text-center"><strong>813</strong></div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle" rowspan="1"><div class="text-left">　　　　　・原料 第1、第5工場</div></td>
+                <td valign="middle"><div class="text-center">加藤</div></td>
+                <td valign="middle"><div class="text-center">823</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle" rowspan="3"><div class="text-left">　　　　　・原料 第2工場</div></td>
+                <td valign="middle"><div class="text-center">卜部</div></td>
+                <td valign="middle"><div class="text-center">821</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle"><div class="text-center">中嶋</div></td>
+                <td valign="middle"><div class="text-center">819</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle"><div class="text-center">河中</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle" rowspan="1"><div class="text-left">　　　　　・原料 第3工場</div></td>
+                <td valign="middle"><div class="text-center">和智</div></td>
+                <td valign="middle"><div class="text-center">834</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle" rowspan="4"><div class="text-left">　　　　　・原料 第4工場</div></td>
+                <td valign="middle"><div class="text-center">深田</div></td>
+                <td valign="middle"><div class="text-center">820</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle"><div class="text-center">高田</div></td>
+                <td valign="middle"><div class="text-center">817</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle"><div class="text-center">中田</div></td>
+                <td valign="middle"><div class="text-center">837</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle"><div class="text-center">沖田</div></td>
+                <td valign="middle"><div class="text-center">814</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+
+            <tr class="table-dark" >
+                <th><div class="text-left"><font size="4">■小分け</font></div></th>
+                <th><div class="text-center"><font size="4">担当者</font></div></th>
+                <th><div class="text-center"><font size="4">内線番号</font></div></th>
+                <th><div class="text-center"><font size="4">外線番号</font></div></th>
+                <th><div class="text-center"><font size="4">備考</font></div></th>
+            </tr>
+            <tr>
+                <td valign="middle" rowspan="1"><div class="text-left"><strong>〇小分け全般に関する問合わせ</strong></div></td>
+                <td valign="middle"><div class="text-center"><strong>内田</strong></div></td>
+                <td valign="middle"><div class="text-center"><strong>828</strong></div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle" rowspan="1"><div class="text-left">　　　　　・小分け原料手配</div></td>
+                <td valign="middle"><div class="text-center">寺岡（敬）</div></td>
+                <td valign="middle"><div class="text-center">825</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left">（原料手配）</div></td>
+            </tr>
+            <tr>            
+                <td valign="middle" rowspan="1"><div class="text-left">　　　　　・小分け原料手配</div></td>
+                <td valign="middle"><div class="text-center">松岡</div></td>
+                <td valign="middle"><div class="text-center">835</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left">（原料手配、搬入依頼、小分け出荷品担当）</div></td>
+            </tr>
+            <tr>            
+                <td valign="middle" rowspan="1"><div class="text-left">　　　　　・第2小分け室</div></td>
+                <td valign="middle"><div class="text-center">松岡</div></td>
+                <td valign="middle"><div class="text-center">827・762</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle" rowspan="1"><div class="text-left">　　　　　・第3小分け室</div></td>
+                <td valign="middle"><div class="text-center">壇上</div></td>
+                <td valign="middle"><div class="text-center">763</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle" rowspan="1"><div class="text-left">　　　　　・第4小分け室</div></td>
+                <td valign="middle"><div class="text-center">岡田</div></td>
+                <td valign="middle"><div class="text-center">764</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle" rowspan="1"><div class="text-left">　　　　　・第5小分け室</div></td>
+                <td valign="middle"><div class="text-center">岡崎</div></td>
+                <td valign="middle"><div class="text-center">761</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle" rowspan="3"><div class="text-left">　　　　　・小分け原料準備</div></td>
+                <td valign="middle"><div class="text-center">木坂</div></td>
+                <td valign="middle"><div class="text-center">822</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle"><div class="text-center">前原（一）</div></td>
+                <td valign="middle"><div class="text-center">831</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle"><div class="text-center">桒原</div></td>
+                <td valign="middle"><div class="text-center">815</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+
+            <tr class="table-dark" >
+                <th><div class="text-left"><font size="4">■製品・出荷</font></div></th>
+                <th><div class="text-center"><font size="4">担当者</font></div></th>
+                <th><div class="text-center"><font size="4">内線番号</font></div></th>
+                <th><div class="text-center"><font size="4">外線番号</font></div></th>
+                <th><div class="text-center"><font size="4">備考</font></div></th>
+            </tr>
+            <tr>
+                <td valign="middle" rowspan="1"><div class="text-left"><strong>〇製品・出荷全般に関する問合せ</strong></div></td>
+                <td valign="middle"><div class="text-center"><strong>細井</strong></div></td>
+                <td valign="middle"><div class="text-center"><strong>832</strong></div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle" rowspan="1"><div class="text-left">　　　　　・出荷 福山通運</div></td>
+                <td valign="middle"><div class="text-center">神谷</div></td>
+                <td valign="middle"><div class="text-center">810</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle" rowspan="2"><div class="text-left">　　　　　・出荷 トールエクスプレス</div></td>
+                <td valign="middle"><div class="text-center">奥野</div></td>
+                <td valign="middle"><div class="text-center">833</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle"><div class="text-center">小川</div></td>
+                <td valign="middle"><div class="text-center">830</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle" rowspan="1"><div class="text-left">　　　　　・出荷 トナミ・ランテック</div></td>
+                <td valign="middle"><div class="text-center">平山</div></td>
+                <td valign="middle"><div class="text-center">826</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle" rowspan="1"><div class="text-left">　　　　　・出荷 西濃・ヤマト・佐川</div></td>
+                <td valign="middle"><div class="text-center">石田</div></td>
+                <td valign="middle"><div class="text-center">824</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle" rowspan="3"><div class="text-left">　　　　　・出荷 庸車・備通</div></td>
+                <td valign="middle"><div class="text-center">山本</div></td>
+                <td valign="middle"><div class="text-center">816</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+       
+                <td valign="middle"><div class="text-center">川上</div></td>
+                <td valign="middle"><div class="text-center">812</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+              
+                <td valign="middle"><div class="text-center">細井</div></td>
+                <td valign="middle"><div class="text-center">832</div></td>
+                <td valign="middle"><div class="text-center"></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+
+            <tr class="table-dark" >
+                <th><div class="text-left"><font size="4">■社内輸送</font></div></th>
+                <th><div class="text-center"><font size="4">担当者</font></div></th>
+                <th><div class="text-center"><font size="4">内線番号</font></div></th>
+                <th><div class="text-center"><font size="4">外線番号</font></div></th>
+                <th><div class="text-center"><font size="4">備考</font></div></th>
+            </tr>
+            <tr>
+                <td valign="middle" rowspan="1"><div class="text-left"><strong>〇社内輸送全般に関する問合せ</strong></div></td>
+                <td valign="middle"><div class="text-center"><strong>長谷山</strong></div></td>
+                <td valign="middle"><div class="text-center"><strong>14664</strong></div></td>
+                <td valign="middle"><div class="text-center"><strong>080-1943-0555</strong></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle" rowspan="1"><div class="text-left">　　　　　・箕島工場内配送・U倉庫</div></td>
+                <td valign="middle"><div class="text-center">横山</div></td>
+                <td valign="middle"><div class="text-center">14666</div></td>
+                <td valign="middle"><div class="text-center">080-1943-0557</div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle" rowspan="1"><div class="text-left">　　　　　・箕島工場内配送</div></td>
+                <td valign="middle"><div class="text-center">徳永</div></td>
+                <td valign="middle"><div class="text-center">14663</div></td>
+                <td valign="middle"><div class="text-center">080-1943-0554</div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle" rowspan="2"><div class="text-left">　　　　　・配送センター⇔箕島工場 輸送 <br>　　　　　　　（カミシマ倉庫）</div></td>
+                <td valign="middle"><div class="text-center">金吉</div></td>
+                <td valign="middle"><div class="text-center">14660</div></td>
+                <td valign="middle"><div class="text-center">080-1943-0551</div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>            
+                <td valign="middle"><div class="text-center">宍戸</div></td>
+                <td valign="middle"><div class="text-center">14661</div></td>
+                <td valign="middle"><div class="text-center">080-1943-0552</div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+
+            <tr class="table-dark" >
+                <th><div class="text-left"><font size="4">■市内輸送</font></div></th>
+                <th><div class="text-center"><font size="4">担当者</font></div></th>
+                <th><div class="text-center"><font size="4">内線番号</font></div></th>
+                <th><div class="text-center"><font size="4">外線番号</font></div></th>
+                <th><div class="text-center"><font size="4">備考</font></div></th>
+            </tr>
+            <tr>
+                <td valign="middle" rowspan="2"><div class="text-left"><strong>〇市内輸送全般に関する問合せ　<br>　（手城、笠岡、営業倉庫他）</strong></div></td>
+                <td valign="middle"><div class="text-center"><strong>寺岡（真）</strong></div></td>
+                <td valign="middle"><div class="text-center"><strong>14665</strong></div></td>
+                <td valign="middle"><div class="text-center"><strong>080-1943-0556</strong></div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+            <tr>
+                <td valign="middle"><div class="text-center">相方</div></td>
+                <td valign="middle"><div class="text-center">14662</div></td>
+                <td valign="middle"><div class="text-center">080-1943-0553</div></td>
+                <td valign="middle"><div class="text-left"></div></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+  
+
+<div class="p-3" id="1-3-8"></div>
+    <hr>
+    <h2 style="text-align:center">&nbsp;&nbsp;3-8.　ITS対応窓口表　<a href="/media/juusho&tel/its.pdf"><font size="2">プリントアウトはこちらから </font></a></h2>  
+    <h5><p style="margin-left:1440px">2022年9月24日</p></h5>   
+    <h3 style="text-align:center">お問合せ・ご相談は、内容により以下のチームまでお願いいたします</h3>   
+</div>
+<div class="container" > 
+    <table class="table table-hover table-warning table-bordered border-dark table-sm d-flex justify-content-center" >
+        <tbody>
+            <tr class="table-dark" >
+                <th style="width: 900px"><div class="text-center"><font size="4">●普段の業務処理について</font></div></th>
+                <th style="width: 360px"><div class="text-center"><font size="4">→ 業務運用管理チームへ</font></div></th>
+            </tr>
+            <tr>
+                <td valign="middle">
+                    <div class="text-left">
+                        <br>・社内システムの操作方法、利用方法のご質問
+                        <br>・社内システムのデータや動作に関するご質問
+                        <br>・各種更新票および製品ラベルに関するご質問
+                        <br>・日次処理・月次処理・請求処理等の業務処理に関するご質問
+                        <br>・エクセル、ワードなどの操作方法に関するご質問第１開発室
+                        <br>　　
+                    </div>
+                </td>
+                <td valign="middle">
+                    <div class="text-center">
+                        TEL 084-957-3360
+                        <br>(箕島内線 3360)
+                        <br>FAX 084-953-8323
+                    </div>
+                </td>
+            </tr>
+    
+            <tr class="table-dark" >
+                <th style="width: 900px"><div class="text-center"><font size="4">●普段の業務処理について</font></div></th>
+                <th style="width: 360px"><div class="text-center"><font size="4">→ 業務運用管理チームへ</font></div></th>
+            </tr>
+            <tr>
+                <td valign="middle">
+                    <div class="text-left">
+                        <br>・社内システムの操作方法、利用方法のご質問
+                        <br>・社内システムのデータや動作に関するご質問
+                        <br>・各種更新票および製品ラベルに関するご質問
+                        <br>・日次処理・月次処理・請求処理等の業務処理に関するご質問
+                        <br>・エクセル、ワードなどの操作方法に関するご質問第１開発室
+                        <br>　　
+                    </div>
+                </td>
+                <td valign="middle">
+                    <div class="text-center">
+                        TEL 084-957-3360
+                        <br>(箕島内線 3360)
+                        <br>FAX 084-953-8323
+                    </div>
+                </td>
+            </tr>
+        
+            <tr class="table-dark" >
+                <th style="width: 900px"><div class="text-center"><font size="4">●社内システムの不具合・障害について</font></div></th>
+                <th style="width: 360px"><div class="text-center"><font size="4">→ データエントリーチームへ</font></div></th>
+            </tr>
+            <tr>
+                <td valign="middle">
+                    <div class="text-left">
+                        <br>・社内システムの不具合や障害についてのご連絡・ご相談
+                        <br>・社内システムのデータ修正などのご相談
+                        <br>　　
+                    </div>
+                </td>
+                <td valign="middle">
+                    <div class="text-center">
+                        TEL 084-957-3314
+                        <br>(箕島内線 3314)
+                        <br>FAX 084-953-8323
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="table-dark" >
+                <th style="width: 900px"><div class="text-center"><font size="4">●情報機器について</font></div></th>
+                <th style="width: 360px"><div class="text-center"><font size="4">→ 業務運用管理チームへ</font></div></th>
+            </tr>
+            <tr>
+                <td valign="middle">
+                    <div class="text-left">
+                        <br>・情報機器の設置や撤去などのご依頼・ご相談
+                        <br>・電話に関するご依頼・ご相談
+                        <br>　　
+                    </div>
+                </td>
+                <td valign="middle">
+                    <div class="text-center">
+                        TEL 084-957-3480
+                        <br>(箕島内線 6412)
+                        <br>FAX 084-957-3381
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="table-dark" >
+                <th style="width: 900px"><div class="text-center"><font size="4">●申請書とその他すべて</font></div></th>
+                <th style="width: 360px"><div class="text-center"><font size="4">→ 業務運用管理チームへ</font></div></th>
+            </tr>
+            <tr>
+                <td valign="middle">
+                    <div class="text-left">
+                        <br>・各申請書・依頼書などの書類のご提出窓口
+                        <br>（ITSへの依頼書、情報機器設置・支給申請書など）
+                        <br>・各種アクセス権の設定や変更に関するご依頼・ご相談
+                        <br>（O:ドライブやソフトウェア使用権限 → ITSへの依頼書）
+                        <br>・ICT全般のご質問やご相談、ご依頼、苦情など一次窓口として承ります
+                        <br>（お客様のシステムの導入に関するご相談窓口、
+                        <br>　システムやソフトウェアの導入のご相談窓口など、全般的に）
+                        <br>　　
+                    </div>
+                </td>
+                <td valign="middle">
+                    <div class="text-center">
+                        TEL 084-957-3380
+                        <br>(箕島内線 3380)
+                        <br>FAX 084-953-8323
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>   
+    <h4 style="text-align:center"><font color="black" size="5">※社内システム・・・ACOS4オンライン、ITS情報サービス、IISシステム、ラベルシステム、キューベルi、MJSなど</font></h4>  
+</div>
+
+<div class="p-3" id="1-3-9"></div>
+    <hr>
+    <h2 style="text-align:center">&nbsp;&nbsp;3-9.　リコス手城　内線番号表　<a href="/media/juusho&tel/licos.pdf"><font size="2">プリントアウトはこちらから </font></a></h2> 
+    <h5><p style="margin-left:1440px">2023年11月23日</p></h5>   
+    <h3 style="text-align:center"><font color="red">700番台：多機能電話　　　　　　　700番台：固定電話　　　　　　　800番台：携帯電話</font></h3>
+</div>
+<div class="container">
+    <div class="p-3"  >
+        <table class="table table-hover table-warning table-bordered border-dark table-sm     d-flex justify-content-center" >
+            <div class="col-3">
+                <tbody>
+                    <tr class="table-dark" >
+                        <th style="width: 150px"><div class="text-center">番号</div></th>
+                        <th style="width: 350px"><div class="text-center">名前</div></th>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">721</div></td>
+                        <td><div class="text-left">久田　Ｕ長</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">724</div></td>
+                        <td><div class="text-left">中川　社員</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">722</div></td>
+                        <td><div class="text-left">松村　係長</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">　</div></td>
+                        <td><div class="text-left">　</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">735</div></td>
+                        <td><div class="text-left">藤原　Ｕ長</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">732</div></td>
+                        <td><div class="text-left">新井　係長</div></td\>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">737</div></td>
+                        <td><div class="text-left">池下幸　主任</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">760</div></td>
+                        <td><div class="text-left">江澤　社員</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">734</div></td>
+                        <td><div class="text-left">黒木　係長</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">733</div></td>
+                        <td><div class="text-left">佐藤珠　社員</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">723</div></td>
+                        <td><div class="text-left">鈴木　主任</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">731</div></td>
+                        <td><div class="text-left">高原　社員</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">704</div></td>
+                        <td><div class="text-left">西江　社員</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">738</div></td>
+                        <td><div class="text-left">藤井栞　社員</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">736</div></td>
+                        <td><div class="text-left">藤川　社員</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">703</div></td>
+                        <td><div class="text-left">森　社員</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">　</div></td>
+                        <td><div class="text-left">　</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">753</div></td>
+                        <td><div class="text-left">日吉　係長</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">751</div></td>
+                        <td><div class="text-left">藤田　係長</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">　</div></td>
+                        <td><div class="text-left">　</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">725</div></td>
+                        <td><div class="text-left">事務所送り状ＰＣ</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">776</div></td>
+                        <td><div class="text-left">ｸﾘｰﾝﾙｰﾑ</div></td>
+                    </tr>
+                </tbody>
+            </div>
+                      
+            <div class="col-3">
+                <tbody>
+                    <tr class="table-dark" >
+                        <th style="width: 150px"><div class="text-center">番号</div></th>
+                        <th style="width: 350px"><div class="text-center">名前</div></th>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">777</div></td>
+                        <td><div class="text-left">受け付け</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">713</div></td>
+                        <td><div class="text-left">ラウンジ</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">714</div></td>
+                        <td><div class="text-left">応接室</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">715</div></td>
+                        <td><div class="text-left">会議室　</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">716</div></td>
+                        <td><div class="text-left">事務所FAX</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">771</div></td>
+                        <td><div class="text-left">原料倉庫</div></td\>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">781</div></td>
+                        <td><div class="text-left">工作室</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">789</div></td>
+                        <td><div class="text-left">食堂</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">　</div></td>
+                        <td><div class="text-left">　</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">　</div></td>
+                        <td><div class="text-left">　</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">782</div></td>
+                        <td><div class="text-left">液体①管理室</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">783</div></td>
+                        <td><div class="text-left">液体①ＧＷ付近</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">785</div></td>
+                        <td><div class="text-left">工場管理室ＦＡＸ</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">797</div></td>
+                        <td><div class="text-left">液体①ＦＡＸ</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">798</div></td>
+                        <td><div class="text-left">液体②ＦＡＸ</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">762</div></td>
+                        <td><div class="text-left"><font size="1">アセンブリ（S1）（ＦＡＸ兼用）</font></div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">761</div></td>
+                        <td><div class="text-left">かすみ草</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">791</div></td>
+                        <td><div class="text-left">第二工場管理室</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">793</div></td>
+                        <td><div class="text-left">第二工場前室</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">　</div></td>
+                        <td><div class="text-left">　</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">784</div></td>
+                        <td><div class="text-left">検査室</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">　</div></td>
+                        <td><div class="text-left">　</div></td>
+                    </tr>
+                </tbody>
+            </div>
+            
+            <div class="col-3">
+                <tbody>
+                    <tr class="table-dark" >
+                        <th style="width: 150px"><div class="text-center">番号</div></th>
+                        <th style="width: 350px"><div class="text-center">名前</div></th>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">804</div></td>
+                        <td><div class="text-left">青山　社長</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">802</div></td>
+                        <td><div class="text-left">池田　取締役</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">815</div></td>
+                        <td><div class="text-left">濵田 工場長</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">837</div></td>
+                        <td><div class="text-left">安達副工場長<font size="2">(第一工場) </font></div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">822</div></td>
+                        <td><div class="text-left">本田副工場長<font size="2">(第二工場) </font></div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">　</div></td>
+                        <td><div class="text-left">　</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">841</div></td>
+                        <td><div class="text-left">谷野　Ｕ長</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">853</div></td>
+                        <td><div class="text-left">岩見　ＭＧ</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">808</div></td>
+                        <td><div class="text-left">白神　ＭＧ</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">842</div></td>
+                        <td><div class="text-left">横山　社員</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">　</div></td>
+                        <td><div class="text-left">　</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">816</div></td>
+                        <td><div class="text-left">山本　Ｕ長</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">888</div></td>
+                        <td><div class="text-left">世良泰　係長（Ｂ長）</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">833</div></td>
+                        <td><div class="text-left">川相　係長</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">809</div></td>
+                        <td><div class="text-left">小畠　社員</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">806</div></td>
+                        <td><div class="text-left">西尾　ＳＥ</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">　</div></td>
+                        <td><div class="text-left">　</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">　</div></td>
+                        <td><div class="text-left">　</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">　</div></td>
+                        <td><div class="text-left">　</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">　</div></td>
+                        <td><div class="text-left">　</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">　</div></td>
+                        <td><div class="text-left">　</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">　</div></td>
+                        <td><div class="text-left">　</div></td>
+                    </tr>
+                </tbody>
+            </div>
+      
+            <div class="col-3">
+                <tbody>
+                    <tr class="table-dark" >
+                        <th style="width: 150px"><div class="text-center">番号</div></th>
+                        <th style="width: 350px"><div class="text-center">名前</div></th>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">851</div></td>
+                        <td><div class="text-left">野村　ＭＧ（Ｂ長）</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">848</div></td>
+                        <td><div class="text-left">天野　主任</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">847</div></td>
+                        <td><div class="text-left">石黒主任･ 縄稚社員　</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">859</div></td>
+                        <td><div class="text-left">大村　主任</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">832</div></td>
+                        <td><div class="text-left">金谷係長･笹原社員</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">831</div></td>
+                        <td><div class="text-left">河合　社員</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">830</div></td>
+                        <td><div class="text-left">小峯　係長</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">845</div></td>
+                        <td><div class="text-left">笹井　主任</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">821</div></td>
+                        <td><div class="text-left">世良康　社員</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">834</div></td>
+                        <td><div class="text-left">先納　社員</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">857</div></td>
+                        <td><div class="text-left">中山　社員</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">812</div></td>
+                        <td><div class="text-left">藤井祐社員・轟社員</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">844</div></td>
+                        <td><div class="text-left">藤原麻　社員</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">856</div></td>
+                        <td><div class="text-left">村上　係長</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">　</div></td>
+                        <td><div class="text-left">　</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">807</div></td>
+                        <td><div class="text-left">河本　ＭＧ（Ｂ長)　</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">852</div></td>
+                        <td><div class="text-left">大本　主任　</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">810</div></td>
+                        <td><div class="text-left">高木　社員</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">819</div></td>
+                        <td><div class="text-left">藤尾　係長</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">805</div></td>
+                        <td><div class="text-left">松浦 ＭＧ</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">854</div></td>
+                        <td><div class="text-left">宮地　主任</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">　</div></td>
+                        <td><div class="text-left">　</div></td>
+                    </tr>
+                </tbody>
+            </div>
+
+            <div class="col-3">
+                <tbody>
+                    <tr class="table-dark" >
+                        <th style="width: 150px"><div class="text-center">番号</div></th>
+                        <th style="width: 350px"><div class="text-center">名前</div></th>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">826</div></td>
+                        <td><div class="text-left">藤井裕　係長（Ｂ長）</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">828</div></td>
+                        <td><div class="text-left">後藤三　社員</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">836</div></td>
+                        <td><div class="text-left">西村　社員</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">858</div></td>
+                        <td><div class="text-left">森岡　主任</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">　</div></td>
+                        <td><div class="text-left">　</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">835</div></td>
+                        <td><div class="text-left">馬越　ＭＧ（Ｂ長）</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">811</div></td>
+                        <td><div class="text-left">池田　主任</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">817</div></td>
+                        <td><div class="text-left">笠原　主任</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">846</div></td>
+                        <td><div class="text-left">黒住　社員</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">823</div></td>
+                        <td><div class="text-left">澤田　主任</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">829</div></td>
+                        <td><div class="text-left">城本　係長</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">824</div></td>
+                        <td><div class="text-left">日髙　社員</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">　</div></td>
+                        <td><div class="text-left">　</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">838</div></td>
+                        <td><div class="text-left">水尾 物流総合①</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">827</div></td>
+                        <td><div class="text-left">篠岡 物流総合②</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">825</div></td>
+                        <td><div class="text-left">渡邉　社員</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">814</div></td>
+                        <td><div class="text-left">池下 自社運搬</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">840</div></td>
+                        <td><div class="text-left">入荷ＡＭのみ</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">　</div></td>
+                        <td><div class="text-left">　</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">　</div></td>
+                        <td><div class="text-left">　</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">855</div></td>
+                        <td><div class="text-left">久田　Ｕ長（PHS)</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="text-center">899</div></td>
+                        <td><div class="text-left">フーズセレクション</div></td>
+                    </tr>
+                </tbody>
+            </div>
+        </table>
+        
+    </div>
+</div>
+<h5 style="margin-left:320px"><font color="black" size="5">※箕島地区→手城へは「２３」 を押下後、１秒お待ちになって 「内線番号」を押下（回線接続までに、０．５秒～１秒かかるため）</font></h5>
+<h5 style="margin-left:320px"><font color="black" size="5">※手城→箕島地区へは「２」を押下後、「内線番号」を押下（内線通話で相手の声が聞き取りづらい場合は、外線をご利用ください）</font></h5>
+<br>
+<br>
+<br>
+{% endblock %}

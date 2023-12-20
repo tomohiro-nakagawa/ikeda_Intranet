@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+{% block head_title %}ICT情報セキュリティポリシー{% endblock %}
+
+{% block content %}
+    <div class="container" >
+        <h1 class="my-3" style="text-align:center">{% if not profile %}6.　ICT情報セキュリティポリシー{% else %}{{profile.username}}のICT情報セキュリティポリシー{% endif %}</h1>
+        <hr>
+    </div>
+
+    <div style="text-align: center;">
+        <div style="display: inline-block; border: 4px double #0000ff; padding: 15px; text-align: left; width: 1200px; background: #ffffff">
+            <h2 style="text-align:centyer">池田糖化グループ　ICT情報セキュリティポリシー</h2>
+            <h5 style="text-align:right">2019年7月10日</h5>
+            <h5 style="text-align:right">ICT情報セキュリティ事務局</h5>
+            <br>
+            <h5 style="text-align:left">ICT情報セキュリティポリシーは、池田糖化グループで実施する情報セキュリティ対策の方針や行動指針を定めたルールです。
+                                      <br>PC・スマートフォン・タブレット・インターネットなどのICT（情報通信技術）を対象に、情報セキュリティの脅威から池田糖化グループの情報資産を適切に守ることを目的とします。
+                                      <br>全社での継続的な運用を通して、従業員の情報セキュリティに対する意識の向上や、取引先や顧客からの信頼の向上につなげます。</h5>
+            <br>
+            <br>
+            <h3 style="text-align:left"><font color="red">◆ICT全般に関する文書</font></h3>
+            <h5 style="text-align:left">　　　　社内ネットワークやシステムの使用、情報機器使用に関する遵守事項を記載した文書です。
+                                    <br>　　　　基準は、情報セキュリティのために遵守すべき規定です。手順は、基準を実施するための手順です。</h5>   
+            <div class="container">
+                <div class="p-3"  >
+                    <table class="table table-hover table-warning table-bordered border-dark table-sm     d-flex justify-content-center" >
+                        <div class="col-6">
+                            <tbody>
+                                <tr class="table-dark" >
+                                    <th style="width: 500px"><div class="text-center">基準</div></th>
+                                </tr>
+                                <tr><td><a href="/media/ict/【基準】システム使用基準.pdf"><font size="4">・システム使用基準</font></a></td></tr>
+                                <tr><td><a href="/media/ict/【基準】情報機器使用基準.pdf"><font size="4">・情報機器使用基準</font></a></td></tr>
+                                <tr><td><a href="/media/ict/【基準】外部サービス使用基準.pdf"><font size="4">・外部サービス使用基準</font></a></td></tr>
+                                <tr><td><a href="/media/ict/【基準】例外時対応基準.pdf"><font size="4">・例外時対応基準</font></a></td></tr>                           
+                            </tbody>
+                        </div>
+                        <div class="col-6">
+                            <tbody>
+                                <tr class="table-dark" >
+                                    <th style="width: 500px"><div class="text-center">手順</div></th>
+                                </tr>
+                                <tr><td><a href="/media/ict/【手順】機器貸与申請手順.pdf"><font size="4">・機器貸与申請手順</font></a></td></tr>     
+                                <tr><td><a href="#"><font size="4">　</font></a></td></tr>  
+                                <tr><td><a href="#"><font size="4">　</font></a></td></tr> 
+                                <tr><td><a href="#"><font size="4">　</font></a></td></tr> 
+                            </tbody>
+                        </div>
+                    </table>
+                    
+                </div>
+            </div>   
+            <br>
+            <br>
+            <h4 style="text-align:left"><font color="red">◆リモート接続に関する文書</font></h4>
+            <h5 style="text-align:left">　　　　社内ネットワークに直接接続できない場所においてインターネット等社外の環境を経由して社内システムや社内ネットワークおよび
+                                    <br>　　　　自社が契約し提供されている外部サービスに接続する場合の遵守事項を記載した文書です。</h5>
+            <div class="container">
+                <div class="p-3"  >
+                    <table class="table table-hover table-warning table-bordered border-dark table-sm     d-flex justify-content-center" >
+                        <div class="col-6">
+                            <tbody>
+                                <tr class="table-dark" >
+                                    <th style="width: 500px"><div class="text-center">基準</div></th>
+                                </tr>
+                                <tr><td><a href="/media/ict/【基準】リモート接続使用基準.pdf"><font size="4">・リモート接続使用基準</font></a></td></tr>
+                                <tr><td><a href="/media/ict/【基準】モバイルPC使用基準.pdf"><font size="4">・モバイルPC使用基準</font></a></td></tr>
+                                <tr><td><a href="/media/ict/【基準】スマートデバイス使用基準.pdf"><font size="4">・スマートデバイス使用基準</font></a></td></tr>             
+                            </tbody>
+                        </div>
+                        <div class="col-6">
+                            <tbody>
+                                <tr class="table-dark" >
+                                    <th style="width: 500px"><div class="text-center">スマートデバイスのアプリと外部サービス</div></th>
+                                </tr>
+                                <tr><td><a href="/media/ict/カテゴリ方針一覧.pdf"><font size="4">・カテゴリ方針一覧</font></a></td></tr>    
+                                <tr><td><a href="/media/ict/アプリとサービス一覧.pdf"><font size="4">・アプリ一覧</font></a></td></tr>  
+                                <tr><td><a href="/media/ict/有料アプリについて.pdf"><font size="4">・有料アプリの説明義務について</font></a></td></tr>   
+                            </tbody>
+                        </div>
+                    </table>                    
+                </div>    
+            </div>
+            <br>
+            <br>
+            <h4 style="text-align:left"><font color="red">◆教育コンテンツ</font></h4>
+            <div class="container">
+                <div class="p-3"  >
+                    <table class="table table-hover table-warning table-bordered border-dark table-sm     d-flex justify-content-center" >
+                        <div class="col-6">
+                            <tbody>
+                                <tr class="table-dark" >
+                                    <th style="width: 500px"><div class="text-center">基準</div></th>
+                                </tr>
+                                <tr><td><a href="/media/ict/【教育コンテンツ】情報機器使用基準.pdf"><font size="4">・情報機器使用基準</font></a></td></tr>
+                                <tr><td><a href="/media/ict/【教育コンテンツ】リモート接続基準.pdf"><font size="4">・リモート接続基準</font></a></td></tr>          
+                            </tbody>
+                        </div>
+                        <div class="col-6">
+                            <tbody>
+                                <tr class="table-dark" >
+                                    <th style="width: 500px"><div class="text-center">基準</div></th>
+                                </tr>
+                                <tr><td><a href="/media/ict/【教育コンテンツ】システム使用基準・外部サービス使用基準.pdf"><font size="4">・システム使用基準・外部サービス使用基準</font></a></td></tr>    
+                                <tr><td><a href="/media/ict/【教育コンテンツ】セキュリティハンドブック.pdf"><font size="4">・セキュリティハンドブック</font></a></td></tr>    
+                            </tbody>
+                        </div>
+                    </table>                    
+                </div>  
+            </div>
+            <br>
+            <br>
+            <h4 style="text-align:left"><font color="red">◆書式（サイボウズのファイル管理へのリンクとなります）</font></h4>
+            <h5 style="text-align:left">　　　　※各書式の用途については <a href="/media/ict/【フロー】情報機器・社内システムの使用手続き.pdf">「情報機器・社内システムの使用手続き」</a>をご確認ください。</h5> 
+            <div class="container">
+                <div class="p-3"  >
+                    <table class="table table-hover table-warning table-bordered border-dark table-sm     d-flex justify-content-center" >
+                        <div class="col-6">
+                            <tbody>
+                                <tr class="table-dark" >
+                                    <th style="width: 500px"><div class="text-center">書式</div></th>
+                                </tr>
+                                <tr><td><a href="/media/ict/【書式】誓約書.pdf"><font size="4">・誓約書</font></a></td></tr>
+                                <tr><td><a href="/media/ict/【書式】システム使用申請書.docx"><font size="4">・システム使用申請書</font></a></td></tr>   
+                                <tr><td><a href="/media/ict/【書式】情報機器設置・支給申請書.docx"><font size="4">・情報機器設置・支給申請書</font></a></td></tr>
+                                <tr><td><a href="/media/ict/【書式】情報機器貸出申請書.docx"><font size="4">・情報機器貸出申請書</font></a></td></tr>             
+                            </tbody>
+                        </div>
+                        <div class="col-6">
+                            <tbody>
+                                <tr class="table-dark" >
+                                    <th style="width: 500px"><div class="text-center">書式</div></th>
+                                </tr>
+                                <tr><td><a href="/media/ict/【書式】ITSへの依頼書.docx"><font size="4">・ITSへの依頼書</font></a></td></tr>    
+                                <tr><td><a href="/media/ict/【書式】リモート接続申請書.pdf"><font size="4">・リモート接続申請書</font></a></td></tr>    
+                                <tr><td><a href="/media/ict/【書式】スマートデバイス新規購入・更新申請書(記入要領付).docx"><font size="4">・スマートデバイス新規購入・更新申請書</font></a></td></tr>    
+                                <tr><td><a href="#"><font size="4">　</font></a></td></tr>  
+                            </tbody>
+                        </div>
+                    </table>                    
+                </div>  
+            </div>
+            <br>
+            <br>     
+            <h4 style="text-align:left"><font color="red">◆ICT情報セキュリティ事務局 向け文書</font></h4>    
+            <div class="container">
+                <div class="p-3"  >
+                    <table class="table table-hover table-warning table-bordered border-dark table-sm     d-flex justify-content-center" >
+                        <div class="col-6">
+                            <tbody>
+                                <tr class="table-dark" >
+                                    <th style="width: 500px"><div class="text-center">マニュアル</div></th>
+                                </tr>
+                                <tr><td><a href="/media/ict/【基準】セキュリティマニュアル.pdf"><font size="4">・セキュリティマニュアル</font></a></td></tr>
+                            </tbody>
+                        </div>
+                        <div class="col-6">
+                            <tbody>
+                                <tr class="table-dark" >
+                                    <th style="width: 500px"><div class="text-center">基準</div></th>
+                                </tr>
+                                <tr><td><a href="/media/ict/【基準】モニタリング基準.pdf"><font size="4">・モニタリング基準</font></a></td></tr>    
+                            </tbody>
+                        </div>
+                    </table>                    
+                </div>  
+            </div>                   
+        </div>
+    </div>
+    <br>
+    <br>
+{% endblock %}

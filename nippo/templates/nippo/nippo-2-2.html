@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block head_title %}職場のハラスメント{% endblock %}
+
+{% block content %}
+    <div class="container" >
+        <h1 class="my-3" style="text-align:center">{% if not profile %}7.　ストップ！職場のハラスメント ～「職場のほっとテレホン」開設～{% else %}{{profile.username}}のストップ！職場のハラスメント ～「職場のほっとテレホン」開設～{% endif %}</h1>
+        <hr>
+    </div>
+
+    <div style="text-align: center;">
+        <a href="/media/harasument/職場のほっとテレホン.pdf"><font size="5"><button style="background-color:#0394fc; color:white" type="button">職場のほっとテレホン</button></font></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/media/harasument/職場のほっとテレホンポスター.pdf"><font size="5"><button style="background-color:#0394fc; color:#ffffff" type="button">職場のほっとテレホンポスター</button></font></a>
+        <br>
+        <br>
+    </div>
+    <div style="text-align: center;">
+        <div style="display: inline-block; border: 4px double #0000ff; padding: 20px; text-align: left; width: 1150px; background: #ffffff">
+            <h4 style="text-align:right">2019 年 7 月 1 日</h4>
+            <br>
+            <h2 style="text-align:center">「職場のほっとテレホン」が開設されました</h2>
+            <br>
+            <h4 style="text-align:left">　このたび従業員の皆様をサポートする相談窓口 <font color="blue" size="5">『職場のほっとテレホン』</font>が開設されましたのでご案内いたします。
+                                       <br><br>　パワハラ・セクハラ・コンプライアンスの問題が生じた時や見聞きした時に利用することができます。
+                                       <br><br>また、トラブルを未然に防止し、健全な職場環境を保つために、職場の人間関係の悩み、働きづらさを感じる時など、
+                                       <br><br>職場で抱える不安を整理するためにもご利用下さい。
+                                       <br><br>&nbsp;&nbsp;&nbsp;<u><strong>全従業員（派遣社員、契約社員、パート社員、アルバイト含む）の方が利用できます。
+                                       <br><br>匿名での相談が可能です。</u></strong>
+            </h4>
+            <br>
+            <br>
+            <h4 style="text-align:left"><b>1．「<font color="blue">職場のほっとテレホン</font>」受付について</b></h4>
+            <br>
+            <h4 style="text-align:center">電話受付時間： <font color="blue" size="6">月曜 ～ 土曜 14:00 ～21:00</font></h4>
+            <br>
+            <h4 style="text-align:center">（祝日、夏季8/13～15、年末年始12/30～1/3 を除く）</h4>
+            <br>
+            <h4 style="text-align:center">相談先： Tel： <font color="blue" size="6">0120-945-941</font>（携帯・公衆電話からも利用可能）</h4>
+            <br>
+            <h4 style="text-align:center">E-mail：  <span style="border-bottom: solid 1px blue;"><font color="blue">ikedatohka-group@e-cuore.com</font></span>（専用アドレス）</h4>   
+            <br>
+            <br>
+            <br>
+            <h4 style="text-align:left"><strong>2．相談･通報への対応</strong></h4>
+            <h4 style="text-align:left">
+                 <br>　会社の調査が必要な場合、相談者の意向により社内担当部署と連携することができます。その際は、社内外にお
+                 <br><br>いて、相談者の意思を尊重し、プライバシー保護を約束します。また、相談･通報をしたことやその調査において証言等
+                 <br><br>を行なったことを理由として、報復や不利益な扱いを受けることはありません。
+            </h4>
+            <br>
+            <h4 style="text-align:right">以上</h4>
+        </div>
+    </div>
+    <br>
+    <br>
+{% endblock %}

@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block head_title %}池田糖化イントラネット{% endblock %}
+
+{% block content %}
+  <div class="container" >
+    <h1 class="my-3 text-start mx-auto" style="max-width:700px">{% if not profile %}池田糖化工業㈱イントラネットへようこそ{% else %}{{profile.username}}の池田糖化工業㈱イントラネット{% endif %}</h1>
+    <hr>
+  </div>
+  
+  <div style="width:1500px;border: 2px solid #4169e1; background: #ffffff; box-shadow:3px 3px 6px -2px #555;margin-left:auto;margin-right:auto;">
+    <div  style="background: #4169e1; color: #ffffff; padding: 5px 15px 1px 15px;"><p><font size="6">概要</font></p></div>
+      <div style="padding: 15px;">
+        <p style="margin : 0px 0px 1px 30px"><font size="5">このページは、以下の構成になっています。<font color="red">しかし、ログインしないと全て使用不可となります。</font></font>
+        <font color="red" size="2">　　(※本HPはサイボウズのクラウドデータを合法的な手段によりダウンロードを行い作成しています。随時更新中・・・)</font></p>
+      </div>
+    </div>
+    <p>&nbsp;</p>
+  </div>
+
+  <div style="width:1500px;border: 2px solid #4169e1; background: #ffffff; box-shadow:3px 3px 6px -2px #555;margin-left:auto;margin-right:auto;">
+    <div style="background: #4169e1; color: #ffffff; padding: 7px 15px 1px 15px;"><p><font size="5">メニューバー</font></p></div>
+      <div style="padding: 15px;">
+
+        <div style="border: solid 1px #E65; padding: 15px; border-width:20px 10px 5px; margin: 10px 30px;">
+          <p  style="margin : 0px 10px 0px 20px" style="max-width:1200px"><font size="5">「会社紹介」タブ</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">1.　会社紹介</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">2.　マツダスタジアム「池田糖化工業」看板！！</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">3.　電話番号</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;3-1.　各支店・事業所　短縮電話番号一覧</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;3-2.　携帯電話番号短縮一覧</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;3-3.　箕島工場　内線番号表</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;3-4.　箕島北工場　内線番号表</font></p>          
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;3-5.　工場事務所　内線番号表</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;3-6.　食研　内線番号表</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;3-7.　アイティケイ株式会社・池田配送センター　問合せ　電話番号表</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;3-8.　ITS対応窓口表</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;3-9.　リコス手城　内線番号表</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">4.　住所録</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">5.　mailアドレス一覧表</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;5-1.　携帯電話メールアドレス一覧表</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;5-2.　PCメールアドレス一覧表</font></p>
+        </div>
+
+        <div style="border: solid 1px #E65; padding: 10px; border-width:20px 10px 5px; margin: 10px 30px;">
+          <p  style="margin : 0px 10px 0px 20px" style="max-width:1200px"><font size="5">「お知らせ」タブ</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">6.　ICT情報セキュリティポリシー</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">7.　ストップ！職場のハラスメント ～「職場のほっとテレホン」開設～</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">8.　伝票処理のためのルール等</font></p>
+          
+          
+        </div>
+
+        <div style="border: solid 1px #E65; padding: 10px; border-width:20px 10px 5px; margin: 10px 30px;">
+          <p  style="margin : 0px 10px 0px 20px" style="max-width:1200px"><font size="5">「○○さんてどんな顔」タブ</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4"> 9.　○○さんてどんな顔</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;9-&ensp;1.　全社</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;9-&ensp;2.　池田糖化工業㈱</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;9-&ensp;3.　池田食研㈱</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;9-&ensp;4.　日本リコス㈱</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;9-&ensp;5.　アイティケイ㈱</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;9-&ensp;6.　アイティエス㈱</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;9-&ensp;7.　池田インターナショナル㈱</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;9-&ensp;8.　キサイフーズ工業㈱</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;8-&ensp;9.　タヌマフーズ㈱</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;9-10.　上越フーズ㈱</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;9-11.　岡山アグリフーズ㈱</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;9-12.　2023年度新入社員</font></p>
+        </div>
+
+        <div style="border: solid 1px #E65; padding: 10px; border-width:20px 10px 5px; margin: 10px 30px;">
+          <p  style="margin : 0px 10px 0px 20px" style="max-width:1200px"><font size="5">「新製品情報」タブ</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4"> 10.　新製品情報</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4"> &ensp;10-1.　2023年10月新製品</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4"> &ensp;10-2.　2023年11月新製品</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4"> &ensp;10-3.　2023年12月新製品</font></p>
+        </div>
+        
+        <div style="border: solid 1px #E65; padding: 10px; border-width:20px 10px 5px; margin: 10px 30px;">
+          <p  style="margin : 0px 10px 0px 20px" style="max-width:1200px"><font size="5">「休日予定表」タブ</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">11.　休日予定表</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4"> &ensp;11-&ensp;1.　【箕島】製造、工場事務、食研_福山（分析）</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4"> &ensp;11-&ensp;2.　【箕島】食研_福山（分析以外）、業務・資材、桜馬場・ＩＴＳ</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4"> &ensp;11-&ensp;3.　東京本社</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4"> &ensp;11-&ensp;4.　名古屋</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4"> &ensp;11-&ensp;5.　大阪</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4"> &ensp;11-&ensp;6.　福山</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4"> &ensp;11-&ensp;7.　広島</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4"> &ensp;11-&ensp;8.　福岡・鹿児島</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4"> &ensp;11-&ensp;9.　上越</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;11-10.　タヌマ</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;11-11.　キサイ</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;11-12.　リコス</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;11-13.　リコス(S精製)</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;11-14.　岡山アグリ</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;11-15.　安丘福華</font></p>
+          <p  style="margin : 0px 3px 0px 60px" style="max-width:1200px"><font size="4">&ensp;11-16.　上海分公司</font></p>
+        </div>
+      </div>
+    </div>
+    <p>&nbsp;</p>
+  </div>
+{% endblock %}
+
+

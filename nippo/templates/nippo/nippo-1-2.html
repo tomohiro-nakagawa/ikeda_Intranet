@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block head_title %}マツダスタジアム{% endblock %}
+
+{% block content %}
+  <head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+
+  </head>
+  <div class="container" >
+        <h1 class="my-3 style=" style="text-align:center">{% if not profile %}2.マツダスタジアム 「池田糖化工業」看板！！{% else %}{{profile.username}}のマツダスタジアム 「池田糖化工業」看板！！{% endif %}</h1>
+    <hr>
+  </div>
+
+  <div>
+        <h2 style="text-align:center"><font color="red">【マツダスタジアム カープパフォーマンス席「池田糖化工業」看板！！】</font></h2>
+        <br>
+        <h3 style="text-align:center">今年(2023年)から 「池田糖化工業」 看板が登場します♬</h3>
+        <br>
+        <br>
+        <h3 style="text-align:center">【トランペット隊エリアの横ですので、必ずどこかで映ります！</h3>
+        <h3 style="text-align:center">現地ではとても綺麗に映えて見えます！</h3>
+        <h3 style="text-align:center">テレビで！球場で！　ご家族・お仲間とカープを応援しましょう！</h3>
+        <h3 style="text-align:center">トランペット隊エリアの横ですので、必ずどこかで映ります！</h3>
+        <br>
+        <div style="text-align:center" >
+           
+            <a href="/media/pages/stand1.jpg" data-lightbox="grp"><img src="/media/pages/stand1.jpg" width="800" height="800" border="2"  vspace='2'></a>
+            <a href="/media/pages/stand2.jpg" data-lightbox="grp"><img src="/media/pages/stand2.jpg" width="800" height="800" border="2"  vspace='2'></a>
+            <a href="/media/pages/UP.jpg"     data-lightbox="grp"><img src="/media/pages/UP.jpg" width="1604" height="1000" border="2"  vspace='2'></a>
+        </div>
+    </div>
+    <br>
+    <br>
+
+{% endblock %}
